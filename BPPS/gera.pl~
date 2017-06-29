@@ -1,0 +1,15 @@
+use strict;
+use warnings;
+use 5.010;
+
+my @names =(" TimeLimit=300 f10400.lp ", " TimeLimit=300 f20400.lp ", " TimeLimit=300 f40400.lp ", " TimeLimit=300 f15900.lp ", " TimeLimit=300 f30900.lp ", " TimeLimit=300 f60900.lp ", " TimeLimit=300 f201600.lp ", " TimeLimit=300 f401600.lp ", " TimeLimit=300 f801600.lp ", " TimeLimit=300 f601600.lp ", " TimeLimit=300 f901600.lp ", " TimeLimit=300 f1001600.lp ", " TimeLimit=300 f1101600.lp ", " TimeLimit=300 f1201600.lp ");
+my $n_lc = 0;
+my $n_ex = 0;
+foreach my $n (@names){
+                open(FIN,">>ResultadoF2");
+                print FIN ("exp. $n \n");
+                close(FIN);
+                system("gurobi_cl $n  >>ResultadoF2");
+}
+
+exit;
