@@ -20,6 +20,7 @@ Instance* allocationPointersInstance(int n, int m){
 	return inst;
 }
 
+
 Instance* loadInstance(const char *fileName){
 	    FILE *arq;
 	    int aux_2;

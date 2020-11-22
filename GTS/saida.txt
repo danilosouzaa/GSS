@@ -1,0 +1,4026 @@
+Found 1 GPUs!
+GPU 0 initialized!
+../Instances/d05200 
+Parameters load
+Pointers Allocated!
+i:0
+1.932869 0.932869
+res:0 rs 97 cp 0
+i 0 cont: 1  szJ: 200
+res:5 rs 32 cp 1699
+i 1 cont: 2  szJ: 200
+res:27 rs 15 cp 1547
+i 2 cont: 3  szJ: 200
+res:42 rs 58 cp 1547
+i 3 cont: 4  szJ: 200
+res:23 rs 14 cp 1589
+i 4 cont: 5  szJ: 200
+res:37 rs 61 cp 1589
+i 5 cont: 6  szJ: 200
+res:6 rs 55 cp 1614
+i 6 cont: 7  szJ: 200
+res:40 rs 62 cp 1589
+i 7 cont: 8  szJ: 200
+res:55 rs 9 cp 1547
+i 8 cont: 9  szJ: 200
+res:26 rs 72 cp 1614
+i 9 cont: 10  szJ: 200
+res:59 rs 3 cp 1589
+i 10 cont: 11  szJ: 200
+res:62 rs 52 cp 1589
+i 11 cont: 12  szJ: 200
+res:60 rs 50 cp 1614
+i 12 cont: 13  szJ: 200
+res:78 rs 1 cp 1589
+i 13 cont: 14  szJ: 200
+res:79 rs 33 cp 1589
+i 14 cont: 15  szJ: 200
+res:9 rs 48 cp 1694
+i 15 cont: 16  szJ: 200
+res:82 rs 68 cp 1589
+i 16 cont: 17  szJ: 200
+res:42 rs 14 cp 1699
+i 17 cont: 18  szJ: 200
+res:56 rs 81 cp 1699
+i 18 cont: 19  szJ: 200
+res:35 rs 48 cp 1694
+i 19 cont: 20  szJ: 200
+res:83 rs 80 cp 1694
+i 20 cont: 21  szJ: 200
+res:89 rs 9 cp 1699
+i 21 cont: 22  szJ: 200
+res:98 rs 39 cp 1699
+i 22 cont: 23  szJ: 200
+res:137 rs 28 cp 1699
+i 23 cont: 24  szJ: 200
+res:84 rs 85 cp 1589
+i 24 cont: 25  szJ: 200
+res:68 rs 63 cp 1547
+i 25 cont: 26  szJ: 200
+res:86 rs 43 cp 1694
+i 26 cont: 27  szJ: 200
+res:129 rs 85 cp 1694
+i 27 cont: 28  szJ: 200
+res:94 rs 42 cp 1589
+i 28 cont: 29  szJ: 200
+res:102 rs 55 cp 1547
+i 29 cont: 30  szJ: 200
+res:157 rs 33 cp 1547
+i 30 cont: 31  szJ: 200
+res:190 rs 6 cp 1547
+i 31 cont: 32  szJ: 200
+res:64 rs 6 cp 1614
+i 32 cont: 33  szJ: 200
+res:70 rs 8 cp 1614
+i 33 cont: 34  szJ: 200
+res:134 rs 36 cp 1694
+i 34 cont: 35  szJ: 200
+res:170 rs 13 cp 1694
+i 35 cont: 36  szJ: 200
+res:162 rs 93 cp 1699
+i 36 cont: 37  szJ: 200
+res:236 rs 11 cp 1694
+i 37 cont: 38  szJ: 200
+res:247 rs 73 cp 1694
+i 38 cont: 39  szJ: 200
+res:208 rs 5 cp 1547
+i 39 cont: 40  szJ: 200
+res:103 rs 49 cp 1589
+i 40 cont: 41  szJ: 200
+res:89 rs 60 cp 1614
+i 41 cont: 42  szJ: 200
+res:133 rs 87 cp 1589
+i 42 cont: 43  szJ: 200
+res:94 rs 56 cp 1614
+i 43 cont: 44  szJ: 200
+res:269 rs 49 cp 1694
+i 44 cont: 45  szJ: 200
+res:112 rs 24 cp 1614
+i 45 cont: 46  szJ: 200
+res:184 rs 76 cp 1699
+i 46 cont: 47  szJ: 200
+res:275 rs 68 cp 1694
+i 47 cont: 48  szJ: 200
+res:234 rs 33 cp 1547
+i 48 cont: 49  szJ: 200
+res:284 rs 11 cp 1694
+i 49 cont: 50  szJ: 200
+res:295 rs 12 cp 1694
+i 50 cont: 51  szJ: 200
+res:307 rs 46 cp 1694
+i 51 cont: 52  szJ: 200
+res:276 rs 68 cp 1547
+i 52 cont: 53  szJ: 200
+res:116 rs 8 cp 1614
+i 53 cont: 54  szJ: 200
+res:124 rs 56 cp 1614
+i 54 cont: 55  szJ: 200
+res:185 rs 83 cp 1699
+i 55 cont: 56  szJ: 200
+res:277 rs 71 cp 1547
+i 56 cont: 57  szJ: 200
+res:177 rs 98 cp 1589
+i 57 cont: 58  szJ: 200
+res:162 rs 63 cp 1614
+i 58 cont: 59  szJ: 200
+res:196 rs 10 cp 1699
+i 59 cont: 60  szJ: 200
+res:206 rs 60 cp 1699
+i 60 cont: 61  szJ: 200
+res:170 rs 49 cp 1614
+i 61 cont: 62  szJ: 200
+res:178 rs 35 cp 1589
+i 62 cont: 63  szJ: 200
+res:225 rs 22 cp 1699
+i 63 cont: 64  szJ: 200
+res:247 rs 36 cp 1699
+i 64 cont: 65  szJ: 200
+res:200 rs 43 cp 1589
+i 65 cont: 66  szJ: 200
+res:292 rs 87 cp 1699
+i 66 cont: 67  szJ: 200
+res:230 rs 44 cp 1589
+i 67 cont: 68  szJ: 200
+res:172 rs 76 cp 1614
+i 68 cont: 69  szJ: 200
+res:254 rs 98 cp 1589
+i 69 cont: 70  szJ: 200
+res:322 rs 12 cp 1699
+i 70 cont: 71  szJ: 200
+res:334 rs 99 cp 1699
+i 71 cont: 72  szJ: 200
+res:305 rs 97 cp 1547
+i 72 cont: 73  szJ: 200
+res:381 rs 99 cp 1699
+i 73 cont: 74  szJ: 200
+res:354 rs 29 cp 1694
+i 74 cont: 75  szJ: 200
+res:284 rs 64 cp 1589
+i 75 cont: 76  szJ: 200
+res:378 rs 35 cp 1694
+i 76 cont: 77  szJ: 200
+res:413 rs 59 cp 1694
+i 77 cont: 78  szJ: 200
+res:337 rs 11 cp 1547
+i 78 cont: 79  szJ: 200
+res:292 rs 5 cp 1589
+i 79 cont: 80  szJ: 200
+res:396 rs 80 cp 1699
+i 80 cont: 81  szJ: 200
+res:340 rs 31 cp 1547
+i 81 cont: 82  szJ: 200
+res:371 rs 39 cp 1547
+i 82 cont: 83  szJ: 200
+res:295 rs 32 cp 1589
+i 83 cont: 84  szJ: 200
+res:420 rs 99 cp 1694
+i 84 cont: 85  szJ: 200
+res:389 rs 74 cp 1547
+i 85 cont: 86  szJ: 200
+res:298 rs 92 cp 1589
+i 86 cont: 87  szJ: 200
+res:424 rs 46 cp 1694
+i 87 cont: 88  szJ: 200
+res:313 rs 30 cp 1589
+i 88 cont: 89  szJ: 200
+res:214 rs 3 cp 1614
+i 89 cont: 90  szJ: 200
+res:217 rs 71 cp 1614
+i 90 cont: 91  szJ: 200
+res:428 rs 16 cp 1694
+i 91 cont: 92  szJ: 200
+res:324 rs 69 cp 1589
+i 92 cont: 93  szJ: 200
+res:229 rs 7 cp 1614
+i 93 cont: 94  szJ: 200
+res:236 rs 35 cp 1614
+i 94 cont: 95  szJ: 200
+res:396 rs 5 cp 1547
+i 95 cont: 96  szJ: 200
+res:401 rs 36 cp 1547
+i 96 cont: 97  szJ: 200
+res:273 rs 71 cp 1614
+i 97 cont: 98  szJ: 200
+res:439 rs 21 cp 1547
+i 98 cont: 99  szJ: 200
+res:325 rs 21 cp 1614
+i 99 cont: 100  szJ: 200
+res:365 rs 13 cp 1589
+i 100 cont: 101  szJ: 200
+res:378 rs 59 cp 1589
+i 101 cont: 102  szJ: 200
+res:467 rs 53 cp 1699
+i 102 cont: 103  szJ: 200
+res:446 rs 52 cp 1694
+i 103 cont: 104  szJ: 200
+res:523 rs 24 cp 1699
+i 104 cont: 105  szJ: 200
+res:407 rs 74 cp 1589
+i 105 cont: 106  szJ: 200
+res:453 rs 27 cp 1694
+i 106 cont: 107  szJ: 200
+res:484 rs 30 cp 1547
+i 107 cont: 108  szJ: 200
+res:342 rs 63 cp 1614
+i 108 cont: 109  szJ: 200
+res:499 rs 4 cp 1547
+i 109 cont: 110  szJ: 200
+res:503 rs 44 cp 1547
+i 110 cont: 111  szJ: 200
+res:487 rs 67 cp 1694
+i 111 cont: 112  szJ: 200
+res:379 rs 28 cp 1614
+i 112 cont: 113  szJ: 200
+res:504 rs 12 cp 1547
+i 113 cont: 114  szJ: 200
+res:516 rs 30 cp 1547
+i 114 cont: 115  szJ: 200
+res:546 rs 23 cp 1547
+i 115 cont: 116  szJ: 200
+res:526 rs 61 cp 1699
+i 116 cont: 117  szJ: 200
+res:569 rs 55 cp 1547
+i 117 cont: 118  szJ: 200
+res:409 rs 80 cp 1614
+i 118 cont: 119  szJ: 200
+res:409 rs 8 cp 1589
+i 119 cont: 120  szJ: 200
+res:417 rs 54 cp 1589
+i 120 cont: 121  szJ: 200
+res:576 rs 37 cp 1547
+i 121 cont: 122  szJ: 200
+res:437 rs 75 cp 1589
+i 122 cont: 123  szJ: 200
+res:509 rs 62 cp 1694
+i 123 cont: 124  szJ: 200
+res:444 rs 32 cp 1614
+i 124 cont: 125  szJ: 200
+res:537 rs 2 cp 1694
+i 125 cont: 126  szJ: 200
+res:539 rs 86 cp 1694
+i 126 cont: 127  szJ: 200
+res:614 rs 9 cp 1547
+i 127 cont: 128  szJ: 200
+res:623 rs 80 cp 1547
+i 128 cont: 129  szJ: 200
+res:566 rs 85 cp 1699
+i 129 cont: 130  szJ: 200
+res:472 rs 34 cp 1614
+i 130 cont: 131  szJ: 200
+res:567 rs 45 cp 1699
+i 131 cont: 132  szJ: 200
+res:566 rs 100 cp 1694
+i 132 cont: 133  szJ: 200
+res:450 rs 74 cp 1589
+i 133 cont: 134  szJ: 200
+res:622 rs 5 cp 1699
+i 134 cont: 135  szJ: 200
+res:627 rs 90 cp 1699
+i 135 cont: 136  szJ: 200
+res:661 rs 19 cp 1547
+i 136 cont: 137  szJ: 200
+res:491 rs 77 cp 1614
+i 137 cont: 138  szJ: 200
+res:584 rs 76 cp 1694
+i 138 cont: 139  szJ: 200
+res:656 rs 92 cp 1699
+i 139 cont: 140  szJ: 200
+res:506 rs 88 cp 1614
+i 140 cont: 141  szJ: 200
+res:585 rs 58 cp 1694
+i 141 cont: 142  szJ: 200
+res:676 rs 46 cp 1699
+i 142 cont: 143  szJ: 200
+res:598 rs 96 cp 1694
+i 143 cont: 144  szJ: 200
+res:518 rs 46 cp 1589
+i 144 cont: 145  szJ: 200
+res:564 rs 29 cp 1589
+i 145 cont: 146  szJ: 200
+res:593 rs 89 cp 1589
+i 146 cont: 147  szJ: 200
+res:671 rs 54 cp 1547
+i 147 cont: 148  szJ: 200
+res:679 rs 9 cp 1699
+i 148 cont: 149  szJ: 200
+res:522 rs 95 cp 1614
+i 149 cont: 150  szJ: 200
+res:701 rs 3 cp 1547
+i 150 cont: 151  szJ: 200
+res:704 rs 64 cp 1547
+i 151 cont: 152  szJ: 200
+res:540 rs 79 cp 1614
+i 152 cont: 153  szJ: 200
+res:719 rs 15 cp 1699
+i 153 cont: 154  szJ: 200
+res:558 rs 68 cp 1614
+i 154 cont: 155  szJ: 200
+res:709 rs 22 cp 1547
+i 155 cont: 156  szJ: 200
+res:608 rs 75 cp 1589
+i 156 cont: 157  szJ: 200
+res:561 rs 24 cp 1614
+i 157 cont: 158  szJ: 200
+res:585 rs 79 cp 1614
+i 158 cont: 159  szJ: 200
+res:602 rs 67 cp 1694
+i 159 cont: 160  szJ: 200
+res:642 rs 29 cp 1589
+i 160 cont: 161  szJ: 200
+res:723 rs 46 cp 1547
+i 161 cont: 162  szJ: 200
+res:768 rs 51 cp 1699
+i 162 cont: 163  szJ: 200
+res:657 rs 48 cp 1589
+i 163 cont: 164  szJ: 200
+res:774 rs 6 cp 1699
+i 164 cont: 165  szJ: 200
+res:780 rs 29 cp 1699
+i 165 cont: 166  szJ: 200
+res:809 rs 16 cp 1699
+i 166 cont: 167  szJ: 200
+res:603 rs 84 cp 1694
+i 167 cont: 168  szJ: 200
+res:665 rs 34 cp 1589
+i 168 cont: 169  szJ: 200
+res:699 rs 13 cp 1589
+i 169 cont: 170  szJ: 200
+res:615 rs 62 cp 1694
+i 170 cont: 171  szJ: 200
+res:677 rs 58 cp 1694
+i 171 cont: 172  szJ: 200
+res:592 rs 97 cp 1614
+i 172 cont: 173  szJ: 200
+res:734 rs 51 cp 1589
+i 173 cont: 174  szJ: 200
+res:728 rs 55 cp 1547
+i 174 cont: 175  szJ: 200
+res:840 rs 15 cp 1699
+i 175 cont: 176  szJ: 200
+res:684 rs 72 cp 1694
+i 176 cont: 177  szJ: 200
+res:737 rs 72 cp 1589
+i 177 cont: 178  szJ: 200
+res:615 rs 88 cp 1614
+i 178 cont: 179  szJ: 200
+res:749 rs 89 cp 1589
+i 179 cont: 180  szJ: 200
+res:700 rs 31 cp 1694
+i 180 cont: 181  szJ: 200
+res:885 rs 88 cp 1699
+i 181 cont: 182  szJ: 200
+res:785 rs 35 cp 1547
+i 182 cont: 183  szJ: 200
+res:616 rs 9 cp 1614
+i 183 cont: 184  szJ: 200
+res:625 rs 44 cp 1614
+i 184 cont: 185  szJ: 200
+res:669 rs 11 cp 1614
+i 185 cont: 186  szJ: 200
+res:889 rs 49 cp 1699
+i 186 cont: 187  szJ: 200
+res:730 rs 96 cp 1694
+i 187 cont: 188  szJ: 200
+res:810 rs 45 cp 1589
+i 188 cont: 189  szJ: 200
+res:736 rs 92 cp 1694
+i 189 cont: 190  szJ: 200
+res:812 rs 91 cp 1589
+i 190 cont: 191  szJ: 200
+res:907 rs 25 cp 1699
+i 191 cont: 192  szJ: 200
+res:809 rs 29 cp 1547
+i 192 cont: 193  szJ: 200
+res:686 rs 71 cp 1614
+i 193 cont: 194  szJ: 200
+res:910 rs 43 cp 1699
+i 194 cont: 195  szJ: 200
+res:832 rs 55 cp 1547
+i 195 cont: 196  szJ: 200
+res:712 rs 20 cp 1614
+i 196 cont: 197  szJ: 200
+res:741 rs 53 cp 1694
+i 197 cont: 198  szJ: 200
+res:757 rs 96 cp 1614
+i 198 cont: 199  szJ: 200
+res:742 rs 67 cp 1694
+i 199 cont: 200  szJ: 200
+i:1
+2.329852 1.329852
+res:0 rs 97 cp 0
+i 0 cont: 1  szJ: 200
+res:5 rs 32 cp 1699
+i 1 cont: 2  szJ: 200
+res:27 rs 15 cp 1547
+i 2 cont: 3  szJ: 200
+res:42 rs 58 cp 1547
+i 3 cont: 4  szJ: 200
+res:68 rs 79 cp 1699
+i 4 cont: 5  szJ: 200
+res:14 rs 61 cp 1589
+i 5 cont: 6  szJ: 200
+res:6 rs 55 cp 1614
+i 6 cont: 7  szJ: 200
+res:17 rs 62 cp 1589
+i 7 cont: 8  szJ: 200
+res:55 rs 9 cp 1547
+i 8 cont: 9  szJ: 200
+res:26 rs 72 cp 1614
+i 9 cont: 10  szJ: 200
+res:36 rs 3 cp 1589
+i 10 cont: 11  szJ: 200
+res:39 rs 52 cp 1589
+i 11 cont: 12  szJ: 200
+res:60 rs 50 cp 1614
+i 12 cont: 13  szJ: 200
+res:110 rs 41 cp 1614
+i 13 cont: 14  szJ: 200
+res:40 rs 33 cp 1589
+i 14 cont: 15  szJ: 200
+res:127 rs 24 cp 1614
+i 15 cont: 16  szJ: 200
+res:43 rs 68 cp 1589
+i 16 cont: 17  szJ: 200
+res:105 rs 14 cp 1699
+i 17 cont: 18  szJ: 200
+res:119 rs 81 cp 1699
+i 18 cont: 19  szJ: 200
+res:26 rs 48 cp 1694
+i 19 cont: 20  szJ: 200
+res:74 rs 80 cp 1694
+i 20 cont: 21  szJ: 200
+res:152 rs 9 cp 1699
+i 21 cont: 22  szJ: 200
+res:161 rs 39 cp 1699
+i 22 cont: 23  szJ: 200
+res:200 rs 28 cp 1699
+i 23 cont: 24  szJ: 200
+res:45 rs 85 cp 1589
+i 24 cont: 25  szJ: 200
+res:68 rs 63 cp 1547
+i 25 cont: 26  szJ: 200
+res:77 rs 43 cp 1694
+i 26 cont: 27  szJ: 200
+res:120 rs 85 cp 1694
+i 27 cont: 28  szJ: 200
+res:55 rs 42 cp 1589
+i 28 cont: 29  szJ: 200
+res:102 rs 55 cp 1547
+i 29 cont: 30  szJ: 200
+res:157 rs 33 cp 1547
+i 30 cont: 31  szJ: 200
+res:190 rs 6 cp 1547
+i 31 cont: 32  szJ: 200
+res:196 rs 55 cp 1547
+i 32 cont: 33  szJ: 200
+res:133 rs 8 cp 1614
+i 33 cont: 34  szJ: 200
+res:125 rs 36 cp 1694
+i 34 cont: 35  szJ: 200
+res:161 rs 13 cp 1694
+i 35 cont: 36  szJ: 200
+res:225 rs 93 cp 1699
+i 36 cont: 37  szJ: 200
+res:227 rs 11 cp 1694
+i 37 cont: 38  szJ: 200
+res:238 rs 73 cp 1694
+i 38 cont: 39  szJ: 200
+res:214 rs 5 cp 1547
+i 39 cont: 40  szJ: 200
+res:64 rs 49 cp 1589
+i 40 cont: 41  szJ: 200
+res:152 rs 60 cp 1614
+i 41 cont: 42  szJ: 200
+res:94 rs 87 cp 1589
+i 42 cont: 43  szJ: 200
+res:157 rs 56 cp 1614
+i 43 cont: 44  szJ: 200
+res:260 rs 49 cp 1694
+i 44 cont: 45  szJ: 200
+res:175 rs 24 cp 1614
+i 45 cont: 46  szJ: 200
+res:247 rs 76 cp 1699
+i 46 cont: 47  szJ: 200
+res:266 rs 68 cp 1694
+i 47 cont: 48  szJ: 200
+res:240 rs 33 cp 1547
+i 48 cont: 49  szJ: 200
+res:275 rs 11 cp 1694
+i 49 cont: 50  szJ: 200
+res:286 rs 12 cp 1694
+i 50 cont: 51  szJ: 200
+res:298 rs 46 cp 1694
+i 51 cont: 52  szJ: 200
+res:282 rs 68 cp 1547
+i 52 cont: 53  szJ: 200
+res:179 rs 8 cp 1614
+i 53 cont: 54  szJ: 200
+res:187 rs 56 cp 1614
+i 54 cont: 55  szJ: 200
+res:248 rs 83 cp 1699
+i 55 cont: 56  szJ: 200
+res:283 rs 71 cp 1547
+i 56 cont: 57  szJ: 200
+res:138 rs 98 cp 1589
+i 57 cont: 58  szJ: 200
+res:225 rs 63 cp 1614
+i 58 cont: 59  szJ: 200
+res:259 rs 10 cp 1699
+i 59 cont: 60  szJ: 200
+res:269 rs 60 cp 1699
+i 60 cont: 61  szJ: 200
+res:233 rs 49 cp 1614
+i 61 cont: 62  szJ: 200
+res:139 rs 35 cp 1589
+i 62 cont: 63  szJ: 200
+res:288 rs 22 cp 1699
+i 63 cont: 64  szJ: 200
+res:310 rs 36 cp 1699
+i 64 cont: 65  szJ: 200
+res:161 rs 43 cp 1589
+i 65 cont: 66  szJ: 200
+res:355 rs 87 cp 1699
+i 66 cont: 67  szJ: 200
+res:191 rs 44 cp 1589
+i 67 cont: 68  szJ: 200
+res:235 rs 76 cp 1614
+i 68 cont: 69  szJ: 200
+res:215 rs 98 cp 1589
+i 69 cont: 70  szJ: 200
+res:385 rs 12 cp 1699
+i 70 cont: 71  szJ: 200
+res:397 rs 99 cp 1699
+i 71 cont: 72  szJ: 200
+res:311 rs 97 cp 1547
+i 72 cont: 73  szJ: 200
+res:444 rs 99 cp 1699
+i 73 cont: 74  szJ: 200
+res:345 rs 29 cp 1694
+i 74 cont: 75  szJ: 200
+res:245 rs 64 cp 1589
+i 75 cont: 76  szJ: 200
+res:369 rs 35 cp 1694
+i 76 cont: 77  szJ: 200
+res:404 rs 59 cp 1694
+i 77 cont: 78  szJ: 200
+res:343 rs 11 cp 1547
+i 78 cont: 79  szJ: 200
+res:253 rs 5 cp 1589
+i 79 cont: 80  szJ: 200
+res:459 rs 80 cp 1699
+i 80 cont: 81  szJ: 200
+res:346 rs 31 cp 1547
+i 81 cont: 82  szJ: 200
+res:377 rs 39 cp 1547
+i 82 cont: 83  szJ: 200
+res:256 rs 32 cp 1589
+i 83 cont: 84  szJ: 200
+res:411 rs 99 cp 1694
+i 84 cont: 85  szJ: 200
+res:395 rs 74 cp 1547
+i 85 cont: 86  szJ: 200
+res:259 rs 92 cp 1589
+i 86 cont: 87  szJ: 200
+res:415 rs 46 cp 1694
+i 87 cont: 88  szJ: 200
+res:274 rs 30 cp 1589
+i 88 cont: 89  szJ: 200
+res:277 rs 3 cp 1614
+i 89 cont: 90  szJ: 200
+res:280 rs 71 cp 1614
+i 90 cont: 91  szJ: 200
+res:419 rs 16 cp 1694
+i 91 cont: 92  szJ: 200
+res:285 rs 69 cp 1589
+i 92 cont: 93  szJ: 200
+res:292 rs 7 cp 1614
+i 93 cont: 94  szJ: 200
+res:299 rs 35 cp 1614
+i 94 cont: 95  szJ: 200
+res:402 rs 5 cp 1547
+i 95 cont: 96  szJ: 200
+res:306 rs 55 cp 1589
+i 96 cont: 97  szJ: 200
+res:336 rs 71 cp 1614
+i 97 cont: 98  szJ: 200
+res:440 rs 21 cp 1547
+i 98 cont: 99  szJ: 200
+res:388 rs 21 cp 1614
+i 99 cont: 100  szJ: 200
+res:347 rs 13 cp 1589
+i 100 cont: 101  szJ: 200
+res:478 rs 71 cp 1699
+i 101 cont: 102  szJ: 200
+res:549 rs 53 cp 1699
+i 102 cont: 103  szJ: 200
+res:437 rs 52 cp 1694
+i 103 cont: 104  szJ: 200
+res:605 rs 24 cp 1699
+i 104 cont: 105  szJ: 200
+res:376 rs 74 cp 1589
+i 105 cont: 106  szJ: 200
+res:444 rs 27 cp 1694
+i 106 cont: 107  szJ: 200
+res:485 rs 30 cp 1547
+i 107 cont: 108  szJ: 200
+res:405 rs 63 cp 1614
+i 108 cont: 109  szJ: 200
+res:500 rs 4 cp 1547
+i 109 cont: 110  szJ: 200
+res:504 rs 44 cp 1547
+i 110 cont: 111  szJ: 200
+res:478 rs 67 cp 1694
+i 111 cont: 112  szJ: 200
+res:442 rs 28 cp 1614
+i 112 cont: 113  szJ: 200
+res:505 rs 12 cp 1547
+i 113 cont: 114  szJ: 200
+res:517 rs 30 cp 1547
+i 114 cont: 115  szJ: 200
+res:547 rs 23 cp 1547
+i 115 cont: 116  szJ: 200
+res:570 rs 23 cp 1547
+i 116 cont: 117  szJ: 200
+res:593 rs 55 cp 1547
+i 117 cont: 118  szJ: 200
+res:472 rs 80 cp 1614
+i 118 cont: 119  szJ: 200
+res:378 rs 8 cp 1589
+i 119 cont: 120  szJ: 200
+res:386 rs 54 cp 1589
+i 120 cont: 121  szJ: 200
+res:600 rs 37 cp 1547
+i 121 cont: 122  szJ: 200
+res:406 rs 75 cp 1589
+i 122 cont: 123  szJ: 200
+res:500 rs 62 cp 1694
+i 123 cont: 124  szJ: 200
+res:507 rs 32 cp 1614
+i 124 cont: 125  szJ: 200
+res:528 rs 2 cp 1694
+i 125 cont: 126  szJ: 200
+res:530 rs 86 cp 1694
+i 126 cont: 127  szJ: 200
+res:638 rs 9 cp 1547
+i 127 cont: 128  szJ: 200
+res:647 rs 80 cp 1547
+i 128 cont: 129  szJ: 200
+res:645 rs 85 cp 1699
+i 129 cont: 130  szJ: 200
+res:535 rs 34 cp 1614
+i 130 cont: 131  szJ: 200
+res:646 rs 45 cp 1699
+i 131 cont: 132  szJ: 200
+res:557 rs 100 cp 1694
+i 132 cont: 133  szJ: 200
+res:570 rs 60 cp 1614
+i 133 cont: 134  szJ: 200
+res:701 rs 5 cp 1699
+i 134 cont: 135  szJ: 200
+res:706 rs 90 cp 1699
+i 135 cont: 136  szJ: 200
+res:685 rs 19 cp 1547
+i 136 cont: 137  szJ: 200
+res:589 rs 77 cp 1614
+i 137 cont: 138  szJ: 200
+res:575 rs 76 cp 1694
+i 138 cont: 139  szJ: 200
+res:735 rs 92 cp 1699
+i 139 cont: 140  szJ: 200
+res:604 rs 88 cp 1614
+i 140 cont: 141  szJ: 200
+res:576 rs 58 cp 1694
+i 141 cont: 142  szJ: 200
+res:755 rs 46 cp 1699
+i 142 cont: 143  szJ: 200
+res:589 rs 96 cp 1694
+i 143 cont: 144  szJ: 200
+res:474 rs 46 cp 1589
+i 144 cont: 145  szJ: 200
+res:520 rs 29 cp 1589
+i 145 cont: 146  szJ: 200
+res:549 rs 89 cp 1589
+i 146 cont: 147  szJ: 200
+res:695 rs 54 cp 1547
+i 147 cont: 148  szJ: 200
+res:758 rs 9 cp 1699
+i 148 cont: 149  szJ: 200
+res:620 rs 95 cp 1614
+i 149 cont: 150  szJ: 200
+res:725 rs 3 cp 1547
+i 150 cont: 151  szJ: 200
+res:728 rs 64 cp 1547
+i 151 cont: 152  szJ: 200
+res:638 rs 79 cp 1614
+i 152 cont: 153  szJ: 200
+res:798 rs 15 cp 1699
+i 153 cont: 154  szJ: 200
+res:656 rs 68 cp 1614
+i 154 cont: 155  szJ: 200
+res:733 rs 22 cp 1547
+i 155 cont: 156  szJ: 200
+res:564 rs 75 cp 1589
+i 156 cont: 157  szJ: 200
+res:659 rs 24 cp 1614
+i 157 cont: 158  szJ: 200
+res:683 rs 79 cp 1614
+i 158 cont: 159  szJ: 200
+res:593 rs 67 cp 1694
+i 159 cont: 160  szJ: 200
+res:598 rs 29 cp 1589
+i 160 cont: 161  szJ: 200
+res:627 rs 72 cp 1589
+i 161 cont: 162  szJ: 200
+res:847 rs 51 cp 1699
+i 162 cont: 163  szJ: 200
+res:642 rs 48 cp 1589
+i 163 cont: 164  szJ: 200
+res:853 rs 6 cp 1699
+i 164 cont: 165  szJ: 200
+res:859 rs 29 cp 1699
+i 165 cont: 166  szJ: 200
+res:888 rs 16 cp 1699
+i 166 cont: 167  szJ: 200
+res:594 rs 84 cp 1694
+i 167 cont: 168  szJ: 200
+res:650 rs 34 cp 1589
+i 168 cont: 169  szJ: 200
+res:684 rs 13 cp 1589
+i 169 cont: 170  szJ: 200
+res:606 rs 62 cp 1694
+i 170 cont: 171  szJ: 200
+res:668 rs 58 cp 1694
+i 171 cont: 172  szJ: 200
+res:690 rs 97 cp 1614
+i 172 cont: 173  szJ: 200
+res:719 rs 51 cp 1589
+i 173 cont: 174  szJ: 200
+res:738 rs 55 cp 1547
+i 174 cont: 175  szJ: 200
+res:919 rs 15 cp 1699
+i 175 cont: 176  szJ: 200
+res:675 rs 72 cp 1694
+i 176 cont: 177  szJ: 200
+res:722 rs 72 cp 1589
+i 177 cont: 178  szJ: 200
+res:713 rs 88 cp 1614
+i 178 cont: 179  szJ: 200
+res:734 rs 89 cp 1589
+i 179 cont: 180  szJ: 200
+res:691 rs 31 cp 1694
+i 180 cont: 181  szJ: 200
+res:964 rs 88 cp 1699
+i 181 cont: 182  szJ: 200
+res:795 rs 35 cp 1547
+i 182 cont: 183  szJ: 200
+res:714 rs 9 cp 1614
+i 183 cont: 184  szJ: 200
+res:723 rs 44 cp 1614
+i 184 cont: 185  szJ: 200
+res:767 rs 11 cp 1614
+i 185 cont: 186  szJ: 200
+res:968 rs 49 cp 1699
+i 186 cont: 187  szJ: 200
+res:721 rs 96 cp 1694
+i 187 cont: 188  szJ: 200
+res:795 rs 45 cp 1589
+i 188 cont: 189  szJ: 200
+res:727 rs 92 cp 1694
+i 189 cont: 190  szJ: 200
+res:797 rs 91 cp 1589
+i 190 cont: 191  szJ: 200
+res:986 rs 25 cp 1699
+i 191 cont: 192  szJ: 200
+res:819 rs 29 cp 1547
+i 192 cont: 193  szJ: 200
+res:784 rs 71 cp 1614
+i 193 cont: 194  szJ: 200
+res:989 rs 43 cp 1699
+i 194 cont: 195  szJ: 200
+res:842 rs 55 cp 1547
+i 195 cont: 196  szJ: 200
+res:810 rs 20 cp 1614
+i 196 cont: 197  szJ: 200
+res:830 rs 45 cp 1614
+i 197 cont: 198  szJ: 200
+res:780 rs 1 cp 1694
+i 198 cont: 199  szJ: 200
+res:781 rs 67 cp 1694
+i 199 cont: 200  szJ: 200
+i:2
+2.286728 1.286728
+res:0 rs 97 cp 0
+i 0 cont: 1  szJ: 200
+res:5 rs 32 cp 1699
+i 1 cont: 2  szJ: 200
+res:27 rs 15 cp 1547
+i 2 cont: 3  szJ: 200
+res:42 rs 58 cp 1547
+i 3 cont: 4  szJ: 200
+res:68 rs 79 cp 1699
+i 4 cont: 5  szJ: 200
+res:14 rs 61 cp 1589
+i 5 cont: 6  szJ: 200
+res:6 rs 55 cp 1614
+i 6 cont: 7  szJ: 200
+res:17 rs 62 cp 1589
+i 7 cont: 8  szJ: 200
+res:55 rs 9 cp 1547
+i 8 cont: 9  szJ: 200
+res:26 rs 72 cp 1614
+i 9 cont: 10  szJ: 200
+res:36 rs 3 cp 1589
+i 10 cont: 11  szJ: 200
+res:39 rs 52 cp 1589
+i 11 cont: 12  szJ: 200
+res:60 rs 50 cp 1614
+i 12 cont: 13  szJ: 200
+res:110 rs 41 cp 1614
+i 13 cont: 14  szJ: 200
+res:40 rs 33 cp 1589
+i 14 cont: 15  szJ: 200
+res:127 rs 24 cp 1614
+i 15 cont: 16  szJ: 200
+res:43 rs 68 cp 1589
+i 16 cont: 17  szJ: 200
+res:105 rs 14 cp 1699
+i 17 cont: 18  szJ: 200
+res:119 rs 81 cp 1699
+i 18 cont: 19  szJ: 200
+res:26 rs 48 cp 1694
+i 19 cont: 20  szJ: 200
+res:74 rs 80 cp 1694
+i 20 cont: 21  szJ: 200
+res:152 rs 9 cp 1699
+i 21 cont: 22  szJ: 200
+res:161 rs 39 cp 1699
+i 22 cont: 23  szJ: 200
+res:200 rs 28 cp 1699
+i 23 cont: 24  szJ: 200
+res:45 rs 85 cp 1589
+i 24 cont: 25  szJ: 200
+res:68 rs 63 cp 1547
+i 25 cont: 26  szJ: 200
+res:77 rs 43 cp 1694
+i 26 cont: 27  szJ: 200
+res:120 rs 85 cp 1694
+i 27 cont: 28  szJ: 200
+res:55 rs 42 cp 1589
+i 28 cont: 29  szJ: 200
+res:102 rs 55 cp 1547
+i 29 cont: 30  szJ: 200
+res:157 rs 33 cp 1547
+i 30 cont: 31  szJ: 200
+res:190 rs 6 cp 1547
+i 31 cont: 32  szJ: 200
+res:196 rs 55 cp 1547
+i 32 cont: 33  szJ: 200
+res:133 rs 8 cp 1614
+i 33 cont: 34  szJ: 200
+res:125 rs 36 cp 1694
+i 34 cont: 35  szJ: 200
+res:161 rs 13 cp 1694
+i 35 cont: 36  szJ: 200
+res:225 rs 93 cp 1699
+i 36 cont: 37  szJ: 200
+res:227 rs 11 cp 1694
+i 37 cont: 38  szJ: 200
+res:238 rs 73 cp 1694
+i 38 cont: 39  szJ: 200
+res:214 rs 5 cp 1547
+i 39 cont: 40  szJ: 200
+res:64 rs 49 cp 1589
+i 40 cont: 41  szJ: 200
+res:152 rs 60 cp 1614
+i 41 cont: 42  szJ: 200
+res:94 rs 87 cp 1589
+i 42 cont: 43  szJ: 200
+res:157 rs 56 cp 1614
+i 43 cont: 44  szJ: 200
+res:260 rs 49 cp 1694
+i 44 cont: 45  szJ: 200
+res:175 rs 24 cp 1614
+i 45 cont: 46  szJ: 200
+res:247 rs 76 cp 1699
+i 46 cont: 47  szJ: 200
+res:266 rs 68 cp 1694
+i 47 cont: 48  szJ: 200
+res:240 rs 33 cp 1547
+i 48 cont: 49  szJ: 200
+res:275 rs 11 cp 1694
+i 49 cont: 50  szJ: 200
+res:286 rs 12 cp 1694
+i 50 cont: 51  szJ: 200
+res:298 rs 46 cp 1694
+i 51 cont: 52  szJ: 200
+res:282 rs 68 cp 1547
+i 52 cont: 53  szJ: 200
+res:179 rs 8 cp 1614
+i 53 cont: 54  szJ: 200
+res:187 rs 56 cp 1614
+i 54 cont: 55  szJ: 200
+res:248 rs 83 cp 1699
+i 55 cont: 56  szJ: 200
+res:283 rs 71 cp 1547
+i 56 cont: 57  szJ: 200
+res:138 rs 98 cp 1589
+i 57 cont: 58  szJ: 200
+res:225 rs 63 cp 1614
+i 58 cont: 59  szJ: 200
+res:259 rs 10 cp 1699
+i 59 cont: 60  szJ: 200
+res:269 rs 60 cp 1699
+i 60 cont: 61  szJ: 200
+res:233 rs 49 cp 1614
+i 61 cont: 62  szJ: 200
+res:139 rs 35 cp 1589
+i 62 cont: 63  szJ: 200
+res:288 rs 22 cp 1699
+i 63 cont: 64  szJ: 200
+res:310 rs 36 cp 1699
+i 64 cont: 65  szJ: 200
+res:161 rs 43 cp 1589
+i 65 cont: 66  szJ: 200
+res:355 rs 87 cp 1699
+i 66 cont: 67  szJ: 200
+res:191 rs 44 cp 1589
+i 67 cont: 68  szJ: 200
+res:235 rs 76 cp 1614
+i 68 cont: 69  szJ: 200
+res:215 rs 98 cp 1589
+i 69 cont: 70  szJ: 200
+res:385 rs 12 cp 1699
+i 70 cont: 71  szJ: 200
+res:397 rs 99 cp 1699
+i 71 cont: 72  szJ: 200
+res:311 rs 97 cp 1547
+i 72 cont: 73  szJ: 200
+res:444 rs 99 cp 1699
+i 73 cont: 74  szJ: 200
+res:345 rs 29 cp 1694
+i 74 cont: 75  szJ: 200
+res:245 rs 64 cp 1589
+i 75 cont: 76  szJ: 200
+res:369 rs 35 cp 1694
+i 76 cont: 77  szJ: 200
+res:404 rs 59 cp 1694
+i 77 cont: 78  szJ: 200
+res:343 rs 11 cp 1547
+i 78 cont: 79  szJ: 200
+res:253 rs 5 cp 1589
+i 79 cont: 80  szJ: 200
+res:459 rs 80 cp 1699
+i 80 cont: 81  szJ: 200
+res:346 rs 31 cp 1547
+i 81 cont: 82  szJ: 200
+res:377 rs 39 cp 1547
+i 82 cont: 83  szJ: 200
+res:256 rs 32 cp 1589
+i 83 cont: 84  szJ: 200
+res:411 rs 99 cp 1694
+i 84 cont: 85  szJ: 200
+res:395 rs 74 cp 1547
+i 85 cont: 86  szJ: 200
+res:259 rs 92 cp 1589
+i 86 cont: 87  szJ: 200
+res:415 rs 46 cp 1694
+i 87 cont: 88  szJ: 200
+res:274 rs 30 cp 1589
+i 88 cont: 89  szJ: 200
+res:277 rs 3 cp 1614
+i 89 cont: 90  szJ: 200
+res:280 rs 71 cp 1614
+i 90 cont: 91  szJ: 200
+res:419 rs 16 cp 1694
+i 91 cont: 92  szJ: 200
+res:285 rs 69 cp 1589
+i 92 cont: 93  szJ: 200
+res:292 rs 7 cp 1614
+i 93 cont: 94  szJ: 200
+res:299 rs 35 cp 1614
+i 94 cont: 95  szJ: 200
+res:402 rs 5 cp 1547
+i 95 cont: 96  szJ: 200
+res:306 rs 55 cp 1589
+i 96 cont: 97  szJ: 200
+res:336 rs 71 cp 1614
+i 97 cont: 98  szJ: 200
+res:440 rs 21 cp 1547
+i 98 cont: 99  szJ: 200
+res:388 rs 21 cp 1614
+i 99 cont: 100  szJ: 200
+res:347 rs 13 cp 1589
+i 100 cont: 101  szJ: 200
+res:478 rs 71 cp 1699
+i 101 cont: 102  szJ: 200
+res:549 rs 53 cp 1699
+i 102 cont: 103  szJ: 200
+res:437 rs 52 cp 1694
+i 103 cont: 104  szJ: 200
+res:605 rs 24 cp 1699
+i 104 cont: 105  szJ: 200
+res:376 rs 74 cp 1589
+i 105 cont: 106  szJ: 200
+res:444 rs 27 cp 1694
+i 106 cont: 107  szJ: 200
+res:485 rs 30 cp 1547
+i 107 cont: 108  szJ: 200
+res:405 rs 63 cp 1614
+i 108 cont: 109  szJ: 200
+res:500 rs 4 cp 1547
+i 109 cont: 110  szJ: 200
+res:504 rs 44 cp 1547
+i 110 cont: 111  szJ: 200
+res:478 rs 67 cp 1694
+i 111 cont: 112  szJ: 200
+res:442 rs 28 cp 1614
+i 112 cont: 113  szJ: 200
+res:505 rs 12 cp 1547
+i 113 cont: 114  szJ: 200
+res:517 rs 30 cp 1547
+i 114 cont: 115  szJ: 200
+res:547 rs 23 cp 1547
+i 115 cont: 116  szJ: 200
+res:570 rs 23 cp 1547
+i 116 cont: 117  szJ: 200
+res:593 rs 55 cp 1547
+i 117 cont: 118  szJ: 200
+res:472 rs 80 cp 1614
+i 118 cont: 119  szJ: 200
+res:378 rs 8 cp 1589
+i 119 cont: 120  szJ: 200
+res:386 rs 54 cp 1589
+i 120 cont: 121  szJ: 200
+res:600 rs 37 cp 1547
+i 121 cont: 122  szJ: 200
+res:406 rs 75 cp 1589
+i 122 cont: 123  szJ: 200
+res:500 rs 62 cp 1694
+i 123 cont: 124  szJ: 200
+res:507 rs 32 cp 1614
+i 124 cont: 125  szJ: 200
+res:528 rs 2 cp 1694
+i 125 cont: 126  szJ: 200
+res:530 rs 86 cp 1694
+i 126 cont: 127  szJ: 200
+res:638 rs 9 cp 1547
+i 127 cont: 128  szJ: 200
+res:647 rs 80 cp 1547
+i 128 cont: 129  szJ: 200
+res:645 rs 85 cp 1699
+i 129 cont: 130  szJ: 200
+res:535 rs 34 cp 1614
+i 130 cont: 131  szJ: 200
+res:646 rs 45 cp 1699
+i 131 cont: 132  szJ: 200
+res:557 rs 100 cp 1694
+i 132 cont: 133  szJ: 200
+res:570 rs 60 cp 1614
+i 133 cont: 134  szJ: 200
+res:701 rs 5 cp 1699
+i 134 cont: 135  szJ: 200
+res:706 rs 90 cp 1699
+i 135 cont: 136  szJ: 200
+res:685 rs 19 cp 1547
+i 136 cont: 137  szJ: 200
+res:589 rs 77 cp 1614
+i 137 cont: 138  szJ: 200
+res:575 rs 76 cp 1694
+i 138 cont: 139  szJ: 200
+res:735 rs 92 cp 1699
+i 139 cont: 140  szJ: 200
+res:604 rs 88 cp 1614
+i 140 cont: 141  szJ: 200
+res:576 rs 58 cp 1694
+i 141 cont: 142  szJ: 200
+res:755 rs 46 cp 1699
+i 142 cont: 143  szJ: 200
+res:589 rs 96 cp 1694
+i 143 cont: 144  szJ: 200
+res:474 rs 46 cp 1589
+i 144 cont: 145  szJ: 200
+res:520 rs 29 cp 1589
+i 145 cont: 146  szJ: 200
+res:549 rs 89 cp 1589
+i 146 cont: 147  szJ: 200
+res:695 rs 54 cp 1547
+i 147 cont: 148  szJ: 200
+res:758 rs 9 cp 1699
+i 148 cont: 149  szJ: 200
+res:620 rs 95 cp 1614
+i 149 cont: 150  szJ: 200
+res:725 rs 3 cp 1547
+i 150 cont: 151  szJ: 200
+res:728 rs 64 cp 1547
+i 151 cont: 152  szJ: 200
+res:638 rs 79 cp 1614
+i 152 cont: 153  szJ: 200
+res:798 rs 15 cp 1699
+i 153 cont: 154  szJ: 200
+res:656 rs 68 cp 1614
+i 154 cont: 155  szJ: 200
+res:733 rs 22 cp 1547
+i 155 cont: 156  szJ: 200
+res:564 rs 75 cp 1589
+i 156 cont: 157  szJ: 200
+res:659 rs 24 cp 1614
+i 157 cont: 158  szJ: 200
+res:683 rs 79 cp 1614
+i 158 cont: 159  szJ: 200
+res:593 rs 67 cp 1694
+i 159 cont: 160  szJ: 200
+res:598 rs 29 cp 1589
+i 160 cont: 161  szJ: 200
+res:627 rs 72 cp 1589
+i 161 cont: 162  szJ: 200
+res:847 rs 51 cp 1699
+i 162 cont: 163  szJ: 200
+res:642 rs 48 cp 1589
+i 163 cont: 164  szJ: 200
+res:853 rs 6 cp 1699
+i 164 cont: 165  szJ: 200
+res:859 rs 29 cp 1699
+i 165 cont: 166  szJ: 200
+res:888 rs 16 cp 1699
+i 166 cont: 167  szJ: 200
+res:594 rs 84 cp 1694
+i 167 cont: 168  szJ: 200
+res:650 rs 34 cp 1589
+i 168 cont: 169  szJ: 200
+res:684 rs 13 cp 1589
+i 169 cont: 170  szJ: 200
+res:606 rs 62 cp 1694
+i 170 cont: 171  szJ: 200
+res:668 rs 58 cp 1694
+i 171 cont: 172  szJ: 200
+res:690 rs 97 cp 1614
+i 172 cont: 173  szJ: 200
+res:719 rs 51 cp 1589
+i 173 cont: 174  szJ: 200
+res:738 rs 55 cp 1547
+i 174 cont: 175  szJ: 200
+res:919 rs 15 cp 1699
+i 175 cont: 176  szJ: 200
+res:675 rs 72 cp 1694
+i 176 cont: 177  szJ: 200
+res:722 rs 72 cp 1589
+i 177 cont: 178  szJ: 200
+res:713 rs 88 cp 1614
+i 178 cont: 179  szJ: 200
+res:734 rs 89 cp 1589
+i 179 cont: 180  szJ: 200
+res:691 rs 31 cp 1694
+i 180 cont: 181  szJ: 200
+res:964 rs 88 cp 1699
+i 181 cont: 182  szJ: 200
+res:795 rs 35 cp 1547
+i 182 cont: 183  szJ: 200
+res:714 rs 9 cp 1614
+i 183 cont: 184  szJ: 200
+res:723 rs 44 cp 1614
+i 184 cont: 185  szJ: 200
+res:767 rs 11 cp 1614
+i 185 cont: 186  szJ: 200
+res:968 rs 49 cp 1699
+i 186 cont: 187  szJ: 200
+res:721 rs 96 cp 1694
+i 187 cont: 188  szJ: 200
+res:795 rs 45 cp 1589
+i 188 cont: 189  szJ: 200
+res:727 rs 92 cp 1694
+i 189 cont: 190  szJ: 200
+res:797 rs 91 cp 1589
+i 190 cont: 191  szJ: 200
+res:986 rs 25 cp 1699
+i 191 cont: 192  szJ: 200
+res:819 rs 29 cp 1547
+i 192 cont: 193  szJ: 200
+res:784 rs 71 cp 1614
+i 193 cont: 194  szJ: 200
+res:989 rs 43 cp 1699
+i 194 cont: 195  szJ: 200
+res:842 rs 55 cp 1547
+i 195 cont: 196  szJ: 200
+res:810 rs 20 cp 1614
+i 196 cont: 197  szJ: 200
+res:830 rs 45 cp 1614
+i 197 cont: 198  szJ: 200
+res:780 rs 1 cp 1694
+i 198 cont: 199  szJ: 200
+res:781 rs 67 cp 1694
+i 199 cont: 200  szJ: 200
+i:3
+2.307839 1.307840
+res:0 rs 97 cp 0
+i 0 cont: 1  szJ: 200
+res:5 rs 32 cp 1699
+i 1 cont: 2  szJ: 200
+res:27 rs 15 cp 1547
+i 2 cont: 3  szJ: 200
+res:42 rs 58 cp 1547
+i 3 cont: 4  szJ: 200
+res:68 rs 79 cp 1699
+i 4 cont: 5  szJ: 200
+res:14 rs 61 cp 1589
+i 5 cont: 6  szJ: 200
+res:6 rs 55 cp 1614
+i 6 cont: 7  szJ: 200
+res:17 rs 62 cp 1589
+i 7 cont: 8  szJ: 200
+res:55 rs 9 cp 1547
+i 8 cont: 9  szJ: 200
+res:26 rs 72 cp 1614
+i 9 cont: 10  szJ: 200
+res:36 rs 3 cp 1589
+i 10 cont: 11  szJ: 200
+res:39 rs 52 cp 1589
+i 11 cont: 12  szJ: 200
+res:60 rs 50 cp 1614
+i 12 cont: 13  szJ: 200
+res:110 rs 41 cp 1614
+i 13 cont: 14  szJ: 200
+res:40 rs 33 cp 1589
+i 14 cont: 15  szJ: 200
+res:127 rs 24 cp 1614
+i 15 cont: 16  szJ: 200
+res:43 rs 68 cp 1589
+i 16 cont: 17  szJ: 200
+res:105 rs 14 cp 1699
+i 17 cont: 18  szJ: 200
+res:119 rs 81 cp 1699
+i 18 cont: 19  szJ: 200
+res:26 rs 48 cp 1694
+i 19 cont: 20  szJ: 200
+res:74 rs 80 cp 1694
+i 20 cont: 21  szJ: 200
+res:152 rs 9 cp 1699
+i 21 cont: 22  szJ: 200
+res:161 rs 39 cp 1699
+i 22 cont: 23  szJ: 200
+res:200 rs 28 cp 1699
+i 23 cont: 24  szJ: 200
+res:45 rs 85 cp 1589
+i 24 cont: 25  szJ: 200
+res:68 rs 63 cp 1547
+i 25 cont: 26  szJ: 200
+res:77 rs 43 cp 1694
+i 26 cont: 27  szJ: 200
+res:120 rs 85 cp 1694
+i 27 cont: 28  szJ: 200
+res:55 rs 42 cp 1589
+i 28 cont: 29  szJ: 200
+res:102 rs 55 cp 1547
+i 29 cont: 30  szJ: 200
+res:157 rs 33 cp 1547
+i 30 cont: 31  szJ: 200
+res:190 rs 6 cp 1547
+i 31 cont: 32  szJ: 200
+res:196 rs 55 cp 1547
+i 32 cont: 33  szJ: 200
+res:133 rs 8 cp 1614
+i 33 cont: 34  szJ: 200
+res:125 rs 36 cp 1694
+i 34 cont: 35  szJ: 200
+res:161 rs 13 cp 1694
+i 35 cont: 36  szJ: 200
+res:225 rs 93 cp 1699
+i 36 cont: 37  szJ: 200
+res:227 rs 11 cp 1694
+i 37 cont: 38  szJ: 200
+res:238 rs 73 cp 1694
+i 38 cont: 39  szJ: 200
+res:214 rs 5 cp 1547
+i 39 cont: 40  szJ: 200
+res:64 rs 49 cp 1589
+i 40 cont: 41  szJ: 200
+res:152 rs 60 cp 1614
+i 41 cont: 42  szJ: 200
+res:94 rs 87 cp 1589
+i 42 cont: 43  szJ: 200
+res:157 rs 56 cp 1614
+i 43 cont: 44  szJ: 200
+res:260 rs 49 cp 1694
+i 44 cont: 45  szJ: 200
+res:175 rs 24 cp 1614
+i 45 cont: 46  szJ: 200
+res:247 rs 76 cp 1699
+i 46 cont: 47  szJ: 200
+res:266 rs 68 cp 1694
+i 47 cont: 48  szJ: 200
+res:240 rs 33 cp 1547
+i 48 cont: 49  szJ: 200
+res:275 rs 11 cp 1694
+i 49 cont: 50  szJ: 200
+res:286 rs 12 cp 1694
+i 50 cont: 51  szJ: 200
+res:298 rs 46 cp 1694
+i 51 cont: 52  szJ: 200
+res:282 rs 68 cp 1547
+i 52 cont: 53  szJ: 200
+res:179 rs 8 cp 1614
+i 53 cont: 54  szJ: 200
+res:187 rs 56 cp 1614
+i 54 cont: 55  szJ: 200
+res:248 rs 83 cp 1699
+i 55 cont: 56  szJ: 200
+res:283 rs 71 cp 1547
+i 56 cont: 57  szJ: 200
+res:138 rs 98 cp 1589
+i 57 cont: 58  szJ: 200
+res:225 rs 63 cp 1614
+i 58 cont: 59  szJ: 200
+res:259 rs 10 cp 1699
+i 59 cont: 60  szJ: 200
+res:269 rs 60 cp 1699
+i 60 cont: 61  szJ: 200
+res:233 rs 49 cp 1614
+i 61 cont: 62  szJ: 200
+res:139 rs 35 cp 1589
+i 62 cont: 63  szJ: 200
+res:288 rs 22 cp 1699
+i 63 cont: 64  szJ: 200
+res:310 rs 36 cp 1699
+i 64 cont: 65  szJ: 200
+res:161 rs 43 cp 1589
+i 65 cont: 66  szJ: 200
+res:355 rs 87 cp 1699
+i 66 cont: 67  szJ: 200
+res:191 rs 44 cp 1589
+i 67 cont: 68  szJ: 200
+res:235 rs 76 cp 1614
+i 68 cont: 69  szJ: 200
+res:215 rs 98 cp 1589
+i 69 cont: 70  szJ: 200
+res:385 rs 12 cp 1699
+i 70 cont: 71  szJ: 200
+res:397 rs 99 cp 1699
+i 71 cont: 72  szJ: 200
+res:311 rs 97 cp 1547
+i 72 cont: 73  szJ: 200
+res:444 rs 99 cp 1699
+i 73 cont: 74  szJ: 200
+res:345 rs 29 cp 1694
+i 74 cont: 75  szJ: 200
+res:245 rs 64 cp 1589
+i 75 cont: 76  szJ: 200
+res:369 rs 35 cp 1694
+i 76 cont: 77  szJ: 200
+res:404 rs 59 cp 1694
+i 77 cont: 78  szJ: 200
+res:343 rs 11 cp 1547
+i 78 cont: 79  szJ: 200
+res:253 rs 5 cp 1589
+i 79 cont: 80  szJ: 200
+res:459 rs 80 cp 1699
+i 80 cont: 81  szJ: 200
+res:346 rs 31 cp 1547
+i 81 cont: 82  szJ: 200
+res:377 rs 39 cp 1547
+i 82 cont: 83  szJ: 200
+res:256 rs 32 cp 1589
+i 83 cont: 84  szJ: 200
+res:411 rs 99 cp 1694
+i 84 cont: 85  szJ: 200
+res:395 rs 74 cp 1547
+i 85 cont: 86  szJ: 200
+res:259 rs 92 cp 1589
+i 86 cont: 87  szJ: 200
+res:415 rs 46 cp 1694
+i 87 cont: 88  szJ: 200
+res:274 rs 30 cp 1589
+i 88 cont: 89  szJ: 200
+res:277 rs 3 cp 1614
+i 89 cont: 90  szJ: 200
+res:280 rs 71 cp 1614
+i 90 cont: 91  szJ: 200
+res:419 rs 16 cp 1694
+i 91 cont: 92  szJ: 200
+res:285 rs 69 cp 1589
+i 92 cont: 93  szJ: 200
+res:292 rs 7 cp 1614
+i 93 cont: 94  szJ: 200
+res:299 rs 35 cp 1614
+i 94 cont: 95  szJ: 200
+res:402 rs 5 cp 1547
+i 95 cont: 96  szJ: 200
+res:306 rs 55 cp 1589
+i 96 cont: 97  szJ: 200
+res:336 rs 71 cp 1614
+i 97 cont: 98  szJ: 200
+res:440 rs 21 cp 1547
+i 98 cont: 99  szJ: 200
+res:388 rs 21 cp 1614
+i 99 cont: 100  szJ: 200
+res:347 rs 13 cp 1589
+i 100 cont: 101  szJ: 200
+res:478 rs 71 cp 1699
+i 101 cont: 102  szJ: 200
+res:549 rs 53 cp 1699
+i 102 cont: 103  szJ: 200
+res:437 rs 52 cp 1694
+i 103 cont: 104  szJ: 200
+res:605 rs 24 cp 1699
+i 104 cont: 105  szJ: 200
+res:376 rs 74 cp 1589
+i 105 cont: 106  szJ: 200
+res:444 rs 27 cp 1694
+i 106 cont: 107  szJ: 200
+res:485 rs 30 cp 1547
+i 107 cont: 108  szJ: 200
+res:405 rs 63 cp 1614
+i 108 cont: 109  szJ: 200
+res:500 rs 4 cp 1547
+i 109 cont: 110  szJ: 200
+res:504 rs 44 cp 1547
+i 110 cont: 111  szJ: 200
+res:478 rs 67 cp 1694
+i 111 cont: 112  szJ: 200
+res:442 rs 28 cp 1614
+i 112 cont: 113  szJ: 200
+res:505 rs 12 cp 1547
+i 113 cont: 114  szJ: 200
+res:517 rs 30 cp 1547
+i 114 cont: 115  szJ: 200
+res:547 rs 23 cp 1547
+i 115 cont: 116  szJ: 200
+res:570 rs 23 cp 1547
+i 116 cont: 117  szJ: 200
+res:593 rs 55 cp 1547
+i 117 cont: 118  szJ: 200
+res:472 rs 80 cp 1614
+i 118 cont: 119  szJ: 200
+res:378 rs 8 cp 1589
+i 119 cont: 120  szJ: 200
+res:386 rs 54 cp 1589
+i 120 cont: 121  szJ: 200
+res:600 rs 37 cp 1547
+i 121 cont: 122  szJ: 200
+res:406 rs 75 cp 1589
+i 122 cont: 123  szJ: 200
+res:500 rs 62 cp 1694
+i 123 cont: 124  szJ: 200
+res:507 rs 32 cp 1614
+i 124 cont: 125  szJ: 200
+res:528 rs 2 cp 1694
+i 125 cont: 126  szJ: 200
+res:530 rs 86 cp 1694
+i 126 cont: 127  szJ: 200
+res:638 rs 9 cp 1547
+i 127 cont: 128  szJ: 200
+res:647 rs 80 cp 1547
+i 128 cont: 129  szJ: 200
+res:645 rs 85 cp 1699
+i 129 cont: 130  szJ: 200
+res:535 rs 34 cp 1614
+i 130 cont: 131  szJ: 200
+res:646 rs 45 cp 1699
+i 131 cont: 132  szJ: 200
+res:557 rs 100 cp 1694
+i 132 cont: 133  szJ: 200
+res:570 rs 60 cp 1614
+i 133 cont: 134  szJ: 200
+res:701 rs 5 cp 1699
+i 134 cont: 135  szJ: 200
+res:706 rs 90 cp 1699
+i 135 cont: 136  szJ: 200
+res:685 rs 19 cp 1547
+i 136 cont: 137  szJ: 200
+res:589 rs 77 cp 1614
+i 137 cont: 138  szJ: 200
+res:575 rs 76 cp 1694
+i 138 cont: 139  szJ: 200
+res:735 rs 92 cp 1699
+i 139 cont: 140  szJ: 200
+res:604 rs 88 cp 1614
+i 140 cont: 141  szJ: 200
+res:576 rs 58 cp 1694
+i 141 cont: 142  szJ: 200
+res:755 rs 46 cp 1699
+i 142 cont: 143  szJ: 200
+res:589 rs 96 cp 1694
+i 143 cont: 144  szJ: 200
+res:474 rs 46 cp 1589
+i 144 cont: 145  szJ: 200
+res:520 rs 29 cp 1589
+i 145 cont: 146  szJ: 200
+res:549 rs 89 cp 1589
+i 146 cont: 147  szJ: 200
+res:695 rs 54 cp 1547
+i 147 cont: 148  szJ: 200
+res:758 rs 9 cp 1699
+i 148 cont: 149  szJ: 200
+res:620 rs 95 cp 1614
+i 149 cont: 150  szJ: 200
+res:725 rs 3 cp 1547
+i 150 cont: 151  szJ: 200
+res:728 rs 64 cp 1547
+i 151 cont: 152  szJ: 200
+res:638 rs 79 cp 1614
+i 152 cont: 153  szJ: 200
+res:798 rs 15 cp 1699
+i 153 cont: 154  szJ: 200
+res:656 rs 68 cp 1614
+i 154 cont: 155  szJ: 200
+res:733 rs 22 cp 1547
+i 155 cont: 156  szJ: 200
+res:564 rs 75 cp 1589
+i 156 cont: 157  szJ: 200
+res:659 rs 24 cp 1614
+i 157 cont: 158  szJ: 200
+res:683 rs 79 cp 1614
+i 158 cont: 159  szJ: 200
+res:593 rs 67 cp 1694
+i 159 cont: 160  szJ: 200
+res:598 rs 29 cp 1589
+i 160 cont: 161  szJ: 200
+res:627 rs 72 cp 1589
+i 161 cont: 162  szJ: 200
+res:847 rs 51 cp 1699
+i 162 cont: 163  szJ: 200
+res:642 rs 48 cp 1589
+i 163 cont: 164  szJ: 200
+res:853 rs 6 cp 1699
+i 164 cont: 165  szJ: 200
+res:859 rs 29 cp 1699
+i 165 cont: 166  szJ: 200
+res:888 rs 16 cp 1699
+i 166 cont: 167  szJ: 200
+res:594 rs 84 cp 1694
+i 167 cont: 168  szJ: 200
+res:650 rs 34 cp 1589
+i 168 cont: 169  szJ: 200
+res:684 rs 13 cp 1589
+i 169 cont: 170  szJ: 200
+res:606 rs 62 cp 1694
+i 170 cont: 171  szJ: 200
+res:668 rs 58 cp 1694
+i 171 cont: 172  szJ: 200
+res:690 rs 97 cp 1614
+i 172 cont: 173  szJ: 200
+res:719 rs 51 cp 1589
+i 173 cont: 174  szJ: 200
+res:738 rs 55 cp 1547
+i 174 cont: 175  szJ: 200
+res:919 rs 15 cp 1699
+i 175 cont: 176  szJ: 200
+res:675 rs 72 cp 1694
+i 176 cont: 177  szJ: 200
+res:722 rs 72 cp 1589
+i 177 cont: 178  szJ: 200
+res:713 rs 88 cp 1614
+i 178 cont: 179  szJ: 200
+res:734 rs 89 cp 1589
+i 179 cont: 180  szJ: 200
+res:691 rs 31 cp 1694
+i 180 cont: 181  szJ: 200
+res:964 rs 88 cp 1699
+i 181 cont: 182  szJ: 200
+res:795 rs 35 cp 1547
+i 182 cont: 183  szJ: 200
+res:714 rs 9 cp 1614
+i 183 cont: 184  szJ: 200
+res:723 rs 44 cp 1614
+i 184 cont: 185  szJ: 200
+res:767 rs 11 cp 1614
+i 185 cont: 186  szJ: 200
+res:968 rs 49 cp 1699
+i 186 cont: 187  szJ: 200
+res:721 rs 96 cp 1694
+i 187 cont: 188  szJ: 200
+res:795 rs 45 cp 1589
+i 188 cont: 189  szJ: 200
+res:727 rs 92 cp 1694
+i 189 cont: 190  szJ: 200
+res:797 rs 91 cp 1589
+i 190 cont: 191  szJ: 200
+res:986 rs 25 cp 1699
+i 191 cont: 192  szJ: 200
+res:819 rs 29 cp 1547
+i 192 cont: 193  szJ: 200
+res:784 rs 71 cp 1614
+i 193 cont: 194  szJ: 200
+res:989 rs 43 cp 1699
+i 194 cont: 195  szJ: 200
+res:842 rs 55 cp 1547
+i 195 cont: 196  szJ: 200
+res:810 rs 20 cp 1614
+i 196 cont: 197  szJ: 200
+res:830 rs 45 cp 1614
+i 197 cont: 198  szJ: 200
+res:780 rs 1 cp 1694
+i 198 cont: 199  szJ: 200
+res:781 rs 67 cp 1694
+i 199 cont: 200  szJ: 200
+i:4
+1.703000 0.703000
+res:0 rs 97 cp 0
+i 0 cont: 1  szJ: 200
+res:5 rs 32 cp 1699
+i 1 cont: 2  szJ: 200
+res:27 rs 15 cp 1547
+i 2 cont: 3  szJ: 200
+res:42 rs 58 cp 1547
+i 3 cont: 4  szJ: 200
+res:23 rs 14 cp 1589
+i 4 cont: 5  szJ: 200
+res:37 rs 61 cp 1589
+i 5 cont: 6  szJ: 200
+res:6 rs 55 cp 1614
+i 6 cont: 7  szJ: 200
+res:40 rs 62 cp 1589
+i 7 cont: 8  szJ: 200
+res:55 rs 9 cp 1547
+i 8 cont: 9  szJ: 200
+res:26 rs 72 cp 1614
+i 9 cont: 10  szJ: 200
+res:59 rs 3 cp 1589
+i 10 cont: 11  szJ: 200
+res:62 rs 52 cp 1589
+i 11 cont: 12  szJ: 200
+res:60 rs 50 cp 1614
+i 12 cont: 13  szJ: 200
+res:78 rs 1 cp 1589
+i 13 cont: 14  szJ: 200
+res:79 rs 33 cp 1589
+i 14 cont: 15  szJ: 200
+res:9 rs 48 cp 1694
+i 15 cont: 16  szJ: 200
+res:82 rs 68 cp 1589
+i 16 cont: 17  szJ: 200
+res:42 rs 14 cp 1699
+i 17 cont: 18  szJ: 200
+res:56 rs 81 cp 1699
+i 18 cont: 19  szJ: 200
+res:35 rs 48 cp 1694
+i 19 cont: 20  szJ: 200
+res:83 rs 80 cp 1694
+i 20 cont: 21  szJ: 200
+res:89 rs 9 cp 1699
+i 21 cont: 22  szJ: 200
+res:98 rs 39 cp 1699
+i 22 cont: 23  szJ: 200
+res:137 rs 28 cp 1699
+i 23 cont: 24  szJ: 200
+res:84 rs 85 cp 1589
+i 24 cont: 25  szJ: 200
+res:68 rs 63 cp 1547
+i 25 cont: 26  szJ: 200
+res:86 rs 43 cp 1694
+i 26 cont: 27  szJ: 200
+res:129 rs 85 cp 1694
+i 27 cont: 28  szJ: 200
+res:94 rs 42 cp 1589
+i 28 cont: 29  szJ: 200
+res:150 rs 83 cp 1699
+i 29 cont: 30  szJ: 200
+res:123 rs 33 cp 1547
+i 30 cont: 31  szJ: 200
+res:156 rs 6 cp 1547
+i 31 cont: 32  szJ: 200
+res:64 rs 6 cp 1614
+i 32 cont: 33  szJ: 200
+res:70 rs 8 cp 1614
+i 33 cont: 34  szJ: 200
+res:134 rs 36 cp 1694
+i 34 cont: 35  szJ: 200
+res:170 rs 13 cp 1694
+i 35 cont: 36  szJ: 200
+res:175 rs 93 cp 1699
+i 36 cont: 37  szJ: 200
+res:236 rs 11 cp 1694
+i 37 cont: 38  szJ: 200
+res:247 rs 73 cp 1694
+i 38 cont: 39  szJ: 200
+res:174 rs 5 cp 1547
+i 39 cont: 40  szJ: 200
+res:103 rs 49 cp 1589
+i 40 cont: 41  szJ: 200
+res:89 rs 60 cp 1614
+i 41 cont: 42  szJ: 200
+res:133 rs 87 cp 1589
+i 42 cont: 43  szJ: 200
+res:94 rs 56 cp 1614
+i 43 cont: 44  szJ: 200
+res:269 rs 49 cp 1694
+i 44 cont: 45  szJ: 200
+res:112 rs 24 cp 1614
+i 45 cont: 46  szJ: 200
+res:197 rs 76 cp 1699
+i 46 cont: 47  szJ: 200
+res:275 rs 68 cp 1694
+i 47 cont: 48  szJ: 200
+res:137 rs 12 cp 1589
+i 48 cont: 49  szJ: 200
+res:284 rs 11 cp 1694
+i 49 cont: 50  szJ: 200
+res:295 rs 12 cp 1694
+i 50 cont: 51  szJ: 200
+res:307 rs 46 cp 1694
+i 51 cont: 52  szJ: 200
+res:216 rs 68 cp 1547
+i 52 cont: 53  szJ: 200
+res:116 rs 8 cp 1614
+i 53 cont: 54  szJ: 200
+res:124 rs 56 cp 1614
+i 54 cont: 55  szJ: 200
+res:198 rs 83 cp 1699
+i 55 cont: 56  szJ: 200
+res:217 rs 71 cp 1547
+i 56 cont: 57  szJ: 200
+res:181 rs 98 cp 1589
+i 57 cont: 58  szJ: 200
+res:162 rs 63 cp 1614
+i 58 cont: 59  szJ: 200
+res:209 rs 10 cp 1699
+i 59 cont: 60  szJ: 200
+res:219 rs 60 cp 1699
+i 60 cont: 61  szJ: 200
+res:170 rs 49 cp 1614
+i 61 cont: 62  szJ: 200
+res:182 rs 35 cp 1589
+i 62 cont: 63  szJ: 200
+res:238 rs 22 cp 1699
+i 63 cont: 64  szJ: 200
+res:260 rs 36 cp 1699
+i 64 cont: 65  szJ: 200
+res:204 rs 43 cp 1589
+i 65 cont: 66  szJ: 200
+res:305 rs 87 cp 1699
+i 66 cont: 67  szJ: 200
+res:234 rs 44 cp 1589
+i 67 cont: 68  szJ: 200
+res:172 rs 76 cp 1614
+i 68 cont: 69  szJ: 200
+res:258 rs 98 cp 1589
+i 69 cont: 70  szJ: 200
+res:335 rs 12 cp 1699
+i 70 cont: 71  szJ: 200
+res:347 rs 99 cp 1699
+i 71 cont: 72  szJ: 200
+res:245 rs 97 cp 1547
+i 72 cont: 73  szJ: 200
+res:394 rs 99 cp 1699
+i 73 cont: 74  szJ: 200
+res:354 rs 29 cp 1694
+i 74 cont: 75  szJ: 200
+res:288 rs 64 cp 1589
+i 75 cont: 76  szJ: 200
+res:378 rs 35 cp 1694
+i 76 cont: 77  szJ: 200
+res:413 rs 59 cp 1694
+i 77 cont: 78  szJ: 200
+res:277 rs 11 cp 1547
+i 78 cont: 79  szJ: 200
+res:296 rs 5 cp 1589
+i 79 cont: 80  szJ: 200
+res:409 rs 80 cp 1699
+i 80 cont: 81  szJ: 200
+res:280 rs 31 cp 1547
+i 81 cont: 82  szJ: 200
+res:311 rs 39 cp 1547
+i 82 cont: 83  szJ: 200
+res:299 rs 32 cp 1589
+i 83 cont: 84  szJ: 200
+res:420 rs 99 cp 1694
+i 84 cont: 85  szJ: 200
+res:329 rs 74 cp 1547
+i 85 cont: 86  szJ: 200
+res:302 rs 92 cp 1589
+i 86 cont: 87  szJ: 200
+res:424 rs 46 cp 1694
+i 87 cont: 88  szJ: 200
+res:317 rs 30 cp 1589
+i 88 cont: 89  szJ: 200
+res:214 rs 3 cp 1614
+i 89 cont: 90  szJ: 200
+res:217 rs 71 cp 1614
+i 90 cont: 91  szJ: 200
+res:428 rs 16 cp 1694
+i 91 cont: 92  szJ: 200
+res:328 rs 69 cp 1589
+i 92 cont: 93  szJ: 200
+res:229 rs 7 cp 1614
+i 93 cont: 94  szJ: 200
+res:236 rs 35 cp 1614
+i 94 cont: 95  szJ: 200
+res:336 rs 5 cp 1547
+i 95 cont: 96  szJ: 200
+res:341 rs 36 cp 1547
+i 96 cont: 97  szJ: 200
+res:273 rs 71 cp 1614
+i 97 cont: 98  szJ: 200
+res:379 rs 21 cp 1547
+i 98 cont: 99  szJ: 200
+res:325 rs 21 cp 1614
+i 99 cont: 100  szJ: 200
+res:369 rs 13 cp 1589
+i 100 cont: 101  szJ: 200
+res:382 rs 59 cp 1589
+i 101 cont: 102  szJ: 200
+res:480 rs 53 cp 1699
+i 102 cont: 103  szJ: 200
+res:446 rs 52 cp 1694
+i 103 cont: 104  szJ: 200
+res:536 rs 24 cp 1699
+i 104 cont: 105  szJ: 200
+res:411 rs 74 cp 1589
+i 105 cont: 106  szJ: 200
+res:453 rs 27 cp 1694
+i 106 cont: 107  szJ: 200
+res:424 rs 30 cp 1547
+i 107 cont: 108  szJ: 200
+res:544 rs 76 cp 1699
+i 108 cont: 109  szJ: 200
+res:439 rs 4 cp 1547
+i 109 cont: 110  szJ: 200
+res:443 rs 44 cp 1547
+i 110 cont: 111  szJ: 200
+res:487 rs 67 cp 1694
+i 111 cont: 112  szJ: 200
+res:362 rs 28 cp 1614
+i 112 cont: 113  szJ: 200
+res:444 rs 12 cp 1547
+i 113 cont: 114  szJ: 200
+res:456 rs 30 cp 1547
+i 114 cont: 115  szJ: 200
+res:486 rs 23 cp 1547
+i 115 cont: 116  szJ: 200
+res:547 rs 61 cp 1699
+i 116 cont: 117  szJ: 200
+res:509 rs 55 cp 1547
+i 117 cont: 118  szJ: 200
+res:392 rs 80 cp 1614
+i 118 cont: 119  szJ: 200
+res:413 rs 8 cp 1589
+i 119 cont: 120  szJ: 200
+res:421 rs 54 cp 1589
+i 120 cont: 121  szJ: 200
+res:516 rs 37 cp 1547
+i 121 cont: 122  szJ: 200
+res:441 rs 75 cp 1589
+i 122 cont: 123  szJ: 200
+res:509 rs 62 cp 1694
+i 123 cont: 124  szJ: 200
+res:427 rs 32 cp 1614
+i 124 cont: 125  szJ: 200
+res:537 rs 2 cp 1694
+i 125 cont: 126  szJ: 200
+res:539 rs 86 cp 1694
+i 126 cont: 127  szJ: 200
+res:554 rs 9 cp 1547
+i 127 cont: 128  szJ: 200
+res:563 rs 80 cp 1547
+i 128 cont: 129  szJ: 200
+res:587 rs 85 cp 1699
+i 129 cont: 130  szJ: 200
+res:455 rs 34 cp 1614
+i 130 cont: 131  szJ: 200
+res:588 rs 45 cp 1699
+i 131 cont: 132  szJ: 200
+res:566 rs 100 cp 1694
+i 132 cont: 133  szJ: 200
+res:454 rs 74 cp 1589
+i 133 cont: 134  szJ: 200
+res:643 rs 5 cp 1699
+i 134 cont: 135  szJ: 200
+res:648 rs 90 cp 1699
+i 135 cont: 136  szJ: 200
+res:601 rs 19 cp 1547
+i 136 cont: 137  szJ: 200
+res:474 rs 77 cp 1614
+i 137 cont: 138  szJ: 200
+res:584 rs 76 cp 1694
+i 138 cont: 139  szJ: 200
+res:677 rs 92 cp 1699
+i 139 cont: 140  szJ: 200
+res:489 rs 88 cp 1614
+i 140 cont: 141  szJ: 200
+res:585 rs 58 cp 1694
+i 141 cont: 142  szJ: 200
+res:697 rs 46 cp 1699
+i 142 cont: 143  szJ: 200
+res:598 rs 96 cp 1694
+i 143 cont: 144  szJ: 200
+res:534 rs 31 cp 1614
+i 144 cont: 145  szJ: 200
+res:500 rs 29 cp 1589
+i 145 cont: 146  szJ: 200
+res:529 rs 89 cp 1589
+i 146 cont: 147  szJ: 200
+res:611 rs 54 cp 1547
+i 147 cont: 148  szJ: 200
+res:700 rs 9 cp 1699
+i 148 cont: 149  szJ: 200
+res:550 rs 95 cp 1614
+i 149 cont: 150  szJ: 200
+res:641 rs 3 cp 1547
+i 150 cont: 151  szJ: 200
+res:644 rs 64 cp 1547
+i 151 cont: 152  szJ: 200
+res:568 rs 79 cp 1614
+i 152 cont: 153  szJ: 200
+res:740 rs 15 cp 1699
+i 153 cont: 154  szJ: 200
+res:586 rs 68 cp 1614
+i 154 cont: 155  szJ: 200
+res:649 rs 22 cp 1547
+i 155 cont: 156  szJ: 200
+res:544 rs 75 cp 1589
+i 156 cont: 157  szJ: 200
+res:589 rs 24 cp 1614
+i 157 cont: 158  szJ: 200
+res:613 rs 79 cp 1614
+i 158 cont: 159  szJ: 200
+res:602 rs 67 cp 1694
+i 159 cont: 160  szJ: 200
+res:578 rs 29 cp 1589
+i 160 cont: 161  szJ: 200
+res:663 rs 46 cp 1547
+i 161 cont: 162  szJ: 200
+res:789 rs 51 cp 1699
+i 162 cont: 163  szJ: 200
+res:593 rs 48 cp 1589
+i 163 cont: 164  szJ: 200
+res:795 rs 6 cp 1699
+i 164 cont: 165  szJ: 200
+res:801 rs 29 cp 1699
+i 165 cont: 166  szJ: 200
+res:830 rs 16 cp 1699
+i 166 cont: 167  szJ: 200
+res:603 rs 84 cp 1694
+i 167 cont: 168  szJ: 200
+res:601 rs 34 cp 1589
+i 168 cont: 169  szJ: 200
+res:635 rs 13 cp 1589
+i 169 cont: 170  szJ: 200
+res:615 rs 62 cp 1694
+i 170 cont: 171  szJ: 200
+res:677 rs 58 cp 1694
+i 171 cont: 172  szJ: 200
+res:620 rs 97 cp 1614
+i 172 cont: 173  szJ: 200
+res:670 rs 51 cp 1589
+i 173 cont: 174  szJ: 200
+res:668 rs 55 cp 1547
+i 174 cont: 175  szJ: 200
+res:861 rs 15 cp 1699
+i 175 cont: 176  szJ: 200
+res:684 rs 72 cp 1694
+i 176 cont: 177  szJ: 200
+res:673 rs 72 cp 1589
+i 177 cont: 178  szJ: 200
+res:689 rs 32 cp 1694
+i 178 cont: 179  szJ: 200
+res:685 rs 89 cp 1589
+i 179 cont: 180  szJ: 200
+res:705 rs 31 cp 1694
+i 180 cont: 181  szJ: 200
+res:906 rs 88 cp 1699
+i 181 cont: 182  szJ: 200
+res:725 rs 35 cp 1547
+i 182 cont: 183  szJ: 200
+res:621 rs 9 cp 1614
+i 183 cont: 184  szJ: 200
+res:630 rs 44 cp 1614
+i 184 cont: 185  szJ: 200
+res:674 rs 11 cp 1614
+i 185 cont: 186  szJ: 200
+res:910 rs 49 cp 1699
+i 186 cont: 187  szJ: 200
+res:735 rs 96 cp 1694
+i 187 cont: 188  szJ: 200
+res:746 rs 45 cp 1589
+i 188 cont: 189  szJ: 200
+res:741 rs 92 cp 1694
+i 189 cont: 190  szJ: 200
+res:748 rs 91 cp 1589
+i 190 cont: 191  szJ: 200
+res:928 rs 25 cp 1699
+i 191 cont: 192  szJ: 200
+res:749 rs 29 cp 1547
+i 192 cont: 193  szJ: 200
+res:691 rs 71 cp 1614
+i 193 cont: 194  szJ: 200
+res:931 rs 43 cp 1699
+i 194 cont: 195  szJ: 200
+res:772 rs 55 cp 1547
+i 195 cont: 196  szJ: 200
+res:717 rs 20 cp 1614
+i 196 cont: 197  szJ: 200
+res:746 rs 53 cp 1694
+i 197 cont: 198  szJ: 200
+res:762 rs 96 cp 1614
+i 198 cont: 199  szJ: 200
+res:747 rs 67 cp 1694
+i 199 cont: 200  szJ: 200
+i:5
+1.615319 0.615319
+res:0 rs 97 cp 0
+i 0 cont: 1  szJ: 200
+res:5 rs 32 cp 1699
+i 1 cont: 2  szJ: 200
+res:27 rs 15 cp 1547
+i 2 cont: 3  szJ: 200
+res:42 rs 58 cp 1547
+i 3 cont: 4  szJ: 200
+res:23 rs 14 cp 1589
+i 4 cont: 5  szJ: 200
+res:37 rs 61 cp 1589
+i 5 cont: 6  szJ: 200
+res:6 rs 55 cp 1614
+i 6 cont: 7  szJ: 200
+res:40 rs 62 cp 1589
+i 7 cont: 8  szJ: 200
+res:55 rs 9 cp 1547
+i 8 cont: 9  szJ: 200
+res:26 rs 72 cp 1614
+i 9 cont: 10  szJ: 200
+res:59 rs 3 cp 1589
+i 10 cont: 11  szJ: 200
+res:62 rs 52 cp 1589
+i 11 cont: 12  szJ: 200
+res:60 rs 50 cp 1614
+i 12 cont: 13  szJ: 200
+res:78 rs 1 cp 1589
+i 13 cont: 14  szJ: 200
+res:79 rs 33 cp 1589
+i 14 cont: 15  szJ: 200
+res:9 rs 48 cp 1694
+i 15 cont: 16  szJ: 200
+res:82 rs 68 cp 1589
+i 16 cont: 17  szJ: 200
+res:42 rs 14 cp 1699
+i 17 cont: 18  szJ: 200
+res:56 rs 81 cp 1699
+i 18 cont: 19  szJ: 200
+res:35 rs 48 cp 1694
+i 19 cont: 20  szJ: 200
+res:83 rs 80 cp 1694
+i 20 cont: 21  szJ: 200
+res:89 rs 9 cp 1699
+i 21 cont: 22  szJ: 200
+res:98 rs 39 cp 1699
+i 22 cont: 23  szJ: 200
+res:137 rs 28 cp 1699
+i 23 cont: 24  szJ: 200
+res:84 rs 85 cp 1589
+i 24 cont: 25  szJ: 200
+res:68 rs 63 cp 1547
+i 25 cont: 26  szJ: 200
+res:86 rs 43 cp 1694
+i 26 cont: 27  szJ: 200
+res:98 rs 25 cp 1547
+i 27 cont: 28  szJ: 200
+res:94 rs 42 cp 1589
+i 28 cont: 29  szJ: 200
+res:150 rs 83 cp 1699
+i 29 cont: 30  szJ: 200
+res:121 rs 89 cp 1694
+i 30 cont: 31  szJ: 200
+res:131 rs 6 cp 1547
+i 31 cont: 32  szJ: 200
+res:64 rs 6 cp 1614
+i 32 cont: 33  szJ: 200
+res:70 rs 8 cp 1614
+i 33 cont: 34  szJ: 200
+res:126 rs 36 cp 1694
+i 34 cont: 35  szJ: 200
+res:162 rs 13 cp 1694
+i 35 cont: 36  szJ: 200
+res:175 rs 93 cp 1699
+i 36 cont: 37  szJ: 200
+res:228 rs 11 cp 1694
+i 37 cont: 38  szJ: 200
+res:239 rs 73 cp 1694
+i 38 cont: 39  szJ: 200
+res:149 rs 5 cp 1547
+i 39 cont: 40  szJ: 200
+res:103 rs 49 cp 1589
+i 40 cont: 41  szJ: 200
+res:89 rs 60 cp 1614
+i 41 cont: 42  szJ: 200
+res:133 rs 87 cp 1589
+i 42 cont: 43  szJ: 200
+res:94 rs 56 cp 1614
+i 43 cont: 44  szJ: 200
+res:261 rs 49 cp 1694
+i 44 cont: 45  szJ: 200
+res:112 rs 24 cp 1614
+i 45 cont: 46  szJ: 200
+res:197 rs 76 cp 1699
+i 46 cont: 47  szJ: 200
+res:267 rs 68 cp 1694
+i 47 cont: 48  szJ: 200
+res:137 rs 12 cp 1589
+i 48 cont: 49  szJ: 200
+res:276 rs 11 cp 1694
+i 49 cont: 50  szJ: 200
+res:287 rs 12 cp 1694
+i 50 cont: 51  szJ: 200
+res:299 rs 46 cp 1694
+i 51 cont: 52  szJ: 200
+res:191 rs 68 cp 1547
+i 52 cont: 53  szJ: 200
+res:116 rs 8 cp 1614
+i 53 cont: 54  szJ: 200
+res:124 rs 56 cp 1614
+i 54 cont: 55  szJ: 200
+res:198 rs 83 cp 1699
+i 55 cont: 56  szJ: 200
+res:192 rs 71 cp 1547
+i 56 cont: 57  szJ: 200
+res:181 rs 98 cp 1589
+i 57 cont: 58  szJ: 200
+res:162 rs 63 cp 1614
+i 58 cont: 59  szJ: 200
+res:209 rs 10 cp 1699
+i 59 cont: 60  szJ: 200
+res:219 rs 60 cp 1699
+i 60 cont: 61  szJ: 200
+res:170 rs 49 cp 1614
+i 61 cont: 62  szJ: 200
+res:182 rs 35 cp 1589
+i 62 cont: 63  szJ: 200
+res:238 rs 22 cp 1699
+i 63 cont: 64  szJ: 200
+res:260 rs 36 cp 1699
+i 64 cont: 65  szJ: 200
+res:204 rs 43 cp 1589
+i 65 cont: 66  szJ: 200
+res:305 rs 87 cp 1699
+i 66 cont: 67  szJ: 200
+res:234 rs 44 cp 1589
+i 67 cont: 68  szJ: 200
+res:172 rs 76 cp 1614
+i 68 cont: 69  szJ: 200
+res:258 rs 98 cp 1589
+i 69 cont: 70  szJ: 200
+res:335 rs 12 cp 1699
+i 70 cont: 71  szJ: 200
+res:347 rs 99 cp 1699
+i 71 cont: 72  szJ: 200
+res:220 rs 97 cp 1547
+i 72 cont: 73  szJ: 200
+res:394 rs 99 cp 1699
+i 73 cont: 74  szJ: 200
+res:346 rs 29 cp 1694
+i 74 cont: 75  szJ: 200
+res:288 rs 64 cp 1589
+i 75 cont: 76  szJ: 200
+res:370 rs 35 cp 1694
+i 76 cont: 77  szJ: 200
+res:405 rs 59 cp 1694
+i 77 cont: 78  szJ: 200
+res:252 rs 11 cp 1547
+i 78 cont: 79  szJ: 200
+res:296 rs 5 cp 1589
+i 79 cont: 80  szJ: 200
+res:409 rs 80 cp 1699
+i 80 cont: 81  szJ: 200
+res:255 rs 31 cp 1547
+i 81 cont: 82  szJ: 200
+res:286 rs 39 cp 1547
+i 82 cont: 83  szJ: 200
+res:299 rs 32 cp 1589
+i 83 cont: 84  szJ: 200
+res:412 rs 99 cp 1694
+i 84 cont: 85  szJ: 200
+res:304 rs 74 cp 1547
+i 85 cont: 86  szJ: 200
+res:302 rs 92 cp 1589
+i 86 cont: 87  szJ: 200
+res:416 rs 46 cp 1694
+i 87 cont: 88  szJ: 200
+res:317 rs 30 cp 1589
+i 88 cont: 89  szJ: 200
+res:214 rs 3 cp 1614
+i 89 cont: 90  szJ: 200
+res:217 rs 71 cp 1614
+i 90 cont: 91  szJ: 200
+res:420 rs 16 cp 1694
+i 91 cont: 92  szJ: 200
+res:328 rs 69 cp 1589
+i 92 cont: 93  szJ: 200
+res:229 rs 7 cp 1614
+i 93 cont: 94  szJ: 200
+res:236 rs 35 cp 1614
+i 94 cont: 95  szJ: 200
+res:311 rs 5 cp 1547
+i 95 cont: 96  szJ: 200
+res:316 rs 36 cp 1547
+i 96 cont: 97  szJ: 200
+res:273 rs 71 cp 1614
+i 97 cont: 98  szJ: 200
+res:354 rs 21 cp 1547
+i 98 cont: 99  szJ: 200
+res:433 rs 46 cp 1699
+i 99 cont: 100  szJ: 200
+res:369 rs 13 cp 1589
+i 100 cont: 101  szJ: 200
+res:382 rs 59 cp 1589
+i 101 cont: 102  szJ: 200
+res:504 rs 53 cp 1699
+i 102 cont: 103  szJ: 200
+res:438 rs 52 cp 1694
+i 103 cont: 104  szJ: 200
+res:560 rs 24 cp 1699
+i 104 cont: 105  szJ: 200
+res:411 rs 74 cp 1589
+i 105 cont: 106  szJ: 200
+res:445 rs 27 cp 1694
+i 106 cont: 107  szJ: 200
+res:472 rs 83 cp 1694
+i 107 cont: 108  szJ: 200
+res:568 rs 76 cp 1699
+i 108 cont: 109  szJ: 200
+res:369 rs 4 cp 1547
+i 109 cont: 110  szJ: 200
+res:373 rs 44 cp 1547
+i 110 cont: 111  szJ: 200
+res:506 rs 67 cp 1694
+i 111 cont: 112  szJ: 200
+res:310 rs 28 cp 1614
+i 112 cont: 113  szJ: 200
+res:374 rs 12 cp 1547
+i 113 cont: 114  szJ: 200
+res:386 rs 30 cp 1547
+i 114 cont: 115  szJ: 200
+res:416 rs 23 cp 1547
+i 115 cont: 116  szJ: 200
+res:571 rs 61 cp 1699
+i 116 cont: 117  szJ: 200
+res:439 rs 55 cp 1547
+i 117 cont: 118  szJ: 200
+res:340 rs 80 cp 1614
+i 118 cont: 119  szJ: 200
+res:413 rs 8 cp 1589
+i 119 cont: 120  szJ: 200
+res:421 rs 54 cp 1589
+i 120 cont: 121  szJ: 200
+res:446 rs 37 cp 1547
+i 121 cont: 122  szJ: 200
+res:441 rs 75 cp 1589
+i 122 cont: 123  szJ: 200
+res:528 rs 62 cp 1694
+i 123 cont: 124  szJ: 200
+res:375 rs 32 cp 1614
+i 124 cont: 125  szJ: 200
+res:556 rs 2 cp 1694
+i 125 cont: 126  szJ: 200
+res:558 rs 86 cp 1694
+i 126 cont: 127  szJ: 200
+res:484 rs 9 cp 1547
+i 127 cont: 128  szJ: 200
+res:493 rs 80 cp 1547
+i 128 cont: 129  szJ: 200
+res:611 rs 85 cp 1699
+i 129 cont: 130  szJ: 200
+res:403 rs 34 cp 1614
+i 130 cont: 131  szJ: 200
+res:612 rs 45 cp 1699
+i 131 cont: 132  szJ: 200
+res:585 rs 100 cp 1694
+i 132 cont: 133  szJ: 200
+res:454 rs 74 cp 1589
+i 133 cont: 134  szJ: 200
+res:667 rs 5 cp 1699
+i 134 cont: 135  szJ: 200
+res:672 rs 90 cp 1699
+i 135 cont: 136  szJ: 200
+res:531 rs 19 cp 1547
+i 136 cont: 137  szJ: 200
+res:422 rs 77 cp 1614
+i 137 cont: 138  szJ: 200
+res:603 rs 76 cp 1694
+i 138 cont: 139  szJ: 200
+res:701 rs 92 cp 1699
+i 139 cont: 140  szJ: 200
+res:437 rs 88 cp 1614
+i 140 cont: 141  szJ: 200
+res:604 rs 58 cp 1694
+i 141 cont: 142  szJ: 200
+res:721 rs 46 cp 1699
+i 142 cont: 143  szJ: 200
+res:617 rs 96 cp 1694
+i 143 cont: 144  szJ: 200
+res:482 rs 31 cp 1614
+i 144 cont: 145  szJ: 200
+res:500 rs 29 cp 1589
+i 145 cont: 146  szJ: 200
+res:529 rs 89 cp 1589
+i 146 cont: 147  szJ: 200
+res:541 rs 54 cp 1547
+i 147 cont: 148  szJ: 200
+res:724 rs 9 cp 1699
+i 148 cont: 149  szJ: 200
+res:498 rs 95 cp 1614
+i 149 cont: 150  szJ: 200
+res:571 rs 3 cp 1547
+i 150 cont: 151  szJ: 200
+res:574 rs 64 cp 1547
+i 151 cont: 152  szJ: 200
+res:516 rs 79 cp 1614
+i 152 cont: 153  szJ: 200
+res:764 rs 15 cp 1699
+i 153 cont: 154  szJ: 200
+res:534 rs 68 cp 1614
+i 154 cont: 155  szJ: 200
+res:579 rs 22 cp 1547
+i 155 cont: 156  szJ: 200
+res:544 rs 75 cp 1589
+i 156 cont: 157  szJ: 200
+res:537 rs 24 cp 1614
+i 157 cont: 158  szJ: 200
+res:561 rs 79 cp 1614
+i 158 cont: 159  szJ: 200
+res:621 rs 67 cp 1694
+i 159 cont: 160  szJ: 200
+res:578 rs 29 cp 1589
+i 160 cont: 161  szJ: 200
+res:593 rs 46 cp 1547
+i 161 cont: 162  szJ: 200
+res:813 rs 51 cp 1699
+i 162 cont: 163  szJ: 200
+res:593 rs 48 cp 1589
+i 163 cont: 164  szJ: 200
+res:819 rs 6 cp 1699
+i 164 cont: 165  szJ: 200
+res:825 rs 29 cp 1699
+i 165 cont: 166  szJ: 200
+res:854 rs 16 cp 1699
+i 166 cont: 167  szJ: 200
+res:622 rs 84 cp 1694
+i 167 cont: 168  szJ: 200
+res:601 rs 34 cp 1589
+i 168 cont: 169  szJ: 200
+res:635 rs 13 cp 1589
+i 169 cont: 170  szJ: 200
+res:634 rs 62 cp 1694
+i 170 cont: 171  szJ: 200
+res:696 rs 58 cp 1694
+i 171 cont: 172  szJ: 200
+res:568 rs 97 cp 1614
+i 172 cont: 173  szJ: 200
+res:670 rs 51 cp 1589
+i 173 cont: 174  szJ: 200
+res:598 rs 55 cp 1547
+i 174 cont: 175  szJ: 200
+res:885 rs 15 cp 1699
+i 175 cont: 176  szJ: 200
+res:703 rs 72 cp 1694
+i 176 cont: 177  szJ: 200
+res:673 rs 72 cp 1589
+i 177 cont: 178  szJ: 200
+res:708 rs 32 cp 1694
+i 178 cont: 179  szJ: 200
+res:685 rs 89 cp 1589
+i 179 cont: 180  szJ: 200
+res:724 rs 31 cp 1694
+i 180 cont: 181  szJ: 200
+res:930 rs 88 cp 1699
+i 181 cont: 182  szJ: 200
+res:655 rs 35 cp 1547
+i 182 cont: 183  szJ: 200
+res:569 rs 9 cp 1614
+i 183 cont: 184  szJ: 200
+res:578 rs 44 cp 1614
+i 184 cont: 185  szJ: 200
+res:622 rs 11 cp 1614
+i 185 cont: 186  szJ: 200
+res:934 rs 49 cp 1699
+i 186 cont: 187  szJ: 200
+res:754 rs 96 cp 1694
+i 187 cont: 188  szJ: 200
+res:746 rs 45 cp 1589
+i 188 cont: 189  szJ: 200
+res:760 rs 92 cp 1694
+i 189 cont: 190  szJ: 200
+res:748 rs 91 cp 1589
+i 190 cont: 191  szJ: 200
+res:952 rs 25 cp 1699
+i 191 cont: 192  szJ: 200
+res:679 rs 29 cp 1547
+i 192 cont: 193  szJ: 200
+res:639 rs 71 cp 1614
+i 193 cont: 194  szJ: 200
+res:955 rs 43 cp 1699
+i 194 cont: 195  szJ: 200
+res:702 rs 55 cp 1547
+i 195 cont: 196  szJ: 200
+res:665 rs 20 cp 1614
+i 196 cont: 197  szJ: 200
+res:765 rs 53 cp 1694
+i 197 cont: 198  szJ: 200
+res:710 rs 96 cp 1614
+i 198 cont: 199  szJ: 200
+res:766 rs 67 cp 1694
+i 199 cont: 200  szJ: 200
+i:6
+2.372275 1.372275
+res:0 rs 97 cp 0
+i 0 cont: 1  szJ: 200
+res:5 rs 32 cp 1699
+i 1 cont: 2  szJ: 200
+res:27 rs 15 cp 1547
+i 2 cont: 3  szJ: 200
+res:42 rs 58 cp 1547
+i 3 cont: 4  szJ: 200
+res:68 rs 79 cp 1699
+i 4 cont: 5  szJ: 200
+res:14 rs 61 cp 1589
+i 5 cont: 6  szJ: 200
+res:6 rs 55 cp 1614
+i 6 cont: 7  szJ: 200
+res:17 rs 62 cp 1589
+i 7 cont: 8  szJ: 200
+res:55 rs 9 cp 1547
+i 8 cont: 9  szJ: 200
+res:26 rs 72 cp 1614
+i 9 cont: 10  szJ: 200
+res:36 rs 3 cp 1589
+i 10 cont: 11  szJ: 200
+res:39 rs 52 cp 1589
+i 11 cont: 12  szJ: 200
+res:60 rs 50 cp 1614
+i 12 cont: 13  szJ: 200
+res:110 rs 41 cp 1614
+i 13 cont: 14  szJ: 200
+res:40 rs 33 cp 1589
+i 14 cont: 15  szJ: 200
+res:127 rs 24 cp 1614
+i 15 cont: 16  szJ: 200
+res:43 rs 68 cp 1589
+i 16 cont: 17  szJ: 200
+res:105 rs 14 cp 1699
+i 17 cont: 18  szJ: 200
+res:119 rs 81 cp 1699
+i 18 cont: 19  szJ: 200
+res:26 rs 48 cp 1694
+i 19 cont: 20  szJ: 200
+res:74 rs 80 cp 1694
+i 20 cont: 21  szJ: 200
+res:152 rs 9 cp 1699
+i 21 cont: 22  szJ: 200
+res:161 rs 39 cp 1699
+i 22 cont: 23  szJ: 200
+res:200 rs 28 cp 1699
+i 23 cont: 24  szJ: 200
+res:45 rs 85 cp 1589
+i 24 cont: 25  szJ: 200
+res:68 rs 63 cp 1547
+i 25 cont: 26  szJ: 200
+res:77 rs 43 cp 1694
+i 26 cont: 27  szJ: 200
+res:120 rs 85 cp 1694
+i 27 cont: 28  szJ: 200
+res:55 rs 42 cp 1589
+i 28 cont: 29  szJ: 200
+res:102 rs 55 cp 1547
+i 29 cont: 30  szJ: 200
+res:157 rs 33 cp 1547
+i 30 cont: 31  szJ: 200
+res:190 rs 6 cp 1547
+i 31 cont: 32  szJ: 200
+res:196 rs 55 cp 1547
+i 32 cont: 33  szJ: 200
+res:133 rs 8 cp 1614
+i 33 cont: 34  szJ: 200
+res:125 rs 36 cp 1694
+i 34 cont: 35  szJ: 200
+res:161 rs 13 cp 1694
+i 35 cont: 36  szJ: 200
+res:225 rs 93 cp 1699
+i 36 cont: 37  szJ: 200
+res:227 rs 11 cp 1694
+i 37 cont: 38  szJ: 200
+res:238 rs 73 cp 1694
+i 38 cont: 39  szJ: 200
+res:214 rs 5 cp 1547
+i 39 cont: 40  szJ: 200
+res:64 rs 49 cp 1589
+i 40 cont: 41  szJ: 200
+res:152 rs 60 cp 1614
+i 41 cont: 42  szJ: 200
+res:94 rs 87 cp 1589
+i 42 cont: 43  szJ: 200
+res:157 rs 56 cp 1614
+i 43 cont: 44  szJ: 200
+res:260 rs 49 cp 1694
+i 44 cont: 45  szJ: 200
+res:175 rs 24 cp 1614
+i 45 cont: 46  szJ: 200
+res:247 rs 76 cp 1699
+i 46 cont: 47  szJ: 200
+res:266 rs 68 cp 1694
+i 47 cont: 48  szJ: 200
+res:240 rs 33 cp 1547
+i 48 cont: 49  szJ: 200
+res:275 rs 11 cp 1694
+i 49 cont: 50  szJ: 200
+res:286 rs 12 cp 1694
+i 50 cont: 51  szJ: 200
+res:298 rs 46 cp 1694
+i 51 cont: 52  szJ: 200
+res:282 rs 68 cp 1547
+i 52 cont: 53  szJ: 200
+res:179 rs 8 cp 1614
+i 53 cont: 54  szJ: 200
+res:187 rs 56 cp 1614
+i 54 cont: 55  szJ: 200
+res:248 rs 83 cp 1699
+i 55 cont: 56  szJ: 200
+res:283 rs 71 cp 1547
+i 56 cont: 57  szJ: 200
+res:138 rs 98 cp 1589
+i 57 cont: 58  szJ: 200
+res:225 rs 63 cp 1614
+i 58 cont: 59  szJ: 200
+res:259 rs 10 cp 1699
+i 59 cont: 60  szJ: 200
+res:269 rs 60 cp 1699
+i 60 cont: 61  szJ: 200
+res:233 rs 49 cp 1614
+i 61 cont: 62  szJ: 200
+res:139 rs 35 cp 1589
+i 62 cont: 63  szJ: 200
+res:288 rs 22 cp 1699
+i 63 cont: 64  szJ: 200
+res:310 rs 36 cp 1699
+i 64 cont: 65  szJ: 200
+res:161 rs 43 cp 1589
+i 65 cont: 66  szJ: 200
+res:355 rs 87 cp 1699
+i 66 cont: 67  szJ: 200
+res:191 rs 44 cp 1589
+i 67 cont: 68  szJ: 200
+res:235 rs 76 cp 1614
+i 68 cont: 69  szJ: 200
+res:215 rs 98 cp 1589
+i 69 cont: 70  szJ: 200
+res:385 rs 12 cp 1699
+i 70 cont: 71  szJ: 200
+res:397 rs 99 cp 1699
+i 71 cont: 72  szJ: 200
+res:311 rs 97 cp 1547
+i 72 cont: 73  szJ: 200
+res:444 rs 99 cp 1699
+i 73 cont: 74  szJ: 200
+res:345 rs 29 cp 1694
+i 74 cont: 75  szJ: 200
+res:245 rs 64 cp 1589
+i 75 cont: 76  szJ: 200
+res:369 rs 35 cp 1694
+i 76 cont: 77  szJ: 200
+res:404 rs 59 cp 1694
+i 77 cont: 78  szJ: 200
+res:343 rs 11 cp 1547
+i 78 cont: 79  szJ: 200
+res:253 rs 5 cp 1589
+i 79 cont: 80  szJ: 200
+res:459 rs 80 cp 1699
+i 80 cont: 81  szJ: 200
+res:346 rs 31 cp 1547
+i 81 cont: 82  szJ: 200
+res:377 rs 39 cp 1547
+i 82 cont: 83  szJ: 200
+res:256 rs 32 cp 1589
+i 83 cont: 84  szJ: 200
+res:411 rs 99 cp 1694
+i 84 cont: 85  szJ: 200
+res:395 rs 74 cp 1547
+i 85 cont: 86  szJ: 200
+res:259 rs 92 cp 1589
+i 86 cont: 87  szJ: 200
+res:415 rs 46 cp 1694
+i 87 cont: 88  szJ: 200
+res:274 rs 30 cp 1589
+i 88 cont: 89  szJ: 200
+res:277 rs 3 cp 1614
+i 89 cont: 90  szJ: 200
+res:280 rs 71 cp 1614
+i 90 cont: 91  szJ: 200
+res:419 rs 16 cp 1694
+i 91 cont: 92  szJ: 200
+res:285 rs 69 cp 1589
+i 92 cont: 93  szJ: 200
+res:292 rs 7 cp 1614
+i 93 cont: 94  szJ: 200
+res:299 rs 35 cp 1614
+i 94 cont: 95  szJ: 200
+res:402 rs 5 cp 1547
+i 95 cont: 96  szJ: 200
+res:306 rs 55 cp 1589
+i 96 cont: 97  szJ: 200
+res:336 rs 71 cp 1614
+i 97 cont: 98  szJ: 200
+res:440 rs 21 cp 1547
+i 98 cont: 99  szJ: 200
+res:388 rs 21 cp 1614
+i 99 cont: 100  szJ: 200
+res:347 rs 13 cp 1589
+i 100 cont: 101  szJ: 200
+res:478 rs 71 cp 1699
+i 101 cont: 102  szJ: 200
+res:549 rs 53 cp 1699
+i 102 cont: 103  szJ: 200
+res:437 rs 52 cp 1694
+i 103 cont: 104  szJ: 200
+res:605 rs 24 cp 1699
+i 104 cont: 105  szJ: 200
+res:376 rs 74 cp 1589
+i 105 cont: 106  szJ: 200
+res:444 rs 27 cp 1694
+i 106 cont: 107  szJ: 200
+res:485 rs 30 cp 1547
+i 107 cont: 108  szJ: 200
+res:405 rs 63 cp 1614
+i 108 cont: 109  szJ: 200
+res:500 rs 4 cp 1547
+i 109 cont: 110  szJ: 200
+res:455 rs 34 cp 1694
+i 110 cont: 111  szJ: 200
+res:489 rs 67 cp 1694
+i 111 cont: 112  szJ: 200
+res:442 rs 28 cp 1614
+i 112 cont: 113  szJ: 200
+res:501 rs 12 cp 1547
+i 113 cont: 114  szJ: 200
+res:513 rs 30 cp 1547
+i 114 cont: 115  szJ: 200
+res:543 rs 23 cp 1547
+i 115 cont: 116  szJ: 200
+res:566 rs 23 cp 1547
+i 116 cont: 117  szJ: 200
+res:589 rs 55 cp 1547
+i 117 cont: 118  szJ: 200
+res:472 rs 80 cp 1614
+i 118 cont: 119  szJ: 200
+res:378 rs 8 cp 1589
+i 119 cont: 120  szJ: 200
+res:386 rs 54 cp 1589
+i 120 cont: 121  szJ: 200
+res:596 rs 37 cp 1547
+i 121 cont: 122  szJ: 200
+res:406 rs 75 cp 1589
+i 122 cont: 123  szJ: 200
+res:511 rs 62 cp 1694
+i 123 cont: 124  szJ: 200
+res:507 rs 32 cp 1614
+i 124 cont: 125  szJ: 200
+res:539 rs 2 cp 1694
+i 125 cont: 126  szJ: 200
+res:541 rs 86 cp 1694
+i 126 cont: 127  szJ: 200
+res:634 rs 9 cp 1547
+i 127 cont: 128  szJ: 200
+res:643 rs 80 cp 1547
+i 128 cont: 129  szJ: 200
+res:645 rs 85 cp 1699
+i 129 cont: 130  szJ: 200
+res:535 rs 34 cp 1614
+i 130 cont: 131  szJ: 200
+res:646 rs 45 cp 1699
+i 131 cont: 132  szJ: 200
+res:568 rs 100 cp 1694
+i 132 cont: 133  szJ: 200
+res:570 rs 60 cp 1614
+i 133 cont: 134  szJ: 200
+res:701 rs 5 cp 1699
+i 134 cont: 135  szJ: 200
+res:706 rs 90 cp 1699
+i 135 cont: 136  szJ: 200
+res:681 rs 19 cp 1547
+i 136 cont: 137  szJ: 200
+res:589 rs 77 cp 1614
+i 137 cont: 138  szJ: 200
+res:586 rs 76 cp 1694
+i 138 cont: 139  szJ: 200
+res:735 rs 92 cp 1699
+i 139 cont: 140  szJ: 200
+res:604 rs 88 cp 1614
+i 140 cont: 141  szJ: 200
+res:587 rs 58 cp 1694
+i 141 cont: 142  szJ: 200
+res:755 rs 46 cp 1699
+i 142 cont: 143  szJ: 200
+res:600 rs 96 cp 1694
+i 143 cont: 144  szJ: 200
+res:474 rs 46 cp 1589
+i 144 cont: 145  szJ: 200
+res:520 rs 29 cp 1589
+i 145 cont: 146  szJ: 200
+res:549 rs 89 cp 1589
+i 146 cont: 147  szJ: 200
+res:691 rs 54 cp 1547
+i 147 cont: 148  szJ: 200
+res:758 rs 9 cp 1699
+i 148 cont: 149  szJ: 200
+res:620 rs 95 cp 1614
+i 149 cont: 150  szJ: 200
+res:721 rs 3 cp 1547
+i 150 cont: 151  szJ: 200
+res:724 rs 64 cp 1547
+i 151 cont: 152  szJ: 200
+res:638 rs 79 cp 1614
+i 152 cont: 153  szJ: 200
+res:798 rs 15 cp 1699
+i 153 cont: 154  szJ: 200
+res:656 rs 68 cp 1614
+i 154 cont: 155  szJ: 200
+res:729 rs 22 cp 1547
+i 155 cont: 156  szJ: 200
+res:564 rs 75 cp 1589
+i 156 cont: 157  szJ: 200
+res:659 rs 24 cp 1614
+i 157 cont: 158  szJ: 200
+res:683 rs 79 cp 1614
+i 158 cont: 159  szJ: 200
+res:604 rs 67 cp 1694
+i 159 cont: 160  szJ: 200
+res:598 rs 29 cp 1589
+i 160 cont: 161  szJ: 200
+res:627 rs 72 cp 1589
+i 161 cont: 162  szJ: 200
+res:847 rs 51 cp 1699
+i 162 cont: 163  szJ: 200
+res:642 rs 48 cp 1589
+i 163 cont: 164  szJ: 200
+res:853 rs 6 cp 1699
+i 164 cont: 165  szJ: 200
+res:859 rs 29 cp 1699
+i 165 cont: 166  szJ: 200
+res:888 rs 16 cp 1699
+i 166 cont: 167  szJ: 200
+res:605 rs 84 cp 1694
+i 167 cont: 168  szJ: 200
+res:650 rs 34 cp 1589
+i 168 cont: 169  szJ: 200
+res:684 rs 13 cp 1589
+i 169 cont: 170  szJ: 200
+res:617 rs 62 cp 1694
+i 170 cont: 171  szJ: 200
+res:679 rs 58 cp 1694
+i 171 cont: 172  szJ: 200
+res:690 rs 97 cp 1614
+i 172 cont: 173  szJ: 200
+res:719 rs 51 cp 1589
+i 173 cont: 174  szJ: 200
+res:734 rs 55 cp 1547
+i 174 cont: 175  szJ: 200
+res:919 rs 15 cp 1699
+i 175 cont: 176  szJ: 200
+res:686 rs 72 cp 1694
+i 176 cont: 177  szJ: 200
+res:722 rs 72 cp 1589
+i 177 cont: 178  szJ: 200
+res:713 rs 88 cp 1614
+i 178 cont: 179  szJ: 200
+res:734 rs 89 cp 1589
+i 179 cont: 180  szJ: 200
+res:702 rs 31 cp 1694
+i 180 cont: 181  szJ: 200
+res:964 rs 88 cp 1699
+i 181 cont: 182  szJ: 200
+res:791 rs 35 cp 1547
+i 182 cont: 183  szJ: 200
+res:714 rs 9 cp 1614
+i 183 cont: 184  szJ: 200
+res:723 rs 44 cp 1614
+i 184 cont: 185  szJ: 200
+res:767 rs 11 cp 1614
+i 185 cont: 186  szJ: 200
+res:968 rs 49 cp 1699
+i 186 cont: 187  szJ: 200
+res:732 rs 96 cp 1694
+i 187 cont: 188  szJ: 200
+res:795 rs 45 cp 1589
+i 188 cont: 189  szJ: 200
+res:738 rs 92 cp 1694
+i 189 cont: 190  szJ: 200
+res:797 rs 91 cp 1589
+i 190 cont: 191  szJ: 200
+res:986 rs 25 cp 1699
+i 191 cont: 192  szJ: 200
+res:815 rs 29 cp 1547
+i 192 cont: 193  szJ: 200
+res:784 rs 71 cp 1614
+i 193 cont: 194  szJ: 200
+res:989 rs 43 cp 1699
+i 194 cont: 195  szJ: 200
+res:838 rs 55 cp 1547
+i 195 cont: 196  szJ: 200
+res:810 rs 20 cp 1614
+i 196 cont: 197  szJ: 200
+res:830 rs 45 cp 1614
+i 197 cont: 198  szJ: 200
+res:791 rs 1 cp 1694
+i 198 cont: 199  szJ: 200
+res:792 rs 67 cp 1694
+i 199 cont: 200  szJ: 200
+i:7
+2.033767 1.033767
+res:0 rs 97 cp 0
+i 0 cont: 1  szJ: 200
+res:5 rs 32 cp 1699
+i 1 cont: 2  szJ: 200
+res:27 rs 15 cp 1547
+i 2 cont: 3  szJ: 200
+res:42 rs 58 cp 1547
+i 3 cont: 4  szJ: 200
+res:23 rs 14 cp 1589
+i 4 cont: 5  szJ: 200
+res:37 rs 61 cp 1589
+i 5 cont: 6  szJ: 200
+res:6 rs 55 cp 1614
+i 6 cont: 7  szJ: 200
+res:40 rs 62 cp 1589
+i 7 cont: 8  szJ: 200
+res:55 rs 9 cp 1547
+i 8 cont: 9  szJ: 200
+res:26 rs 72 cp 1614
+i 9 cont: 10  szJ: 200
+res:59 rs 3 cp 1589
+i 10 cont: 11  szJ: 200
+res:62 rs 52 cp 1589
+i 11 cont: 12  szJ: 200
+res:60 rs 50 cp 1614
+i 12 cont: 13  szJ: 200
+res:78 rs 1 cp 1589
+i 13 cont: 14  szJ: 200
+res:79 rs 33 cp 1589
+i 14 cont: 15  szJ: 200
+res:77 rs 24 cp 1614
+i 15 cont: 16  szJ: 200
+res:82 rs 68 cp 1589
+i 16 cont: 17  szJ: 200
+res:42 rs 14 cp 1699
+i 17 cont: 18  szJ: 200
+res:56 rs 81 cp 1699
+i 18 cont: 19  szJ: 200
+res:26 rs 48 cp 1694
+i 19 cont: 20  szJ: 200
+res:74 rs 80 cp 1694
+i 20 cont: 21  szJ: 200
+res:89 rs 9 cp 1699
+i 21 cont: 22  szJ: 200
+res:98 rs 39 cp 1699
+i 22 cont: 23  szJ: 200
+res:137 rs 28 cp 1699
+i 23 cont: 24  szJ: 200
+res:84 rs 85 cp 1589
+i 24 cont: 25  szJ: 200
+res:68 rs 63 cp 1547
+i 25 cont: 26  szJ: 200
+res:77 rs 43 cp 1694
+i 26 cont: 27  szJ: 200
+res:120 rs 85 cp 1694
+i 27 cont: 28  szJ: 200
+res:94 rs 42 cp 1589
+i 28 cont: 29  szJ: 200
+res:102 rs 55 cp 1547
+i 29 cont: 30  szJ: 200
+res:157 rs 33 cp 1547
+i 30 cont: 31  szJ: 200
+res:190 rs 6 cp 1547
+i 31 cont: 32  szJ: 200
+res:196 rs 55 cp 1547
+i 32 cont: 33  szJ: 200
+res:83 rs 8 cp 1614
+i 33 cont: 34  szJ: 200
+res:125 rs 36 cp 1694
+i 34 cont: 35  szJ: 200
+res:161 rs 13 cp 1694
+i 35 cont: 36  szJ: 200
+res:162 rs 93 cp 1699
+i 36 cont: 37  szJ: 200
+res:227 rs 11 cp 1694
+i 37 cont: 38  szJ: 200
+res:238 rs 73 cp 1694
+i 38 cont: 39  szJ: 200
+res:214 rs 5 cp 1547
+i 39 cont: 40  szJ: 200
+res:103 rs 49 cp 1589
+i 40 cont: 41  szJ: 200
+res:102 rs 60 cp 1614
+i 41 cont: 42  szJ: 200
+res:133 rs 87 cp 1589
+i 42 cont: 43  szJ: 200
+res:107 rs 56 cp 1614
+i 43 cont: 44  szJ: 200
+res:260 rs 49 cp 1694
+i 44 cont: 45  szJ: 200
+res:125 rs 24 cp 1614
+i 45 cont: 46  szJ: 200
+res:184 rs 76 cp 1699
+i 46 cont: 47  szJ: 200
+res:266 rs 68 cp 1694
+i 47 cont: 48  szJ: 200
+res:240 rs 33 cp 1547
+i 48 cont: 49  szJ: 200
+res:275 rs 11 cp 1694
+i 49 cont: 50  szJ: 200
+res:286 rs 12 cp 1694
+i 50 cont: 51  szJ: 200
+res:298 rs 46 cp 1694
+i 51 cont: 52  szJ: 200
+res:282 rs 68 cp 1547
+i 52 cont: 53  szJ: 200
+res:129 rs 8 cp 1614
+i 53 cont: 54  szJ: 200
+res:137 rs 56 cp 1614
+i 54 cont: 55  szJ: 200
+res:185 rs 83 cp 1699
+i 55 cont: 56  szJ: 200
+res:283 rs 71 cp 1547
+i 56 cont: 57  szJ: 200
+res:177 rs 98 cp 1589
+i 57 cont: 58  szJ: 200
+res:175 rs 63 cp 1614
+i 58 cont: 59  szJ: 200
+res:196 rs 10 cp 1699
+i 59 cont: 60  szJ: 200
+res:206 rs 60 cp 1699
+i 60 cont: 61  szJ: 200
+res:183 rs 49 cp 1614
+i 61 cont: 62  szJ: 200
+res:178 rs 35 cp 1589
+i 62 cont: 63  szJ: 200
+res:225 rs 22 cp 1699
+i 63 cont: 64  szJ: 200
+res:247 rs 36 cp 1699
+i 64 cont: 65  szJ: 200
+res:200 rs 43 cp 1589
+i 65 cont: 66  szJ: 200
+res:292 rs 87 cp 1699
+i 66 cont: 67  szJ: 200
+res:230 rs 44 cp 1589
+i 67 cont: 68  szJ: 200
+res:185 rs 76 cp 1614
+i 68 cont: 69  szJ: 200
+res:254 rs 98 cp 1589
+i 69 cont: 70  szJ: 200
+res:322 rs 12 cp 1699
+i 70 cont: 71  szJ: 200
+res:334 rs 99 cp 1699
+i 71 cont: 72  szJ: 200
+res:311 rs 97 cp 1547
+i 72 cont: 73  szJ: 200
+res:381 rs 99 cp 1699
+i 73 cont: 74  szJ: 200
+res:345 rs 29 cp 1694
+i 74 cont: 75  szJ: 200
+res:284 rs 64 cp 1589
+i 75 cont: 76  szJ: 200
+res:369 rs 35 cp 1694
+i 76 cont: 77  szJ: 200
+res:404 rs 59 cp 1694
+i 77 cont: 78  szJ: 200
+res:343 rs 11 cp 1547
+i 78 cont: 79  szJ: 200
+res:292 rs 5 cp 1589
+i 79 cont: 80  szJ: 200
+res:396 rs 80 cp 1699
+i 80 cont: 81  szJ: 200
+res:346 rs 31 cp 1547
+i 81 cont: 82  szJ: 200
+res:377 rs 39 cp 1547
+i 82 cont: 83  szJ: 200
+res:295 rs 32 cp 1589
+i 83 cont: 84  szJ: 200
+res:411 rs 99 cp 1694
+i 84 cont: 85  szJ: 200
+res:395 rs 74 cp 1547
+i 85 cont: 86  szJ: 200
+res:298 rs 92 cp 1589
+i 86 cont: 87  szJ: 200
+res:415 rs 46 cp 1694
+i 87 cont: 88  szJ: 200
+res:313 rs 30 cp 1589
+i 88 cont: 89  szJ: 200
+res:227 rs 3 cp 1614
+i 89 cont: 90  szJ: 200
+res:230 rs 71 cp 1614
+i 90 cont: 91  szJ: 200
+res:419 rs 16 cp 1694
+i 91 cont: 92  szJ: 200
+res:324 rs 69 cp 1589
+i 92 cont: 93  szJ: 200
+res:242 rs 7 cp 1614
+i 93 cont: 94  szJ: 200
+res:249 rs 35 cp 1614
+i 94 cont: 95  szJ: 200
+res:402 rs 5 cp 1547
+i 95 cont: 96  szJ: 200
+res:407 rs 36 cp 1547
+i 96 cont: 97  szJ: 200
+res:286 rs 71 cp 1614
+i 97 cont: 98  szJ: 200
+res:445 rs 21 cp 1547
+i 98 cont: 99  szJ: 200
+res:338 rs 21 cp 1614
+i 99 cont: 100  szJ: 200
+res:365 rs 13 cp 1589
+i 100 cont: 101  szJ: 200
+res:415 rs 71 cp 1699
+i 101 cont: 102  szJ: 200
+res:486 rs 53 cp 1699
+i 102 cont: 103  szJ: 200
+res:437 rs 52 cp 1694
+i 103 cont: 104  szJ: 200
+res:542 rs 24 cp 1699
+i 104 cont: 105  szJ: 200
+res:394 rs 74 cp 1589
+i 105 cont: 106  szJ: 200
+res:444 rs 27 cp 1694
+i 106 cont: 107  szJ: 200
+res:490 rs 30 cp 1547
+i 107 cont: 108  szJ: 200
+res:355 rs 63 cp 1614
+i 108 cont: 109  szJ: 200
+res:505 rs 4 cp 1547
+i 109 cont: 110  szJ: 200
+res:509 rs 44 cp 1547
+i 110 cont: 111  szJ: 200
+res:478 rs 67 cp 1694
+i 111 cont: 112  szJ: 200
+res:392 rs 28 cp 1614
+i 112 cont: 113  szJ: 200
+res:510 rs 12 cp 1547
+i 113 cont: 114  szJ: 200
+res:522 rs 30 cp 1547
+i 114 cont: 115  szJ: 200
+res:552 rs 23 cp 1547
+i 115 cont: 116  szJ: 200
+res:575 rs 23 cp 1547
+i 116 cont: 117  szJ: 200
+res:598 rs 55 cp 1547
+i 117 cont: 118  szJ: 200
+res:422 rs 80 cp 1614
+i 118 cont: 119  szJ: 200
+res:396 rs 8 cp 1589
+i 119 cont: 120  szJ: 200
+res:404 rs 54 cp 1589
+i 120 cont: 121  szJ: 200
+res:605 rs 37 cp 1547
+i 121 cont: 122  szJ: 200
+res:424 rs 75 cp 1589
+i 122 cont: 123  szJ: 200
+res:500 rs 62 cp 1694
+i 123 cont: 124  szJ: 200
+res:457 rs 32 cp 1614
+i 124 cont: 125  szJ: 200
+res:528 rs 2 cp 1694
+i 125 cont: 126  szJ: 200
+res:530 rs 86 cp 1694
+i 126 cont: 127  szJ: 200
+res:643 rs 9 cp 1547
+i 127 cont: 128  szJ: 200
+res:652 rs 80 cp 1547
+i 128 cont: 129  szJ: 200
+res:582 rs 85 cp 1699
+i 129 cont: 130  szJ: 200
+res:485 rs 34 cp 1614
+i 130 cont: 131  szJ: 200
+res:583 rs 45 cp 1699
+i 131 cont: 132  szJ: 200
+res:557 rs 100 cp 1694
+i 132 cont: 133  szJ: 200
+res:520 rs 60 cp 1614
+i 133 cont: 134  szJ: 200
+res:638 rs 5 cp 1699
+i 134 cont: 135  szJ: 200
+res:643 rs 90 cp 1699
+i 135 cont: 136  szJ: 200
+res:690 rs 19 cp 1547
+i 136 cont: 137  szJ: 200
+res:539 rs 77 cp 1614
+i 137 cont: 138  szJ: 200
+res:575 rs 76 cp 1694
+i 138 cont: 139  szJ: 200
+res:672 rs 92 cp 1699
+i 139 cont: 140  szJ: 200
+res:554 rs 88 cp 1614
+i 140 cont: 141  szJ: 200
+res:576 rs 58 cp 1694
+i 141 cont: 142  szJ: 200
+res:692 rs 46 cp 1699
+i 142 cont: 143  szJ: 200
+res:589 rs 96 cp 1694
+i 143 cont: 144  szJ: 200
+res:492 rs 46 cp 1589
+i 144 cont: 145  szJ: 200
+res:538 rs 29 cp 1589
+i 145 cont: 146  szJ: 200
+res:567 rs 89 cp 1589
+i 146 cont: 147  szJ: 200
+res:700 rs 54 cp 1547
+i 147 cont: 148  szJ: 200
+res:695 rs 9 cp 1699
+i 148 cont: 149  szJ: 200
+res:570 rs 95 cp 1614
+i 149 cont: 150  szJ: 200
+res:730 rs 3 cp 1547
+i 150 cont: 151  szJ: 200
+res:733 rs 64 cp 1547
+i 151 cont: 152  szJ: 200
+res:588 rs 79 cp 1614
+i 152 cont: 153  szJ: 200
+res:735 rs 15 cp 1699
+i 153 cont: 154  szJ: 200
+res:606 rs 68 cp 1614
+i 154 cont: 155  szJ: 200
+res:738 rs 22 cp 1547
+i 155 cont: 156  szJ: 200
+res:582 rs 75 cp 1589
+i 156 cont: 157  szJ: 200
+res:609 rs 24 cp 1614
+i 157 cont: 158  szJ: 200
+res:633 rs 79 cp 1614
+i 158 cont: 159  szJ: 200
+res:593 rs 67 cp 1694
+i 159 cont: 160  szJ: 200
+res:616 rs 29 cp 1589
+i 160 cont: 161  szJ: 200
+res:752 rs 46 cp 1547
+i 161 cont: 162  szJ: 200
+res:784 rs 51 cp 1699
+i 162 cont: 163  szJ: 200
+res:631 rs 48 cp 1589
+i 163 cont: 164  szJ: 200
+res:790 rs 6 cp 1699
+i 164 cont: 165  szJ: 200
+res:796 rs 29 cp 1699
+i 165 cont: 166  szJ: 200
+res:825 rs 16 cp 1699
+i 166 cont: 167  szJ: 200
+res:594 rs 84 cp 1694
+i 167 cont: 168  szJ: 200
+res:639 rs 34 cp 1589
+i 168 cont: 169  szJ: 200
+res:673 rs 13 cp 1589
+i 169 cont: 170  szJ: 200
+res:606 rs 62 cp 1694
+i 170 cont: 171  szJ: 200
+res:668 rs 58 cp 1694
+i 171 cont: 172  szJ: 200
+res:640 rs 97 cp 1614
+i 172 cont: 173  szJ: 200
+res:708 rs 51 cp 1589
+i 173 cont: 174  szJ: 200
+res:757 rs 55 cp 1547
+i 174 cont: 175  szJ: 200
+res:856 rs 15 cp 1699
+i 175 cont: 176  szJ: 200
+res:675 rs 72 cp 1694
+i 176 cont: 177  szJ: 200
+res:711 rs 72 cp 1589
+i 177 cont: 178  szJ: 200
+res:663 rs 88 cp 1614
+i 178 cont: 179  szJ: 200
+res:723 rs 89 cp 1589
+i 179 cont: 180  szJ: 200
+res:691 rs 31 cp 1694
+i 180 cont: 181  szJ: 200
+res:901 rs 88 cp 1699
+i 181 cont: 182  szJ: 200
+res:814 rs 35 cp 1547
+i 182 cont: 183  szJ: 200
+res:664 rs 9 cp 1614
+i 183 cont: 184  szJ: 200
+res:673 rs 44 cp 1614
+i 184 cont: 185  szJ: 200
+res:717 rs 11 cp 1614
+i 185 cont: 186  szJ: 200
+res:905 rs 49 cp 1699
+i 186 cont: 187  szJ: 200
+res:721 rs 96 cp 1694
+i 187 cont: 188  szJ: 200
+res:784 rs 45 cp 1589
+i 188 cont: 189  szJ: 200
+res:727 rs 92 cp 1694
+i 189 cont: 190  szJ: 200
+res:786 rs 91 cp 1589
+i 190 cont: 191  szJ: 200
+res:923 rs 25 cp 1699
+i 191 cont: 192  szJ: 200
+res:838 rs 29 cp 1547
+i 192 cont: 193  szJ: 200
+res:734 rs 71 cp 1614
+i 193 cont: 194  szJ: 200
+res:926 rs 43 cp 1699
+i 194 cont: 195  szJ: 200
+res:861 rs 55 cp 1547
+i 195 cont: 196  szJ: 200
+res:760 rs 20 cp 1614
+i 196 cont: 197  szJ: 200
+res:732 rs 53 cp 1694
+i 197 cont: 198  szJ: 200
+res:785 rs 1 cp 1694
+i 198 cont: 199  szJ: 200
+res:786 rs 67 cp 1694
+i 199 cont: 200  szJ: 200
+i:8
+2.131251 1.131251
+res:0 rs 97 cp 0
+i 0 cont: 1  szJ: 200
+res:5 rs 32 cp 1699
+i 1 cont: 2  szJ: 200
+res:27 rs 15 cp 1547
+i 2 cont: 3  szJ: 200
+res:42 rs 58 cp 1547
+i 3 cont: 4  szJ: 200
+res:23 rs 14 cp 1589
+i 4 cont: 5  szJ: 200
+res:37 rs 61 cp 1589
+i 5 cont: 6  szJ: 200
+res:6 rs 55 cp 1614
+i 6 cont: 7  szJ: 200
+res:40 rs 62 cp 1589
+i 7 cont: 8  szJ: 200
+res:55 rs 9 cp 1547
+i 8 cont: 9  szJ: 200
+res:26 rs 72 cp 1614
+i 9 cont: 10  szJ: 200
+res:59 rs 3 cp 1589
+i 10 cont: 11  szJ: 200
+res:62 rs 52 cp 1589
+i 11 cont: 12  szJ: 200
+res:60 rs 50 cp 1614
+i 12 cont: 13  szJ: 200
+res:78 rs 1 cp 1589
+i 13 cont: 14  szJ: 200
+res:79 rs 33 cp 1589
+i 14 cont: 15  szJ: 200
+res:77 rs 24 cp 1614
+i 15 cont: 16  szJ: 200
+res:82 rs 68 cp 1589
+i 16 cont: 17  szJ: 200
+res:42 rs 14 cp 1699
+i 17 cont: 18  szJ: 200
+res:56 rs 81 cp 1699
+i 18 cont: 19  szJ: 200
+res:26 rs 48 cp 1694
+i 19 cont: 20  szJ: 200
+res:74 rs 80 cp 1694
+i 20 cont: 21  szJ: 200
+res:89 rs 9 cp 1699
+i 21 cont: 22  szJ: 200
+res:98 rs 39 cp 1699
+i 22 cont: 23  szJ: 200
+res:137 rs 28 cp 1699
+i 23 cont: 24  szJ: 200
+res:84 rs 85 cp 1589
+i 24 cont: 25  szJ: 200
+res:68 rs 63 cp 1547
+i 25 cont: 26  szJ: 200
+res:77 rs 43 cp 1694
+i 26 cont: 27  szJ: 200
+res:120 rs 85 cp 1694
+i 27 cont: 28  szJ: 200
+res:94 rs 42 cp 1589
+i 28 cont: 29  szJ: 200
+res:102 rs 55 cp 1547
+i 29 cont: 30  szJ: 200
+res:157 rs 33 cp 1547
+i 30 cont: 31  szJ: 200
+res:190 rs 6 cp 1547
+i 31 cont: 32  szJ: 200
+res:196 rs 55 cp 1547
+i 32 cont: 33  szJ: 200
+res:83 rs 8 cp 1614
+i 33 cont: 34  szJ: 200
+res:125 rs 36 cp 1694
+i 34 cont: 35  szJ: 200
+res:161 rs 13 cp 1694
+i 35 cont: 36  szJ: 200
+res:162 rs 93 cp 1699
+i 36 cont: 37  szJ: 200
+res:227 rs 11 cp 1694
+i 37 cont: 38  szJ: 200
+res:238 rs 73 cp 1694
+i 38 cont: 39  szJ: 200
+res:214 rs 5 cp 1547
+i 39 cont: 40  szJ: 200
+res:103 rs 49 cp 1589
+i 40 cont: 41  szJ: 200
+res:102 rs 60 cp 1614
+i 41 cont: 42  szJ: 200
+res:133 rs 87 cp 1589
+i 42 cont: 43  szJ: 200
+res:107 rs 56 cp 1614
+i 43 cont: 44  szJ: 200
+res:260 rs 49 cp 1694
+i 44 cont: 45  szJ: 200
+res:125 rs 24 cp 1614
+i 45 cont: 46  szJ: 200
+res:184 rs 76 cp 1699
+i 46 cont: 47  szJ: 200
+res:266 rs 68 cp 1694
+i 47 cont: 48  szJ: 200
+res:240 rs 33 cp 1547
+i 48 cont: 49  szJ: 200
+res:275 rs 11 cp 1694
+i 49 cont: 50  szJ: 200
+res:286 rs 12 cp 1694
+i 50 cont: 51  szJ: 200
+res:298 rs 46 cp 1694
+i 51 cont: 52  szJ: 200
+res:282 rs 68 cp 1547
+i 52 cont: 53  szJ: 200
+res:129 rs 8 cp 1614
+i 53 cont: 54  szJ: 200
+res:137 rs 56 cp 1614
+i 54 cont: 55  szJ: 200
+res:185 rs 83 cp 1699
+i 55 cont: 56  szJ: 200
+res:283 rs 71 cp 1547
+i 56 cont: 57  szJ: 200
+res:177 rs 98 cp 1589
+i 57 cont: 58  szJ: 200
+res:175 rs 63 cp 1614
+i 58 cont: 59  szJ: 200
+res:196 rs 10 cp 1699
+i 59 cont: 60  szJ: 200
+res:206 rs 60 cp 1699
+i 60 cont: 61  szJ: 200
+res:183 rs 49 cp 1614
+i 61 cont: 62  szJ: 200
+res:178 rs 35 cp 1589
+i 62 cont: 63  szJ: 200
+res:225 rs 22 cp 1699
+i 63 cont: 64  szJ: 200
+res:247 rs 36 cp 1699
+i 64 cont: 65  szJ: 200
+res:200 rs 43 cp 1589
+i 65 cont: 66  szJ: 200
+res:292 rs 87 cp 1699
+i 66 cont: 67  szJ: 200
+res:230 rs 44 cp 1589
+i 67 cont: 68  szJ: 200
+res:185 rs 76 cp 1614
+i 68 cont: 69  szJ: 200
+res:254 rs 98 cp 1589
+i 69 cont: 70  szJ: 200
+res:322 rs 12 cp 1699
+i 70 cont: 71  szJ: 200
+res:334 rs 99 cp 1699
+i 71 cont: 72  szJ: 200
+res:311 rs 97 cp 1547
+i 72 cont: 73  szJ: 200
+res:381 rs 99 cp 1699
+i 73 cont: 74  szJ: 200
+res:345 rs 29 cp 1694
+i 74 cont: 75  szJ: 200
+res:284 rs 64 cp 1589
+i 75 cont: 76  szJ: 200
+res:369 rs 35 cp 1694
+i 76 cont: 77  szJ: 200
+res:404 rs 59 cp 1694
+i 77 cont: 78  szJ: 200
+res:343 rs 11 cp 1547
+i 78 cont: 79  szJ: 200
+res:292 rs 5 cp 1589
+i 79 cont: 80  szJ: 200
+res:396 rs 80 cp 1699
+i 80 cont: 81  szJ: 200
+res:346 rs 31 cp 1547
+i 81 cont: 82  szJ: 200
+res:377 rs 39 cp 1547
+i 82 cont: 83  szJ: 200
+res:295 rs 32 cp 1589
+i 83 cont: 84  szJ: 200
+res:411 rs 99 cp 1694
+i 84 cont: 85  szJ: 200
+res:395 rs 74 cp 1547
+i 85 cont: 86  szJ: 200
+res:298 rs 92 cp 1589
+i 86 cont: 87  szJ: 200
+res:415 rs 46 cp 1694
+i 87 cont: 88  szJ: 200
+res:313 rs 30 cp 1589
+i 88 cont: 89  szJ: 200
+res:227 rs 3 cp 1614
+i 89 cont: 90  szJ: 200
+res:230 rs 71 cp 1614
+i 90 cont: 91  szJ: 200
+res:419 rs 16 cp 1694
+i 91 cont: 92  szJ: 200
+res:324 rs 69 cp 1589
+i 92 cont: 93  szJ: 200
+res:242 rs 7 cp 1614
+i 93 cont: 94  szJ: 200
+res:249 rs 35 cp 1614
+i 94 cont: 95  szJ: 200
+res:402 rs 5 cp 1547
+i 95 cont: 96  szJ: 200
+res:407 rs 36 cp 1547
+i 96 cont: 97  szJ: 200
+res:286 rs 71 cp 1614
+i 97 cont: 98  szJ: 200
+res:445 rs 21 cp 1547
+i 98 cont: 99  szJ: 200
+res:338 rs 21 cp 1614
+i 99 cont: 100  szJ: 200
+res:365 rs 13 cp 1589
+i 100 cont: 101  szJ: 200
+res:415 rs 71 cp 1699
+i 101 cont: 102  szJ: 200
+res:486 rs 53 cp 1699
+i 102 cont: 103  szJ: 200
+res:437 rs 52 cp 1694
+i 103 cont: 104  szJ: 200
+res:542 rs 24 cp 1699
+i 104 cont: 105  szJ: 200
+res:394 rs 74 cp 1589
+i 105 cont: 106  szJ: 200
+res:444 rs 27 cp 1694
+i 106 cont: 107  szJ: 200
+res:490 rs 30 cp 1547
+i 107 cont: 108  szJ: 200
+res:355 rs 63 cp 1614
+i 108 cont: 109  szJ: 200
+res:505 rs 4 cp 1547
+i 109 cont: 110  szJ: 200
+res:509 rs 44 cp 1547
+i 110 cont: 111  szJ: 200
+res:478 rs 67 cp 1694
+i 111 cont: 112  szJ: 200
+res:392 rs 28 cp 1614
+i 112 cont: 113  szJ: 200
+res:510 rs 12 cp 1547
+i 113 cont: 114  szJ: 200
+res:522 rs 30 cp 1547
+i 114 cont: 115  szJ: 200
+res:552 rs 23 cp 1547
+i 115 cont: 116  szJ: 200
+res:575 rs 23 cp 1547
+i 116 cont: 117  szJ: 200
+res:598 rs 55 cp 1547
+i 117 cont: 118  szJ: 200
+res:422 rs 80 cp 1614
+i 118 cont: 119  szJ: 200
+res:396 rs 8 cp 1589
+i 119 cont: 120  szJ: 200
+res:404 rs 54 cp 1589
+i 120 cont: 121  szJ: 200
+res:605 rs 37 cp 1547
+i 121 cont: 122  szJ: 200
+res:424 rs 75 cp 1589
+i 122 cont: 123  szJ: 200
+res:500 rs 62 cp 1694
+i 123 cont: 124  szJ: 200
+res:457 rs 32 cp 1614
+i 124 cont: 125  szJ: 200
+res:528 rs 2 cp 1694
+i 125 cont: 126  szJ: 200
+res:530 rs 86 cp 1694
+i 126 cont: 127  szJ: 200
+res:643 rs 9 cp 1547
+i 127 cont: 128  szJ: 200
+res:652 rs 80 cp 1547
+i 128 cont: 129  szJ: 200
+res:582 rs 85 cp 1699
+i 129 cont: 130  szJ: 200
+res:485 rs 34 cp 1614
+i 130 cont: 131  szJ: 200
+res:583 rs 45 cp 1699
+i 131 cont: 132  szJ: 200
+res:557 rs 100 cp 1694
+i 132 cont: 133  szJ: 200
+res:520 rs 60 cp 1614
+i 133 cont: 134  szJ: 200
+res:638 rs 5 cp 1699
+i 134 cont: 135  szJ: 200
+res:643 rs 90 cp 1699
+i 135 cont: 136  szJ: 200
+res:690 rs 19 cp 1547
+i 136 cont: 137  szJ: 200
+res:539 rs 77 cp 1614
+i 137 cont: 138  szJ: 200
+res:575 rs 76 cp 1694
+i 138 cont: 139  szJ: 200
+res:672 rs 92 cp 1699
+i 139 cont: 140  szJ: 200
+res:554 rs 88 cp 1614
+i 140 cont: 141  szJ: 200
+res:576 rs 58 cp 1694
+i 141 cont: 142  szJ: 200
+res:692 rs 46 cp 1699
+i 142 cont: 143  szJ: 200
+res:589 rs 96 cp 1694
+i 143 cont: 144  szJ: 200
+res:492 rs 46 cp 1589
+i 144 cont: 145  szJ: 200
+res:538 rs 29 cp 1589
+i 145 cont: 146  szJ: 200
+res:567 rs 89 cp 1589
+i 146 cont: 147  szJ: 200
+res:700 rs 54 cp 1547
+i 147 cont: 148  szJ: 200
+res:695 rs 9 cp 1699
+i 148 cont: 149  szJ: 200
+res:570 rs 95 cp 1614
+i 149 cont: 150  szJ: 200
+res:730 rs 3 cp 1547
+i 150 cont: 151  szJ: 200
+res:733 rs 64 cp 1547
+i 151 cont: 152  szJ: 200
+res:588 rs 79 cp 1614
+i 152 cont: 153  szJ: 200
+res:735 rs 15 cp 1699
+i 153 cont: 154  szJ: 200
+res:606 rs 68 cp 1614
+i 154 cont: 155  szJ: 200
+res:738 rs 22 cp 1547
+i 155 cont: 156  szJ: 200
+res:582 rs 75 cp 1589
+i 156 cont: 157  szJ: 200
+res:609 rs 24 cp 1614
+i 157 cont: 158  szJ: 200
+res:633 rs 79 cp 1614
+i 158 cont: 159  szJ: 200
+res:593 rs 67 cp 1694
+i 159 cont: 160  szJ: 200
+res:616 rs 29 cp 1589
+i 160 cont: 161  szJ: 200
+res:752 rs 46 cp 1547
+i 161 cont: 162  szJ: 200
+res:784 rs 51 cp 1699
+i 162 cont: 163  szJ: 200
+res:631 rs 48 cp 1589
+i 163 cont: 164  szJ: 200
+res:790 rs 6 cp 1699
+i 164 cont: 165  szJ: 200
+res:796 rs 29 cp 1699
+i 165 cont: 166  szJ: 200
+res:825 rs 16 cp 1699
+i 166 cont: 167  szJ: 200
+res:594 rs 84 cp 1694
+i 167 cont: 168  szJ: 200
+res:639 rs 34 cp 1589
+i 168 cont: 169  szJ: 200
+res:673 rs 13 cp 1589
+i 169 cont: 170  szJ: 200
+res:606 rs 62 cp 1694
+i 170 cont: 171  szJ: 200
+res:668 rs 58 cp 1694
+i 171 cont: 172  szJ: 200
+res:640 rs 97 cp 1614
+i 172 cont: 173  szJ: 200
+res:708 rs 51 cp 1589
+i 173 cont: 174  szJ: 200
+res:757 rs 55 cp 1547
+i 174 cont: 175  szJ: 200
+res:856 rs 15 cp 1699
+i 175 cont: 176  szJ: 200
+res:675 rs 72 cp 1694
+i 176 cont: 177  szJ: 200
+res:711 rs 72 cp 1589
+i 177 cont: 178  szJ: 200
+res:663 rs 88 cp 1614
+i 178 cont: 179  szJ: 200
+res:723 rs 89 cp 1589
+i 179 cont: 180  szJ: 200
+res:691 rs 31 cp 1694
+i 180 cont: 181  szJ: 200
+res:901 rs 88 cp 1699
+i 181 cont: 182  szJ: 200
+res:814 rs 35 cp 1547
+i 182 cont: 183  szJ: 200
+res:664 rs 9 cp 1614
+i 183 cont: 184  szJ: 200
+res:673 rs 44 cp 1614
+i 184 cont: 185  szJ: 200
+res:717 rs 11 cp 1614
+i 185 cont: 186  szJ: 200
+res:905 rs 49 cp 1699
+i 186 cont: 187  szJ: 200
+res:721 rs 96 cp 1694
+i 187 cont: 188  szJ: 200
+res:784 rs 45 cp 1589
+i 188 cont: 189  szJ: 200
+res:727 rs 92 cp 1694
+i 189 cont: 190  szJ: 200
+res:786 rs 91 cp 1589
+i 190 cont: 191  szJ: 200
+res:923 rs 25 cp 1699
+i 191 cont: 192  szJ: 200
+res:838 rs 29 cp 1547
+i 192 cont: 193  szJ: 200
+res:734 rs 71 cp 1614
+i 193 cont: 194  szJ: 200
+res:926 rs 43 cp 1699
+i 194 cont: 195  szJ: 200
+res:861 rs 55 cp 1547
+i 195 cont: 196  szJ: 200
+res:760 rs 20 cp 1614
+i 196 cont: 197  szJ: 200
+res:732 rs 53 cp 1694
+i 197 cont: 198  szJ: 200
+res:785 rs 1 cp 1694
+i 198 cont: 199  szJ: 200
+res:786 rs 67 cp 1694
+i 199 cont: 200  szJ: 200
+i:9
+1.724218 0.724218
+res:0 rs 97 cp 0
+i 0 cont: 1  szJ: 200
+res:5 rs 32 cp 1699
+i 1 cont: 2  szJ: 200
+res:27 rs 15 cp 1547
+i 2 cont: 3  szJ: 200
+res:42 rs 58 cp 1547
+i 3 cont: 4  szJ: 200
+res:23 rs 14 cp 1589
+i 4 cont: 5  szJ: 200
+res:37 rs 61 cp 1589
+i 5 cont: 6  szJ: 200
+res:6 rs 55 cp 1614
+i 6 cont: 7  szJ: 200
+res:40 rs 62 cp 1589
+i 7 cont: 8  szJ: 200
+res:55 rs 9 cp 1547
+i 8 cont: 9  szJ: 200
+res:26 rs 72 cp 1614
+i 9 cont: 10  szJ: 200
+res:59 rs 3 cp 1589
+i 10 cont: 11  szJ: 200
+res:62 rs 52 cp 1589
+i 11 cont: 12  szJ: 200
+res:60 rs 50 cp 1614
+i 12 cont: 13  szJ: 200
+res:78 rs 1 cp 1589
+i 13 cont: 14  szJ: 200
+res:79 rs 33 cp 1589
+i 14 cont: 15  szJ: 200
+res:9 rs 48 cp 1694
+i 15 cont: 16  szJ: 200
+res:82 rs 68 cp 1589
+i 16 cont: 17  szJ: 200
+res:42 rs 14 cp 1699
+i 17 cont: 18  szJ: 200
+res:56 rs 81 cp 1699
+i 18 cont: 19  szJ: 200
+res:35 rs 48 cp 1694
+i 19 cont: 20  szJ: 200
+res:83 rs 80 cp 1694
+i 20 cont: 21  szJ: 200
+res:89 rs 9 cp 1699
+i 21 cont: 22  szJ: 200
+res:98 rs 39 cp 1699
+i 22 cont: 23  szJ: 200
+res:137 rs 28 cp 1699
+i 23 cont: 24  szJ: 200
+res:84 rs 85 cp 1589
+i 24 cont: 25  szJ: 200
+res:68 rs 63 cp 1547
+i 25 cont: 26  szJ: 200
+res:86 rs 43 cp 1694
+i 26 cont: 27  szJ: 200
+res:129 rs 85 cp 1694
+i 27 cont: 28  szJ: 200
+res:94 rs 42 cp 1589
+i 28 cont: 29  szJ: 200
+res:150 rs 83 cp 1699
+i 29 cont: 30  szJ: 200
+res:123 rs 33 cp 1547
+i 30 cont: 31  szJ: 200
+res:156 rs 6 cp 1547
+i 31 cont: 32  szJ: 200
+res:64 rs 6 cp 1614
+i 32 cont: 33  szJ: 200
+res:70 rs 8 cp 1614
+i 33 cont: 34  szJ: 200
+res:134 rs 36 cp 1694
+i 34 cont: 35  szJ: 200
+res:170 rs 13 cp 1694
+i 35 cont: 36  szJ: 200
+res:175 rs 93 cp 1699
+i 36 cont: 37  szJ: 200
+res:236 rs 11 cp 1694
+i 37 cont: 38  szJ: 200
+res:247 rs 73 cp 1694
+i 38 cont: 39  szJ: 200
+res:174 rs 5 cp 1547
+i 39 cont: 40  szJ: 200
+res:103 rs 49 cp 1589
+i 40 cont: 41  szJ: 200
+res:89 rs 60 cp 1614
+i 41 cont: 42  szJ: 200
+res:133 rs 87 cp 1589
+i 42 cont: 43  szJ: 200
+res:94 rs 56 cp 1614
+i 43 cont: 44  szJ: 200
+res:269 rs 49 cp 1694
+i 44 cont: 45  szJ: 200
+res:112 rs 24 cp 1614
+i 45 cont: 46  szJ: 200
+res:197 rs 76 cp 1699
+i 46 cont: 47  szJ: 200
+res:275 rs 68 cp 1694
+i 47 cont: 48  szJ: 200
+res:137 rs 12 cp 1589
+i 48 cont: 49  szJ: 200
+res:284 rs 11 cp 1694
+i 49 cont: 50  szJ: 200
+res:295 rs 12 cp 1694
+i 50 cont: 51  szJ: 200
+res:307 rs 46 cp 1694
+i 51 cont: 52  szJ: 200
+res:216 rs 68 cp 1547
+i 52 cont: 53  szJ: 200
+res:116 rs 8 cp 1614
+i 53 cont: 54  szJ: 200
+res:124 rs 56 cp 1614
+i 54 cont: 55  szJ: 200
+res:198 rs 83 cp 1699
+i 55 cont: 56  szJ: 200
+res:217 rs 71 cp 1547
+i 56 cont: 57  szJ: 200
+res:181 rs 98 cp 1589
+i 57 cont: 58  szJ: 200
+res:162 rs 63 cp 1614
+i 58 cont: 59  szJ: 200
+res:209 rs 10 cp 1699
+i 59 cont: 60  szJ: 200
+res:219 rs 60 cp 1699
+i 60 cont: 61  szJ: 200
+res:170 rs 49 cp 1614
+i 61 cont: 62  szJ: 200
+res:182 rs 35 cp 1589
+i 62 cont: 63  szJ: 200
+res:238 rs 22 cp 1699
+i 63 cont: 64  szJ: 200
+res:260 rs 36 cp 1699
+i 64 cont: 65  szJ: 200
+res:204 rs 43 cp 1589
+i 65 cont: 66  szJ: 200
+res:305 rs 87 cp 1699
+i 66 cont: 67  szJ: 200
+res:234 rs 44 cp 1589
+i 67 cont: 68  szJ: 200
+res:172 rs 76 cp 1614
+i 68 cont: 69  szJ: 200
+res:258 rs 98 cp 1589
+i 69 cont: 70  szJ: 200
+res:335 rs 12 cp 1699
+i 70 cont: 71  szJ: 200
+res:347 rs 99 cp 1699
+i 71 cont: 72  szJ: 200
+res:245 rs 97 cp 1547
+i 72 cont: 73  szJ: 200
+res:394 rs 99 cp 1699
+i 73 cont: 74  szJ: 200
+res:354 rs 29 cp 1694
+i 74 cont: 75  szJ: 200
+res:288 rs 64 cp 1589
+i 75 cont: 76  szJ: 200
+res:378 rs 35 cp 1694
+i 76 cont: 77  szJ: 200
+res:413 rs 59 cp 1694
+i 77 cont: 78  szJ: 200
+res:277 rs 11 cp 1547
+i 78 cont: 79  szJ: 200
+res:296 rs 5 cp 1589
+i 79 cont: 80  szJ: 200
+res:409 rs 80 cp 1699
+i 80 cont: 81  szJ: 200
+res:280 rs 31 cp 1547
+i 81 cont: 82  szJ: 200
+res:311 rs 39 cp 1547
+i 82 cont: 83  szJ: 200
+res:299 rs 32 cp 1589
+i 83 cont: 84  szJ: 200
+res:420 rs 99 cp 1694
+i 84 cont: 85  szJ: 200
+res:329 rs 74 cp 1547
+i 85 cont: 86  szJ: 200
+res:302 rs 92 cp 1589
+i 86 cont: 87  szJ: 200
+res:424 rs 46 cp 1694
+i 87 cont: 88  szJ: 200
+res:317 rs 30 cp 1589
+i 88 cont: 89  szJ: 200
+res:214 rs 3 cp 1614
+i 89 cont: 90  szJ: 200
+res:217 rs 71 cp 1614
+i 90 cont: 91  szJ: 200
+res:428 rs 16 cp 1694
+i 91 cont: 92  szJ: 200
+res:328 rs 69 cp 1589
+i 92 cont: 93  szJ: 200
+res:229 rs 7 cp 1614
+i 93 cont: 94  szJ: 200
+res:236 rs 35 cp 1614
+i 94 cont: 95  szJ: 200
+res:336 rs 5 cp 1547
+i 95 cont: 96  szJ: 200
+res:341 rs 36 cp 1547
+i 96 cont: 97  szJ: 200
+res:273 rs 71 cp 1614
+i 97 cont: 98  szJ: 200
+res:379 rs 21 cp 1547
+i 98 cont: 99  szJ: 200
+res:325 rs 21 cp 1614
+i 99 cont: 100  szJ: 200
+res:369 rs 13 cp 1589
+i 100 cont: 101  szJ: 200
+res:382 rs 59 cp 1589
+i 101 cont: 102  szJ: 200
+res:480 rs 53 cp 1699
+i 102 cont: 103  szJ: 200
+res:446 rs 52 cp 1694
+i 103 cont: 104  szJ: 200
+res:536 rs 24 cp 1699
+i 104 cont: 105  szJ: 200
+res:411 rs 74 cp 1589
+i 105 cont: 106  szJ: 200
+res:453 rs 27 cp 1694
+i 106 cont: 107  szJ: 200
+res:424 rs 30 cp 1547
+i 107 cont: 108  szJ: 200
+res:544 rs 76 cp 1699
+i 108 cont: 109  szJ: 200
+res:439 rs 4 cp 1547
+i 109 cont: 110  szJ: 200
+res:443 rs 44 cp 1547
+i 110 cont: 111  szJ: 200
+res:487 rs 67 cp 1694
+i 111 cont: 112  szJ: 200
+res:362 rs 28 cp 1614
+i 112 cont: 113  szJ: 200
+res:444 rs 12 cp 1547
+i 113 cont: 114  szJ: 200
+res:456 rs 30 cp 1547
+i 114 cont: 115  szJ: 200
+res:486 rs 23 cp 1547
+i 115 cont: 116  szJ: 200
+res:547 rs 61 cp 1699
+i 116 cont: 117  szJ: 200
+res:509 rs 55 cp 1547
+i 117 cont: 118  szJ: 200
+res:392 rs 80 cp 1614
+i 118 cont: 119  szJ: 200
+res:413 rs 8 cp 1589
+i 119 cont: 120  szJ: 200
+res:421 rs 54 cp 1589
+i 120 cont: 121  szJ: 200
+res:516 rs 37 cp 1547
+i 121 cont: 122  szJ: 200
+res:441 rs 75 cp 1589
+i 122 cont: 123  szJ: 200
+res:509 rs 62 cp 1694
+i 123 cont: 124  szJ: 200
+res:427 rs 32 cp 1614
+i 124 cont: 125  szJ: 200
+res:537 rs 2 cp 1694
+i 125 cont: 126  szJ: 200
+res:539 rs 86 cp 1694
+i 126 cont: 127  szJ: 200
+res:554 rs 9 cp 1547
+i 127 cont: 128  szJ: 200
+res:563 rs 80 cp 1547
+i 128 cont: 129  szJ: 200
+res:587 rs 85 cp 1699
+i 129 cont: 130  szJ: 200
+res:455 rs 34 cp 1614
+i 130 cont: 131  szJ: 200
+res:588 rs 45 cp 1699
+i 131 cont: 132  szJ: 200
+res:566 rs 100 cp 1694
+i 132 cont: 133  szJ: 200
+res:454 rs 74 cp 1589
+i 133 cont: 134  szJ: 200
+res:643 rs 5 cp 1699
+i 134 cont: 135  szJ: 200
+res:648 rs 90 cp 1699
+i 135 cont: 136  szJ: 200
+res:601 rs 19 cp 1547
+i 136 cont: 137  szJ: 200
+res:474 rs 77 cp 1614
+i 137 cont: 138  szJ: 200
+res:584 rs 76 cp 1694
+i 138 cont: 139  szJ: 200
+res:677 rs 92 cp 1699
+i 139 cont: 140  szJ: 200
+res:489 rs 88 cp 1614
+i 140 cont: 141  szJ: 200
+res:585 rs 58 cp 1694
+i 141 cont: 142  szJ: 200
+res:697 rs 46 cp 1699
+i 142 cont: 143  szJ: 200
+res:598 rs 96 cp 1694
+i 143 cont: 144  szJ: 200
+res:534 rs 31 cp 1614
+i 144 cont: 145  szJ: 200
+res:500 rs 29 cp 1589
+i 145 cont: 146  szJ: 200
+res:529 rs 89 cp 1589
+i 146 cont: 147  szJ: 200
+res:611 rs 54 cp 1547
+i 147 cont: 148  szJ: 200
+res:700 rs 9 cp 1699
+i 148 cont: 149  szJ: 200
+res:550 rs 95 cp 1614
+i 149 cont: 150  szJ: 200
+res:641 rs 3 cp 1547
+i 150 cont: 151  szJ: 200
+res:644 rs 64 cp 1547
+i 151 cont: 152  szJ: 200
+res:568 rs 79 cp 1614
+i 152 cont: 153  szJ: 200
+res:740 rs 15 cp 1699
+i 153 cont: 154  szJ: 200
+res:586 rs 68 cp 1614
+i 154 cont: 155  szJ: 200
+res:649 rs 22 cp 1547
+i 155 cont: 156  szJ: 200
+res:544 rs 75 cp 1589
+i 156 cont: 157  szJ: 200
+res:589 rs 24 cp 1614
+i 157 cont: 158  szJ: 200
+res:613 rs 79 cp 1614
+i 158 cont: 159  szJ: 200
+res:602 rs 67 cp 1694
+i 159 cont: 160  szJ: 200
+res:578 rs 29 cp 1589
+i 160 cont: 161  szJ: 200
+res:663 rs 46 cp 1547
+i 161 cont: 162  szJ: 200
+res:789 rs 51 cp 1699
+i 162 cont: 163  szJ: 200
+res:593 rs 48 cp 1589
+i 163 cont: 164  szJ: 200
+res:795 rs 6 cp 1699
+i 164 cont: 165  szJ: 200
+res:801 rs 29 cp 1699
+i 165 cont: 166  szJ: 200
+res:830 rs 16 cp 1699
+i 166 cont: 167  szJ: 200
+res:603 rs 84 cp 1694
+i 167 cont: 168  szJ: 200
+res:601 rs 34 cp 1589
+i 168 cont: 169  szJ: 200
+res:635 rs 13 cp 1589
+i 169 cont: 170  szJ: 200
+res:615 rs 62 cp 1694
+i 170 cont: 171  szJ: 200
+res:677 rs 58 cp 1694
+i 171 cont: 172  szJ: 200
+res:620 rs 97 cp 1614
+i 172 cont: 173  szJ: 200
+res:670 rs 51 cp 1589
+i 173 cont: 174  szJ: 200
+res:668 rs 55 cp 1547
+i 174 cont: 175  szJ: 200
+res:861 rs 15 cp 1699
+i 175 cont: 176  szJ: 200
+res:684 rs 72 cp 1694
+i 176 cont: 177  szJ: 200
+res:673 rs 72 cp 1589
+i 177 cont: 178  szJ: 200
+res:689 rs 32 cp 1694
+i 178 cont: 179  szJ: 200
+res:685 rs 89 cp 1589
+i 179 cont: 180  szJ: 200
+res:705 rs 31 cp 1694
+i 180 cont: 181  szJ: 200
+res:906 rs 88 cp 1699
+i 181 cont: 182  szJ: 200
+res:725 rs 35 cp 1547
+i 182 cont: 183  szJ: 200
+res:621 rs 9 cp 1614
+i 183 cont: 184  szJ: 200
+res:630 rs 44 cp 1614
+i 184 cont: 185  szJ: 200
+res:674 rs 11 cp 1614
+i 185 cont: 186  szJ: 200
+res:910 rs 49 cp 1699
+i 186 cont: 187  szJ: 200
+res:735 rs 96 cp 1694
+i 187 cont: 188  szJ: 200
+res:746 rs 45 cp 1589
+i 188 cont: 189  szJ: 200
+res:741 rs 92 cp 1694
+i 189 cont: 190  szJ: 200
+res:748 rs 91 cp 1589
+i 190 cont: 191  szJ: 200
+res:928 rs 25 cp 1699
+i 191 cont: 192  szJ: 200
+res:749 rs 29 cp 1547
+i 192 cont: 193  szJ: 200
+res:691 rs 71 cp 1614
+i 193 cont: 194  szJ: 200
+res:931 rs 43 cp 1699
+i 194 cont: 195  szJ: 200
+res:772 rs 55 cp 1547
+i 195 cont: 196  szJ: 200
+res:717 rs 20 cp 1614
+i 196 cont: 197  szJ: 200
+res:746 rs 53 cp 1694
+i 197 cont: 198  szJ: 200
+res:762 rs 96 cp 1614
+i 198 cont: 199  szJ: 200
+res:747 rs 67 cp 1694
+i 199 cont: 200  szJ: 200
+Time Greedy Random: 53

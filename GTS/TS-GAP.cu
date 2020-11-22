@@ -21,7 +21,7 @@
 #include "Instance.h"
 #include "Solution.h"
 #include "gSolution.cuh"
-#include "guloso.h"
+#include "greedy.h"
 
 //const int nThreads = 896;
 //const int nBlocks = 5;
@@ -83,6 +83,7 @@ int main(int argc, char *argv[])
 	best_solution = allocationPointersSolution(h_instance);
 	h_solution = allocationPointersSolution(h_instance);
 	h_ejection = allocationPointerEjectionChain(h_instance);
+	
 	//weight greedy
 	float w1,w2;
 	struct timeval time_rand;
@@ -95,39 +96,39 @@ int main(int argc, char *argv[])
 	//Generate Initial Solution from greedy method
 	gettimeofday(&t_inicio,NULL);
 	for(i=0;i<nBlocks;i++){
-		gettimeofday(&time_rand,NULL);
-		srand(time_rand.tv_usec);
-		//memset(h_solution,0,size_solution);
-
+		
 		if(temp_teste[0]=='e'){
 			do{ 
-				printf("Teste");
+				gettimeofday(&time_rand,NULL);
+				srand(time_rand.tv_usec);
 				for(j=0;j<h_instance->mAgents;j++){
 					h_solution->resUsage[j+i*h_instance->mAgents] = 0;
 				}
 				w1 = (float)(rand())/(float)(RAND_MAX) + 0.5;
 				w2 = 19 + w1;
-			}while(guloso(h_instance,h_solution,w1,w2,i)==0);
+			}while(greedy(h_instance,h_solution,w1,w2,i)==0);
 		}else{
 			do{
+				gettimeofday(&time_rand,NULL);
+				srand(time_rand.tv_usec);
 				for(j=0;j<h_instance->mAgents;j++){
 					h_solution->resUsage[j+i*h_instance->mAgents] = 0;
 				}
-				w2 = (float)(rand())/(float)(RAND_MAX) + 0.5;
-				w1 = 1 + w2;
-			}while(guloso(h_instance,h_solution,w1,w2,i)==0);
+				w1 = (float)(rand())/(float)(RAND_MAX) + 0.5;
+				w2 = 1 + w1;
+			}while(greedy(h_instance,h_solution,w1,w2,i)==0);
 		}
+		
 	}
 	gettimeofday(&t_fim, NULL);
 	int t_aux =   (int) (1000 * (t_fim.tv_sec - t_inicio.tv_sec) + (t_fim.tv_usec - t_inicio.tv_usec) / 1000);
 	printf("Time Greedy Random: %d\n", t_aux);
-//	getchar();
 	//best_solution = h_solution;
 	//Size Struct Solution
 	size_t size_solution =  sizeof(Solution)
-																					+ sizeof(TcostFinal)*nBlocks
-																					+ sizeof(Ts)*(h_instance->nJobs*nBlocks)
-																					+ sizeof(TresUsage)*(h_instance->mAgents*nBlocks);
+		+ sizeof(TcostFinal)*nBlocks
+		+ sizeof(Ts)*(h_instance->nJobs*nBlocks)
+		+ sizeof(TresUsage)*(h_instance->mAgents*nBlocks);
 	for(i=0;i<nBlocks;i++){
 		best_solution->costFinal[i] = h_solution->costFinal[i]; 
 		for(j=0;j<h_instance->nJobs;j++){
@@ -180,16 +181,16 @@ int main(int argc, char *argv[])
 	gpuMemcpy(d_short_list, h_short_list,sizeof(int)*(nBlocks*h_instance->nJobs), cudaMemcpyHostToDevice);
 
 
-//	int blockSize;      // The launch configurator returned block size
-//	int minGridSize;    // The minimum grid size needed to achieve the maximum occupancy for a full device launch
-//	int gridSize;
-//	int N = 1000000;
+	// int blockSize;      // The launch configurator returned block size
+	// int minGridSize;    // The minimum grid size needed to achieve the maximum occupancy for a full device launch
+	// int gridSize;
+	// int N = 1000000;
 
-//	cudaOccupancyMaxPotentialBlockSize(&minGridSize, &blockSize,TS_GAP, 0, N);
+	// cudaOccupancyMaxPotentialBlockSize(&minGridSize, &blockSize,TS_GAP, 0, N);
 
-//	printf("block size %d\n",blockSize);
-//	printf("Min Grid %d\n",minGridSize);
-	//	getchar();
+	// printf("block size %d\n",blockSize);
+	// printf("Min Grid %d\n",minGridSize);
+	// 	getchar();
 
 
 
@@ -219,7 +220,7 @@ int main(int argc, char *argv[])
 	int sizeTabu;
 	int menor,aux1,t1,m1,aux;
 	unsigned short int m2;
-	int *v_menor_pos = (int*)malloc(sizeof(int)*nBlocks);
+	//int *v_menor_pos = (int*)malloc(sizeof(int)*nBlocks);
 	int b_aux;
 //	struct timeval inicio;
 //	struct timeval t_inicio;
@@ -244,7 +245,7 @@ int main(int argc, char *argv[])
 		gpuMemcpy(h_ejection, d_ejection, size_ejection, cudaMemcpyDeviceToHost);
 		gpuMemcpy(h_short_list, d_short_list,sizeof(int)*(nBlocks*h_instance->nJobs), cudaMemcpyDeviceToHost);
 		gpuMemcpy(h_seed, d_seed, sizeof(unsigned int)*(nThreads*nBlocks), cudaMemcpyDeviceToHost);
-
+		printf("%d %d", ite, n_iteration);
 		//reallocation pointers of Instance
 		h_instance->cost = (Tcost*)(h_instance+1);
 		h_instance->resourcesAgent =(TresourcesAgent*) (h_instance->cost +(h_instance->nJobs*h_instance->mAgents));
