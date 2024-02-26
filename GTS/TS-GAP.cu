@@ -7,6 +7,12 @@
  Description : CUDA compute reciprocals
  ============================================================================
  */
+#define RESET   "\033[0m"
+#define RED     "\033[31m"      /* Red */
+#define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
+#define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
+#define BOLDYELLOW  "\033[1m\033[33m"      /* Bold Yellow */
+#define BOLDBLUE    "\033[1m\033[34m"      /* Bold Blue */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -29,6 +35,23 @@
 
 int main(int argc, char *argv[])
 {
+	if(argc!=6){
+	    printf(RED "Erro: " RESET);
+	    printf("\tInvalid number arguments;\n");
+	    printf("\tNumber of arguments informed:");
+	    printf( BOLDRED "(%i)" RESET ,argc-1);
+            printf("\n\tExpected arguments:");
+	    printf(BOLDGREEN "(5)\n" RESET);
+	    printf("\t\t ./GTS " BOLDGREEN "[1] [2] [3] [4] [5]\n" RESET);
+	    printf(BOLDGREEN "\t[1]" RESET ": Instance name;\n");
+	    printf(BOLDGREEN "\t[2]" RESET ": Method iteration limit;\n");
+	    printf(BOLDGREEN "\t[3]" RESET ": Tabu search call limit;\n");
+	    printf(BOLDGREEN "\t[4]" RESET ": Best know object function;\n");
+	    printf(BOLDGREEN "\t[5]" RESET ": Method time limit;\n");
+
+	    exit(1);
+	}
+
 	//Variable with GPU's number
 	int deviceCount = 0;
 	//Commands for verify use correct of GPU
