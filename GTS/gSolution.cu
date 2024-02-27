@@ -260,9 +260,6 @@ Solution* createGPUsolution(Solution* h_solution,TnJobs nJobs, TmAgents mAgents)
                         		   + sizeof(TcostFinal)*nBlocks
                         		   + sizeof(Ts)*(nJobs*nBlocks) //vector s
                         		   + sizeof(TresUsage)*(mAgents*nBlocks); // vector resUsage
-
-
-
 	Solution *d_sol;
 	gpuMalloc((void**)&d_sol, size_solution);
 	gpuMemset(d_sol,0,size_solution);

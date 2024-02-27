@@ -56,9 +56,6 @@ Instance* loadInstance(const char *fileName){
 	                inst->cost[iReturn(j,i,n,m)]=aux_2;
 	            }
 	        }
-
-
-
 	        for(i=0; i<m; i++)
 	        {
 	            for(j=0; j<n; j++)
@@ -72,10 +69,10 @@ Instance* loadInstance(const char *fileName){
 	            fscanf(arq,"%hi", &aux);
 	            inst->capacity[j]=aux;
 	        }
-
+			fclose(arq);
+	    	return inst;
 	    }
-	    fclose(arq);
-	    return inst;
+	    
 }
 
 void showInstance(Instance *inst){

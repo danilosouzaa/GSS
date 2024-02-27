@@ -37,7 +37,7 @@ Instance* loadInstance(const char *fileName);
 
 void showInstance(Instance *inst);
 
-Instance* createGPUInstance(const Instance* h_instance, TnJobs nJobs, TmAgents);
+Instance* createGPUInstance(Instance* h_instance, TnJobs nJobs, TmAgents);
 EXTERN_C_END
 
 #endif

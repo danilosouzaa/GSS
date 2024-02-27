@@ -50,7 +50,6 @@ int main(int argc, char *argv[])
 	    printf(BOLDGREEN "\t[3]" RESET ": Tabu search call limit;\n");
 	    printf(BOLDGREEN "\t[4]" RESET ": Best know object function;\n");
 	    printf(BOLDGREEN "\t[5]" RESET ": Method runtime limit (minutes).\n");
-
 	    exit(1);
 	}
 
@@ -58,7 +57,7 @@ int main(int argc, char *argv[])
 	//Variable with GPU's number
 	int deviceCount = 0;
 	//Commands for verify use correct of GPU
-	cudaError_t error_id = cudaGetDeviceCount(&deviceCount);
+	cudaError_t error_id = cudaGetDeviceCount(&deviceCount); //valgrindError
 	if (error_id != cudaSuccess)
 	{
 		printf("cudaGetDeviceCount returned %d\n-> %s\n", (int)error_id, cudaGetErrorString(error_id));
@@ -77,6 +76,7 @@ int main(int argc, char *argv[])
 			printf("GPU 0 initialized!\n");
 		}
 	}
+	//free(error_id);
 	//iterator of use in for
 	int i, j;
 	//Pointer of states for use in curand (GPU)
@@ -108,9 +108,9 @@ int main(int argc, char *argv[])
 	
 	//showInstance(h_instance);
 	//Create and memory allocation from Solution and Ejection structs
-	Solution *best_solution = allocationPointersSolution(h_instance);
-	Solution *h_solution = allocationPointersSolution(h_instance);//erroValgrind
-	EjectionChain *h_ejection = allocationPointerEjectionChain(h_instance);
+	Solution *best_solution = allocationPointersSolution(h_instance); //valgrindError: free
+	Solution *h_solution = allocationPointersSolution(h_instance);//valgrindError: free
+	EjectionChain *h_ejection = allocationPointerEjectionChain(h_instance); //valgrindError: free
 	
 	//weight greedy
 	float w1,w2;
@@ -144,7 +144,7 @@ int main(int argc, char *argv[])
 				}
 				w1 = (float)(rand())/(float)(RAND_MAX) + 0.5;
 				w2 = 1 + w1;
-			}while(greedy(h_instance,h_solution,w1,w2,i)==0);//erroValgrind
+			}while(greedy(h_instance,h_solution,w1,w2,i)==0);
 		}
 		
 	}
@@ -230,9 +230,11 @@ int main(int argc, char *argv[])
 
 
 	//Reallocation of pointers Instance and Solution for GPU (device)
+	TnJobs tmpNJobs = h_instance->nJobs;
+	TmAgents tmpMAgents = h_instance->mAgents;
 	Instance *d_instance = createGPUInstance(h_instance, h_instance->nJobs, h_instance->mAgents);
-	Solution *d_solution = createGPUsolution(h_solution,h_instance->nJobs, h_instance->mAgents);
-	EjectionChain *d_ejection = createGPUejection(h_ejection,h_instance->nJobs, h_instance->mAgents);
+	Solution *d_solution = createGPUsolution(h_solution,tmpNJobs, tmpMAgents);
+	EjectionChain *d_ejection = createGPUejection(h_ejection,tmpNJobs, tmpMAgents);
 
 	//Pointers seed in device (GPU)
 	unsigned int *d_seed;
@@ -259,7 +261,7 @@ int main(int argc, char *argv[])
 	
 	float currentTime = 0.0; //current runtime 
 	float timeWOutImp = 0.0; //current time without improvement
-	int propSZMaxTabuList = 1.25*(h_instance->nJobs/(maxChain+1)); //25% more than the proportion of jobs distributed per chain
+	int propSZMaxTabuList = 1.25*(tmpNJobs/(maxChain+1)); //25% more than the proportion of jobs distributed per chain
 //	propSZMaxTabuList = 15;
 	gettimeofday(&inicio, NULL);
 	//size_t freeMem, totalMem;
@@ -275,15 +277,18 @@ int main(int argc, char *argv[])
 		gpuMemcpy(h_instance, d_instance, size_instance, cudaMemcpyDeviceToHost);
 		gpuMemcpy(h_solution, d_solution, size_solution, cudaMemcpyDeviceToHost);
 		gpuMemcpy(h_ejection, d_ejection, size_ejection, cudaMemcpyDeviceToHost);
-		gpuMemcpy(h_short_list, d_short_list,sizeof(int)*(nBlocks*h_instance->nJobs), cudaMemcpyDeviceToHost);
+		gpuMemcpy(h_short_list, d_short_list,sizeof(int)*(nBlocks*tmpNJobs), cudaMemcpyDeviceToHost);
 		gpuMemcpy(h_seed, d_seed, sizeof(unsigned int)*(nThreads*nBlocks), cudaMemcpyDeviceToHost);
 		
 		
 		//reallocation pointers of Instance
 		h_instance->cost = (Tcost*)(h_instance+1);
-		h_instance->resourcesAgent =(TresourcesAgent*) (h_instance->cost +(h_instance->nJobs*h_instance->mAgents));
-		h_instance->capacity =(Tcapacity*) (h_instance->resourcesAgent + (h_instance->nJobs*h_instance->mAgents));
-
+		h_instance->resourcesAgent =(TresourcesAgent*) (h_instance->cost +(tmpNJobs*tmpMAgents));
+		h_instance->capacity =(Tcapacity*) (h_instance->resourcesAgent + (tmpNJobs*tmpMAgents));
+		h_instance->nJobs = tmpNJobs;
+		h_instance->mAgents = tmpMAgents;
+		
+		
 		//reallocation pointers of Solution
 		h_solution->costFinal = (TcostFinal*)(h_solution+1);
 		h_solution->s = (Ts*)(h_solution->costFinal + nBlocks);
@@ -345,7 +350,7 @@ int main(int argc, char *argv[])
 				}
 				h_solution->s[h_ejection->pos[(h_ejection->sizeChain[lowestDelta + i*nThreads]-1) + lowestDelta*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs] = ((char)aux);
 			}
-			//			printf("cost: %d\n", h_solution->costFinal[i]);
+			//update current runTime
 			gettimeofday(&fim, NULL);
 			currentTime = (float) (1000 * (fim.tv_sec - inicio.tv_sec) + (fim.tv_usec - inicio.tv_usec) / 1000);
 		
@@ -359,9 +364,11 @@ int main(int argc, char *argv[])
 					printf(BOLDBLUE "IMPROMENT KNOW BEST SOLUTION!\n" RESET);
 				}
 			}else{
+				//update time without improviment
 				gettimeofday(&t_fim, NULL);
 				timeWOutImp = (float) (1000 * (t_fim.tv_sec - t_inicio.tv_sec) + (t_fim.tv_usec - t_inicio.tv_usec) / 1000);
 			}
+			//update bestSolution
 			if(h_solution->costFinal[i] < best_solution->costFinal[i]){
 				best_solution->costFinal[i] = h_solution->costFinal[i];
 				for(j=0;j<h_instance->nJobs;j++){
@@ -415,7 +422,7 @@ int main(int argc, char *argv[])
 			gpuMemcpy(d_solution, h_solution, size_solution, cudaMemcpyHostToDevice);
 
 			//reallocation pointers of Ejection
-			//memset(h_ejection,0,size_ejection);
+			memset(h_ejection,0,size_ejection);
 			h_ejection->pos=(Tpos*)(d_ejection + 1);
 			h_ejection->op = (Top*)(h_ejection->pos+ (nBlocks*nThreads*maxChain));
 			h_ejection->sizeChain = (TSizeChain*)(h_ejection->op + (nBlocks*nThreads));
@@ -438,6 +445,7 @@ int main(int argc, char *argv[])
 		//		gettimeofday(&fim, NULL);
 		//		currentTime = (float) (1000 * (fim.tv_sec - inicio.tv_sec) + (fim.tv_usec - inicio.tv_usec) / 1000);
 	}
+	free(h_long_list);
 	printf("cost: %d\n ite: %d\n time: %.2f ms\n", bestCost, ite, currentTime);
 
 	int k;	
@@ -481,10 +489,10 @@ int main(int argc, char *argv[])
 
 	aux = 0;
 	k = best_solution->costFinal[0];
-	for(i=1;i<nBlocks;i++){
+	for(i=1;i<nBlocks;i++){ //position bestSolution
 		if(best_solution->costFinal[i]<k){
 			aux = i;
-			k= best_solution->costFinal[i];
+			k = best_solution->costFinal[i];
 		}
 	}
 	for(i=0;i<nBlocks;i++){
@@ -496,29 +504,33 @@ int main(int argc, char *argv[])
 	createOutputFileSolution(best_solution,h_instance,aux,temp_teste); //change function name 
 	createOutputFileFrequencyVersion1(best_solution,h_instance,cont_similarity,aux,temp_teste);//change function name 
 	createOutputFileFrequencyVersion2(best_solution,h_instance,cont_freq,aux,temp_teste);//change function name 
-
-	// cudaFree(states);
-	// cudaFree(d_instance);
-	// cudaFree(d_solution);
-	// cudaFree(d_ejection);
-	// cudaFree(d_seed);
-	// cudaFree(d_short_list);
-
 	
-	free(h_short_list);
-	free(h_seed);
-	freePointersInstance(h_instance);
-	freePointersSolution(h_solution);
-	freePointerEjectionChain(h_ejection);
-	freePointersSolution(best_solution);
-	free(cont_similarity);
-	free(total_similarity);
 	cudaFree(states);
 	cudaFree(d_instance);
 	cudaFree(d_solution);
 	cudaFree(d_ejection);
 	cudaFree(d_seed);
 	cudaFree(d_short_list);
+
+	free(cont_freq);
+	free(h_short_list);
+	free(h_seed);
+	free(h_instance);
+	free(h_solution);
+	free(h_ejection);
+	free(best_solution);
+	// freePointersInstance(h_instance);
+	// freePointersSolution(h_solution);
+	// freePointerEjectionChain(h_ejection);
+	// freePointersSolution(best_solution);
+	free(cont_similarity);
+	free(total_similarity);
+	// cudaFree(states);
+	// cudaFree(d_instance);
+	// cudaFree(d_solution);
+	// cudaFree(d_ejection);
+	// cudaFree(d_seed);
+	// cudaFree(d_short_list);
 	return 0;
 }
 
