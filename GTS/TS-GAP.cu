@@ -490,7 +490,7 @@ int main(int argc, char *argv[])
 	aux = 0;
 	k = best_solution->costFinal[0];
 	for(i=1;i<nBlocks;i++){ //position bestSolution
-		if(best_solution->costFinal[i]<k){
+		if(best_solution->costFinal[i]< k){
 			aux = i;
 			k = best_solution->costFinal[i];
 		}
