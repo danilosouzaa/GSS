@@ -13,7 +13,7 @@ EXTERN_C_BEGIN
 
 int* inicializeVector(Instance *inst, float p1, float p2);
 
-int* inicializeVector2(Instance *inst, int job, float p1, float p2);
+int* createAssigmentPriorityVector(Instance *inst, int job, float p1, float p2);
 
 int quicksortCof(float *values, int *idc, int began, int end);
 

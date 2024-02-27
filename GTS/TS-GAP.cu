@@ -35,6 +35,8 @@
 
 int main(int argc, char *argv[])
 {
+
+	//verify arguments 
 	if(argc!=6){
 	    printf(RED "Erro: " RESET);
 	    printf("\tInvalid number arguments;\n");
@@ -47,10 +49,11 @@ int main(int argc, char *argv[])
 	    printf(BOLDGREEN "\t[2]" RESET ": Method iteration limit;\n");
 	    printf(BOLDGREEN "\t[3]" RESET ": Tabu search call limit;\n");
 	    printf(BOLDGREEN "\t[4]" RESET ": Best know object function;\n");
-	    printf(BOLDGREEN "\t[5]" RESET ": Method time limit;\n");
+	    printf(BOLDGREEN "\t[5]" RESET ": Method runtime limit (minutes).\n");
 
 	    exit(1);
 	}
+
 
 	//Variable with GPU's number
 	int deviceCount = 0;
@@ -61,17 +64,18 @@ int main(int argc, char *argv[])
 		printf("cudaGetDeviceCount returned %d\n-> %s\n", (int)error_id, cudaGetErrorString(error_id));
 		printf("Result = FAIL\n");
 		exit(1);
-	}
-	if(deviceCount == 0)
-	{
-		printf("No GPU found :(");
-		exit(1);
-	}
-	else
-	{
-		printf("Found %d GPUs!\n", deviceCount);
-		gpuSetDevice(0);
-		printf("GPU 0 initialized!\n");
+	}else{
+		if(deviceCount == 0)
+		{
+			printf("No GPU found :(");
+			exit(1);
+		}
+		else
+		{
+			printf("Found %d GPUs!\n", deviceCount);
+			gpuSetDevice(0);
+			printf("GPU 0 initialized!\n");
+		}
 	}
 	//iterator of use in for
 	int i, j;
@@ -88,24 +92,25 @@ int main(int argc, char *argv[])
 
 
 	//Pointers of intance, solution and ejection for use in CPU(Host) and GPU(Device)
-	Instance *h_instance, *d_instance;
-	Solution *h_solution, *d_solution, *best_solution;
-	EjectionChain *h_ejection, *d_ejection;
+	//Instance *h_instance, *d_instance;
+	//Solution *h_solution, *d_solution, *best_solution;
+	//EjectionChain *h_ejection, *d_ejection;
 
 	//Load Instance
 	char nameAux[50] = "../Instances/";
 	const char *temp_teste = argv[1];
 	strcat(nameAux,argv[1]);
-	printf("%s \n",nameAux);
 	const char *fileName = nameAux; //argv[1];
-	//	strcat(fileName,argv[1]);
-	h_instance = loadInstance(fileName);
-	int ti = atoi(argv[5]);
+	
+	//Create, memory allocation and read instance struct
+	Instance *h_instance = loadInstance(fileName);
+	float runtimeLimit= atof(argv[5])*60000;// runtime limit (convert minutes from ms)
+	
 	//showInstance(h_instance);
-	//Allocation Solution and Ejection
-	best_solution = allocationPointersSolution(h_instance);
-	h_solution = allocationPointersSolution(h_instance);
-	h_ejection = allocationPointerEjectionChain(h_instance);
+	//Create and memory allocation from Solution and Ejection structs
+	Solution *best_solution = allocationPointersSolution(h_instance);
+	Solution *h_solution = allocationPointersSolution(h_instance);//erroValgrind
+	EjectionChain *h_ejection = allocationPointerEjectionChain(h_instance);
 	
 	//weight greedy
 	float w1,w2;
@@ -139,23 +144,27 @@ int main(int argc, char *argv[])
 				}
 				w1 = (float)(rand())/(float)(RAND_MAX) + 0.5;
 				w2 = 1 + w1;
-			}while(greedy(h_instance,h_solution,w1,w2,i)==0);
+			}while(greedy(h_instance,h_solution,w1,w2,i)==0);//erroValgrind
 		}
 		
 	}
 	gettimeofday(&t_fim, NULL);
-	int t_aux =   (int) (1000 * (t_fim.tv_sec - t_inicio.tv_sec) + (t_fim.tv_usec - t_inicio.tv_usec) / 1000);
-	printf("Time Greedy Random: %d\n", t_aux);
+	float t_aux =   (float) (1000 * (t_fim.tv_sec - t_inicio.tv_sec) + (t_fim.tv_usec - t_inicio.tv_usec) / 1000);
+	printf("Time Greedy Random: %.1fms\n", t_aux);
 	//best_solution = h_solution;
 	//Size Struct Solution
 	size_t size_solution =  sizeof(Solution)
 		+ sizeof(TcostFinal)*nBlocks
 		+ sizeof(Ts)*(h_instance->nJobs*nBlocks)
 		+ sizeof(TresUsage)*(h_instance->mAgents*nBlocks);
+	if(size_solution<=0){
+		printf(BOLDRED "Error: verify nBlocks value and parameters read from the instance.\n" RESET);
+	}
+	//copies solution initial (greedy) into the structure of the best solution 
 	for(i=0;i<nBlocks;i++){
 		best_solution->costFinal[i] = h_solution->costFinal[i]; 
 		for(j=0;j<h_instance->nJobs;j++){
-			best_solution->s[j+i*h_instance->nJobs] = h_solution->costFinal[j+i*h_instance->nJobs];
+			best_solution->s[j+i*h_instance->nJobs] = h_solution->s[j+i*h_instance->nJobs];//erroValgrind
 		}
 		for(j=0;j<h_instance->mAgents;j++){
 					best_solution->resUsage[j+i*h_instance->mAgents] = h_solution->resUsage[j+i*h_instance->mAgents];
@@ -167,39 +176,42 @@ int main(int argc, char *argv[])
 													+ sizeof(Top)*(nBlocks*nThreads)
 													+ sizeof(TSizeChain)*(nBlocks*nThreads)
 													+ sizeof(Tdelta)*(nBlocks*nThreads);
-
+	if(size_ejection<=0){
+		printf(BOLDRED "Error: verify nBlocks and nThreads values.\n" RESET);
+	}
 	//Size Struct of Instance
 	size_t size_instance = sizeof(Instance)
-																											+ sizeof(Tcost)*(h_instance->nJobs*h_instance->mAgents)  //cost
-																											+ sizeof(TresourcesAgent)*(h_instance->nJobs*h_instance->mAgents)
-																											+ sizeof(Tcapacity)*h_instance->mAgents;
-
+							+ sizeof(Tcost)*(h_instance->nJobs*h_instance->mAgents)  //cost
+							+ sizeof(TresourcesAgent)*(h_instance->nJobs*h_instance->mAgents) //resources
+							+ sizeof(Tcapacity)*h_instance->mAgents; //capacity
+	if (size_instance<=0){
+		printf(BOLDRED "Error: check parameters read from the instance.\n" RESET);
+	}
 	int *h_short_list = (int*)malloc(sizeof(int)*(nBlocks*h_instance->nJobs));
 	int *h_long_list = (int*)malloc(sizeof(int)*(h_instance->nJobs*h_instance->mAgents));
-	memset(h_short_list,0,sizeof(int)*(nBlocks*h_instance->nJobs));
-	memset(h_long_list,0,sizeof(int)*(h_instance->nJobs*h_instance->mAgents));
-	int cost_saida = 1000000;
+	for(i=0;i<nBlocks*h_instance->nJobs;i++){
+		h_short_list[i] = 0;
+	}
+	for(i=0;i<h_instance->nJobs*h_instance->mAgents;i++){
+		h_long_list[i] = 0;
+	}
+	int bestCost = 1000000; //bigM
 	for(i=0;i<nBlocks;i++){
 		for(j=0;j<h_instance->nJobs;j++){
 			h_long_list[j + h_solution->s[j+i*h_instance->nJobs]*h_instance->nJobs]++;
 		}
 	}
 
-	for(i=0;i<nBlocks;i++){
-		printf("Initial cost: %d\n", h_solution->costFinal[i]);
-		if(cost_saida>h_solution->costFinal[i]){
-			cost_saida=h_solution->costFinal[i];
+	for(i=0;i<nBlocks;i++){ 
+		printf("Initial cost obtained by the greedy method: %d\n", h_solution->costFinal[i]);
+		if(h_solution->costFinal[i]< bestCost){
+			bestCost = h_solution->costFinal[i]; //update costOut with value of greedy solution found
 		}
-		//		if(i==0){
-		//			for(j=0;j<h_instance->nJobs;j++){
-		//				printf("job %d agent %d\n",j, h_solution->s[j+i*h_instance->nJobs]);
-		//			}			
-		//		}
 	}
 
-	int nJ = h_instance->nJobs;
+	
 
-	int *d_short_list;
+	int *d_short_list; //verify objective of struct
 	gpuMalloc((void*)&d_short_list,sizeof(int)*(nBlocks*h_instance->nJobs) );
 	gpuMemcpy(d_short_list, h_short_list,sizeof(int)*(nBlocks*h_instance->nJobs), cudaMemcpyHostToDevice);
 
@@ -218,9 +230,9 @@ int main(int argc, char *argv[])
 
 
 	//Reallocation of pointers Instance and Solution for GPU (device)
-	d_instance = createGPUInstance(h_instance, h_instance->nJobs, h_instance->mAgents);
-	d_solution = createGPUsolution(h_solution,h_instance->nJobs, h_instance->mAgents);
-	d_ejection = createGPUejection(h_ejection,h_instance->nJobs, h_instance->mAgents);
+	Instance *d_instance = createGPUInstance(h_instance, h_instance->nJobs, h_instance->mAgents);
+	Solution *d_solution = createGPUsolution(h_solution,h_instance->nJobs, h_instance->mAgents);
+	EjectionChain *d_ejection = createGPUejection(h_ejection,h_instance->nJobs, h_instance->mAgents);
 
 	//Pointers seed in device (GPU)
 	unsigned int *d_seed;
@@ -233,33 +245,30 @@ int main(int argc, char *argv[])
 	// Allocation of pointer and copy value in d_seed (Device)
 	gpuMalloc((void*)&d_seed, sizeof(unsigned int)*(nThreads*nBlocks));
 	gpuMemcpy(d_seed, h_seed, sizeof(unsigned int)*(nThreads*nBlocks), cudaMemcpyHostToDevice);
+	cudaEventRecord(start);//verify objective of function
 
-	cudaEventRecord(start);
-	int n_iteration = atoi(argv[2]);
-	int ite=1;
-	int n_busca = atoi(argv[3]);
-	int b_solution = atoi(argv[4]);
-	int ite_b = 0;
-	int sizeTabu;
-	int menor,aux1,t1,m1,aux;
-	unsigned short int m2;
-	//int *v_menor_pos = (int*)malloc(sizeof(int)*nBlocks);
-	int b_aux;
-//	struct timeval inicio;
-//	struct timeval t_inicio;
-//	struct timeval fim;
-//	struct timeval t_fim;
-	int tmili = 0;
-	int tmelhora = 0;
-	nJ =1.25*( nJ/(maxChain+1) );
-//	nJ = 15;
+	int iterationLimit = atoi(argv[2]); //iteration limit call GTS
+	int ite=1; // iteration current
+	int searchLimitCall = atoi(argv[3]); //search limit TS in each thread of GPU
+	int knowBestSolution = atoi(argv[4]); 
+	//int ite_b = 0;//verify mistery????
+	int szTabuList; //size Tabu List
+	int lowestDelta;//value lowest Delta
+	int aux; //auxiliar variable
+	
+	
+	float currentTime = 0.0; //current runtime 
+	float timeWOutImp = 0.0; //current time without improvement
+	int propSZMaxTabuList = 1.25*(h_instance->nJobs/(maxChain+1)); //25% more than the proportion of jobs distributed per chain
+//	propSZMaxTabuList = 15;
 	gettimeofday(&inicio, NULL);
 	//size_t freeMem, totalMem;
 	gettimeofday(&t_inicio,NULL);
-	while((ite<=n_iteration)&&(tmili<=(ti*60000))&&(tmelhora<60000)){
-		sizeTabu = rand()%nJ + 1;
-		//		printf("Size tabu: %d\n", sizeTabu);
-		TS_GAP<<<nBlocks,nThreads>>>(d_instance, d_solution,d_ejection, d_short_list, d_seed, states, ite, n_busca);
+	float timeLimitImprov = 60000; //ms
+	while((ite<=iterationLimit)&&(currentTime<=runtimeLimit)&&(timeWOutImp<timeLimitImprov)){
+		szTabuList = rand()%propSZMaxTabuList + 1; //random tabu list RANDOM(1,propSZMaxTabuList)
+		//verify in globals TS_GAP szTabuList???
+		TS_GAP<<<nBlocks,nThreads>>>(d_instance, d_solution,d_ejection, d_short_list, d_seed, states, ite, searchLimitCall);
 		gpuDeviceSynchronize();
 	//	cudaMemGetInfo(&freeMem, &totalMem);
 	//	printf("Free = %zu, Total = %zu\n, size_intance = %zu", freeMem, totalMem,size_instance);
@@ -268,7 +277,8 @@ int main(int argc, char *argv[])
 		gpuMemcpy(h_ejection, d_ejection, size_ejection, cudaMemcpyDeviceToHost);
 		gpuMemcpy(h_short_list, d_short_list,sizeof(int)*(nBlocks*h_instance->nJobs), cudaMemcpyDeviceToHost);
 		gpuMemcpy(h_seed, d_seed, sizeof(unsigned int)*(nThreads*nBlocks), cudaMemcpyDeviceToHost);
-		printf("%d %d", ite, n_iteration);
+		
+		
 		//reallocation pointers of Instance
 		h_instance->cost = (Tcost*)(h_instance+1);
 		h_instance->resourcesAgent =(TresourcesAgent*) (h_instance->cost +(h_instance->nJobs*h_instance->mAgents));
@@ -287,36 +297,36 @@ int main(int argc, char *argv[])
 		h_ejection->delta = (Tdelta*)(h_ejection->sizeChain + (nBlocks*nThreads));
 
 
-		//		printf("%d time %d \n",ite,tmili);
+		//		printf("%d time %f \n",ite,currentTime);
 		for(i=0;i<nBlocks;i++){
-			menor = 100000;
+			lowestDelta = 100000;//bigM
 			for(j=0;j<nThreads;j++){
-				if(h_ejection->delta[j + i*nThreads]<menor){
-					menor = h_ejection->delta[j + i*nThreads];
+				if(h_ejection->delta[j + i*nThreads]<lowestDelta){
+					lowestDelta = h_ejection->delta[j + i*nThreads];
 				}
 				//printf("value of delta for thread %d in block %d: :%d \n", j, i, h_ejection->delta[j + i*nThreads]);
 			}
-			menor = returnIndice(h_solution,h_ejection,i,/*nBlocks,nThreads,*/menor,h_long_list,h_instance->nJobs,h_instance->mAgents);
-			//	printf("menor delta do bloco %d: %d\n",i,menor);
-			if(h_ejection->op[menor + i*nThreads]==1){
-				aux1 = h_ejection->pos[0 + menor*maxChain + i*maxChain*nThreads];
-				//aux2 = ejection->pos[0 + menor*maxChain + i*maxChain*nThreads];
-				h_short_list[aux1 + i*h_instance->nJobs] = ite + sizeTabu;
+			lowestDelta = returnIndice(h_solution,h_ejection,i,/*nBlocks,nThreads,*/lowestDelta,h_long_list,h_instance->nJobs,h_instance->mAgents);
+			//	printf("lowestDelta delta do bloco %d: %d\n",i,lowestDelta);
+			if(h_ejection->op[lowestDelta + i*nThreads]==1){
+				int aux1 = h_ejection->pos[0 + lowestDelta*maxChain + i*maxChain*nThreads];
+				//aux2 = ejection->pos[0 + lowestDelta*maxChain + i*maxChain*nThreads];
+				h_short_list[aux1 + i*h_instance->nJobs] = ite + szTabuList;
 
 			}else{
-					b_aux = rand()%h_ejection->sizeChain[menor+i*nThreads];
-				//for(j = 0; j<h_ejection->sizeChain[menor + i*nThreads];j++){
-					aux1 = h_ejection->pos[b_aux + menor*maxChain + i*maxChain*nThreads];
-					h_short_list[aux1 + i*h_instance->nJobs] = ite + sizeTabu;
+					int varAux = rand()%h_ejection->sizeChain[lowestDelta+i*nThreads];
+				//for(j = 0; j<h_ejection->sizeChain[lowestDelta + i*nThreads];j++){
+					int aux1 = h_ejection->pos[varAux + lowestDelta*maxChain + i*maxChain*nThreads];
+					h_short_list[aux1 + i*h_instance->nJobs] = ite + szTabuList;
 				//}
 
 			}
 
-			h_solution->costFinal[i] += h_ejection->delta[menor+i*nThreads];
-			if(h_ejection->op[menor + i*nThreads]==1){
-				t1 = h_ejection->pos[0 + menor*maxChain + i*maxChain*nThreads];
-				m2 = h_ejection->pos[1 + menor*maxChain + i*maxChain*nThreads];
-				m1 = ((int)h_solution->s[t1 + i*h_instance->nJobs]);
+			h_solution->costFinal[i] += h_ejection->delta[lowestDelta+i*nThreads];
+			if(h_ejection->op[lowestDelta + i*nThreads]==1){
+				int t1 = h_ejection->pos[0 + lowestDelta*maxChain + i*maxChain*nThreads];
+				unsigned short int m2 = h_ejection->pos[1 + lowestDelta*maxChain + i*maxChain*nThreads];
+				int m1 = ((int)h_solution->s[t1 + i*h_instance->nJobs]);
 				h_solution->resUsage[m1 + i*h_instance->mAgents] -= h_instance->resourcesAgent[t1*h_instance->mAgents + m1];
 				h_solution->resUsage[m2 + i*h_instance->mAgents] += h_instance->resourcesAgent[t1*h_instance->mAgents + m2];
 				h_solution->s[t1 + i*h_instance->nJobs] = (m2);
@@ -325,22 +335,32 @@ int main(int argc, char *argv[])
 				//		}
 
 			}else{
-				h_solution->resUsage[((int)h_solution->s[h_ejection->pos[0 + menor*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs]) + i*h_instance->mAgents] += h_instance->resourcesAgent[h_ejection->pos[(h_ejection->sizeChain[menor + i*nThreads]-1)  + menor*maxChain + i*maxChain*nThreads]*h_instance->mAgents + ((int)h_solution->s[h_ejection->pos[0 + menor*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs])];
-				h_solution->resUsage[((int)h_solution->s[h_ejection->pos[0 + menor*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs]) + i*h_instance->mAgents] -= h_instance->resourcesAgent[h_ejection->pos[0 + menor*maxChain + i*maxChain*nThreads]*h_instance->mAgents + ((int)h_solution->s[h_ejection->pos[0 + menor*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs])];
-				aux = ((int)h_solution->s[h_ejection->pos[0 + menor*maxChain + i*maxChain*nThreads]+ i*h_instance->nJobs]);
-				for(j=1; j<h_ejection->sizeChain[menor + i*nThreads]; j++){
-					h_solution->resUsage[((int)h_solution->s[h_ejection->pos[j + menor*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs]) + i*h_instance->mAgents] += h_instance->resourcesAgent[h_ejection->pos[(j-1) + menor*maxChain + i*maxChain*nThreads]*h_instance->mAgents + ((int)h_solution->s[h_ejection->pos[j + menor*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs])];
-					h_solution->resUsage[((int)h_solution->s[h_ejection->pos[j + menor*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs]) + i*h_instance->mAgents] -= h_instance->resourcesAgent[h_ejection->pos[j + menor*maxChain + i*maxChain*nThreads]*h_instance->mAgents + ((int)h_solution->s[h_ejection->pos[j + menor*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs])];
-					h_solution->s[h_ejection->pos[(j-1) + menor*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs] = h_solution->s[h_ejection->pos[j + menor*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs];
+				h_solution->resUsage[((int)h_solution->s[h_ejection->pos[0 + lowestDelta*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs]) + i*h_instance->mAgents] += h_instance->resourcesAgent[h_ejection->pos[(h_ejection->sizeChain[lowestDelta + i*nThreads]-1)  + lowestDelta*maxChain + i*maxChain*nThreads]*h_instance->mAgents + ((int)h_solution->s[h_ejection->pos[0 + lowestDelta*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs])];
+				h_solution->resUsage[((int)h_solution->s[h_ejection->pos[0 + lowestDelta*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs]) + i*h_instance->mAgents] -= h_instance->resourcesAgent[h_ejection->pos[0 + lowestDelta*maxChain + i*maxChain*nThreads]*h_instance->mAgents + ((int)h_solution->s[h_ejection->pos[0 + lowestDelta*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs])];
+				aux = ((int)h_solution->s[h_ejection->pos[0 + lowestDelta*maxChain + i*maxChain*nThreads]+ i*h_instance->nJobs]);
+				for(j=1; j<h_ejection->sizeChain[lowestDelta + i*nThreads]; j++){
+					h_solution->resUsage[((int)h_solution->s[h_ejection->pos[j + lowestDelta*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs]) + i*h_instance->mAgents] += h_instance->resourcesAgent[h_ejection->pos[(j-1) + lowestDelta*maxChain + i*maxChain*nThreads]*h_instance->mAgents + ((int)h_solution->s[h_ejection->pos[j + lowestDelta*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs])];
+					h_solution->resUsage[((int)h_solution->s[h_ejection->pos[j + lowestDelta*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs]) + i*h_instance->mAgents] -= h_instance->resourcesAgent[h_ejection->pos[j + lowestDelta*maxChain + i*maxChain*nThreads]*h_instance->mAgents + ((int)h_solution->s[h_ejection->pos[j + lowestDelta*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs])];
+					h_solution->s[h_ejection->pos[(j-1) + lowestDelta*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs] = h_solution->s[h_ejection->pos[j + lowestDelta*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs];
 				}
-				h_solution->s[h_ejection->pos[(h_ejection->sizeChain[menor + i*nThreads]-1) + menor*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs] = ((char)aux);
+				h_solution->s[h_ejection->pos[(h_ejection->sizeChain[lowestDelta + i*nThreads]-1) + lowestDelta*maxChain + i*maxChain*nThreads] + i*h_instance->nJobs] = ((char)aux);
 			}
 			//			printf("cost: %d\n", h_solution->costFinal[i]);
-			if(h_solution->costFinal[i]<cost_saida){
-				cost_saida = h_solution->costFinal[i];
-				tmelhora = 0;
+			gettimeofday(&fim, NULL);
+			currentTime = (float) (1000 * (fim.tv_sec - inicio.tv_sec) + (fim.tv_usec - inicio.tv_usec) / 1000);
+		
+			if(h_solution->costFinal[i]<bestCost){
+				bestCost = h_solution->costFinal[i];
+				timeWOutImp = 0;
 				gettimeofday(&t_inicio,NULL);
-				printf("tempo/ custo: %d - %d \n", tmili, cost_saida);
+				printf(BOLDGREEN "IMPROMENT SOLUTION: " RESET);
+				printf("\tcost %d K.B.S. %d\n", bestCost, knowBestSolution);
+				if(bestCost<knowBestSolution){
+					printf(BOLDBLUE "IMPROMENT KNOW BEST SOLUTION!\n" RESET);
+				}
+			}else{
+				gettimeofday(&t_fim, NULL);
+				timeWOutImp = (float) (1000 * (t_fim.tv_sec - t_inicio.tv_sec) + (t_fim.tv_usec - t_inicio.tv_usec) / 1000);
 			}
 			if(h_solution->costFinal[i] < best_solution->costFinal[i]){
 				best_solution->costFinal[i] = h_solution->costFinal[i];
@@ -361,7 +381,7 @@ int main(int argc, char *argv[])
 		}
 
 
-/*		for(i=0;i<nBlocks;i++){ //aqui
+		/*for(i=0;i<nBlocks;i++){ //aqui
 			for(j=0;j<h_instance->nJobs;j++){
 				h_long_list[j + h_solution->s[j+i*h_instance->nJobs]*h_instance->nJobs]++;
 				if(h_solution->s[j + i*h_instance->nJobs]>4){
@@ -369,14 +389,20 @@ int main(int argc, char *argv[])
 				}
 			}		
 		}*/ //aqui
+	
 		gettimeofday(&fim, NULL);
 		gettimeofday(&t_fim, NULL); 
-		tmili = (int) (1000 * (fim.tv_sec - inicio.tv_sec) + (fim.tv_usec - inicio.tv_usec) / 1000);
-		tmelhora = (int) (1000 * (t_fim.tv_sec - t_inicio.tv_sec) + (t_fim.tv_usec - t_inicio.tv_usec) / 1000);
+		currentTime = (float) (1000 * (fim.tv_sec - inicio.tv_sec) + (fim.tv_usec - inicio.tv_usec) / 1000);
+		timeWOutImp = (float) (1000 * (t_fim.tv_sec - t_inicio.tv_sec) + (t_fim.tv_usec - t_inicio.tv_usec) / 1000);
+
+		printf("//----------------------------------------------------------------//\n");
+		printf("current iteration: %d iteration limit: %d\n", ite, iterationLimit);
+		printf("current time: %.0fms time limit: %.0fms\n", currentTime,runtimeLimit);
+		printf("current time without improvement: %.0fms time limit for found improvement: %.0f(ms)\n", timeWOutImp,timeLimitImprov);
+		printf("//----------------------------------------------------------------//\n");
 		
-		if((ite!=n_iteration)&&(tmili<ti*(60000))&&(tmelhora<15000)){
-			//reallocation pointers of Instanc
-			tmelhora=0;
+		if((ite!=iterationLimit)&&(currentTime<runtimeLimit)&&(timeWOutImp<timeLimitImprov)){
+			//reallocation pointers of Instance
 			h_instance->cost = (Tcost*)(d_instance+1);
 			h_instance->resourcesAgent =(TresourcesAgent*) (h_instance->cost +(h_instance->nJobs*h_instance->mAgents));
 			h_instance->capacity =(Tcapacity*) (h_instance->resourcesAgent + (h_instance->nJobs*h_instance->mAgents));
@@ -389,7 +415,7 @@ int main(int argc, char *argv[])
 			gpuMemcpy(d_solution, h_solution, size_solution, cudaMemcpyHostToDevice);
 
 			//reallocation pointers of Ejection
-			memset(h_ejection,0,size_ejection);
+			//memset(h_ejection,0,size_ejection);
 			h_ejection->pos=(Tpos*)(d_ejection + 1);
 			h_ejection->op = (Top*)(h_ejection->pos+ (nBlocks*nThreads*maxChain));
 			h_ejection->sizeChain = (TSizeChain*)(h_ejection->op + (nBlocks*nThreads));
@@ -404,42 +430,38 @@ int main(int argc, char *argv[])
 			gpuMemcpy(d_seed, h_seed, sizeof(unsigned int)*(nThreads*nBlocks), cudaMemcpyHostToDevice);
 			gpuMemcpy(d_short_list, h_short_list,sizeof(int)*(nBlocks*h_instance->nJobs), cudaMemcpyHostToDevice);
 
-		}else{
-			printf("time:%d\n",tmili);
 		}
-		if((ite_b==0)&&(cost_saida<= 1.01 * b_solution)){
-			ite_b = ite;
-		}
+		// if((ite_b==0)&&(bestCost<= 1.01 * knowBestSolution)){ //verify really objective???
+		// 	ite_b = ite;
+		// }
 		ite++;
 		//		gettimeofday(&fim, NULL);
-		//		tmili = (int) (1000 * (fim.tv_sec - inicio.tv_sec) + (fim.tv_usec - inicio.tv_usec) / 1000);
+		//		currentTime = (float) (1000 * (fim.tv_sec - inicio.tv_sec) + (fim.tv_usec - inicio.tv_usec) / 1000);
 	}
-	printf("cost: %d\n ite: %d\n time: %d\n", cost_saida, ite, tmili);
+	printf("cost: %d\n ite: %d\n time: %.2f ms\n", bestCost, ite, currentTime);
 
 	int k;	
 	int *cont_similarity = (int*)malloc(sizeof(int)*(h_instance->nJobs*nBlocks));
 	int *total_similarity = (int*)malloc(sizeof(int)*nBlocks);
-	memset(total_similarity,0,sizeof(int)*nBlocks);
-	memset(cont_similarity,0,sizeof(int)*(h_instance->nJobs*nBlocks));
+	for(k=0;k<h_instance->nJobs*nBlocks;k++){
+		if(k<nBlocks){
+			total_similarity[k]=0;
+		}
+		cont_similarity[k]=0;
+	}
+	
+	//h_solution->costFinal[0]=bestCost;
 
-	//h_solution->costFinal[0]=cost_saida;
-	//for(i=0;i<h_instance->nJobs;i++){
-	//	h_solution->s[i] = sol_best[0];
-	//}
-
-//	printf("ok1\n");
 
 	int* cont_freq = (int*)malloc(sizeof(int)*h_instance->nJobs*h_instance->mAgents);
-	memset(cont_freq,0,h_instance->nJobs*h_instance->mAgents);
-        for(i=0;i<h_instance->nJobs;i++){
-                for(j=0;j<h_instance->mAgents;j++){
-                    cont_freq[i+j*h_instance->nJobs]=0;
-                }
-        }
+	for(i=0;i<h_instance->nJobs;i++){
+            for(j=0;j<h_instance->mAgents;j++){
+                cont_freq[i+j*h_instance->nJobs]=0;
+            }
+    }
 
 
-	for(i=0;i<nBlocks;i++){
-//		printf("pelo block: %d\n",i); 
+	for(i=0;i<nBlocks;i++){ 
 		for(j=i+1;j<nBlocks;j++){
 			for(k=0;k<h_instance->nJobs;k++){
 				if(best_solution->s[k + i*h_instance->nJobs] == best_solution->s[k + j*h_instance->nJobs]){
@@ -451,20 +473,17 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-//	printf("ok2\n");
+
 	for(i=0;i<nBlocks;i++){
-		printf("Solution: %d - %d\n",best_solution->costFinal[i], h_solution->costFinal[i]);
-		printf("Similarity Total:%d\n",total_similarity[i]);
+		printf("cost solution of the block %d: %d - BKS(%d)\n",i, h_solution->costFinal[i],best_solution->costFinal[i]);
+		printf("total similarity :%d\n",total_similarity[i]);
 	}
 
 	aux = 0;
-//	k = total_similarity[0];
 	k = best_solution->costFinal[0];
 	for(i=1;i<nBlocks;i++){
-		//if(total_similarity[i]>k){
 		if(best_solution->costFinal[i]<k){
 			aux = i;
-//			k=total_similarity[i];
 			k= best_solution->costFinal[i];
 		}
 	}
@@ -473,19 +492,19 @@ int main(int argc, char *argv[])
 		    cont_freq[j+best_solution->s[j+i*h_instance->nJobs]*h_instance->nJobs]++;
 		}
 	}
-	printf("Solution with most similarity is %d with %d, cost: %d\n",aux,total_similarity[aux],best_solution->costFinal[aux] );
-	create_solution(best_solution,h_instance,aux,temp_teste);
-	create_frequency(best_solution,h_instance,cont_similarity,aux,temp_teste);
-	create_frequency_2(best_solution,h_instance,cont_freq,aux,temp_teste);
+	printf("solution with most similarity is %d with %d, cost: %d\n",aux,total_similarity[aux],best_solution->costFinal[aux]);
+	createOutputFileSolution(best_solution,h_instance,aux,temp_teste); //change function name 
+	createOutputFileFrequencyVersion1(best_solution,h_instance,cont_similarity,aux,temp_teste);//change function name 
+	createOutputFileFrequencyVersion2(best_solution,h_instance,cont_freq,aux,temp_teste);//change function name 
 
-	cudaFree(states);
-	cudaFree(d_instance);
-	cudaFree(d_solution);
-	cudaFree(d_ejection);
-	cudaFree(d_seed);
-	cudaFree(d_short_list);
+	// cudaFree(states);
+	// cudaFree(d_instance);
+	// cudaFree(d_solution);
+	// cudaFree(d_ejection);
+	// cudaFree(d_seed);
+	// cudaFree(d_short_list);
 
-	//	free(sol_best);
+	
 	free(h_short_list);
 	free(h_seed);
 	freePointersInstance(h_instance);
@@ -494,6 +513,12 @@ int main(int argc, char *argv[])
 	freePointersSolution(best_solution);
 	free(cont_similarity);
 	free(total_similarity);
+	cudaFree(states);
+	cudaFree(d_instance);
+	cudaFree(d_solution);
+	cudaFree(d_ejection);
+	cudaFree(d_seed);
+	cudaFree(d_short_list);
 	return 0;
 }
 

@@ -28,7 +28,7 @@ typedef struct{
 
 int iReturn(int i, int j, int n, int m );
 
-Instance* allocationPointersInstance(int n, int m);
+Instance* allocationPointersInstance(int nJobs, int mAgents);
 
 void freePointersInstance(Instance *inst);
 

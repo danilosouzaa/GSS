@@ -40,11 +40,11 @@ EjectionChain* allocationPointerEjectionChain(Instance *inst);
 
 void freePointerEjectionChain(EjectionChain *ejection);
 
-void create_solution(Solution *sol, Instance *inst,int pos_best, const char *fileName);
+void createOutputFileSolution(Solution *sol, Instance *inst,int pos_best, const char *fileName);
 
-void create_frequency(Solution *sol, Instance *inst,int *cont_similarity,int pos_best, const char *fileName);
+void createOutputFileFrequencyVersion1(Solution *sol, Instance *inst,int *cont_similarity,int pos_best, const char *fileName);
 
-void create_frequency_2(Solution *sol, Instance *inst,int *cont_similarity,int pos_best, const char *fileName);
+void createOutputFileFrequencyVersion2(Solution *sol, Instance *inst,int *cont_similarity,int pos_best, const char *fileName);
 
 int returnIndice(Solution *h_solution, EjectionChain *h_ejection, int block, /*int nBlocks, int nThreads,*/ int menor,int *h_long_list, int nJobs,int mAgents);
 

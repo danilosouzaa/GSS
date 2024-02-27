@@ -10,7 +10,7 @@ int* inicializeVector(Instance *inst, float p1, float p2)
     int *vOrdem = (int*)malloc(sizeof(int)*(inst->nJobs *inst->mAgents));
     float *vParametro = (float*)malloc(sizeof(float)*(inst->nJobs *inst->mAgents));
     int i, j;
-    int aux1,aux2,iAux1,iAux2;
+    int aux1,aux2,iAux2;
     for(i=0; i<inst->nJobs ; i++)
     {
         for(j=0; j<inst->mAgents; j++)
@@ -41,7 +41,7 @@ int* inicializeVector(Instance *inst, float p1, float p2)
     return vOrdem;
 }
 
-int* inicializeVector2(Instance *inst, int job, float p1, float p2)
+int* createAssigmentPriorityVector(Instance *inst, int job, float p1, float p2)
 { 
     int *vOrdem = (int*)malloc(sizeof(int)*inst->mAgents);
     float *vParametro = (float*)malloc(sizeof(float)*inst->mAgents);
@@ -97,16 +97,18 @@ int quicksortCof(float *values, int *idc, int began, int end)
 
 int greedy(Instance *inst, Solution *sol, float p1, float p2, int block)
 {
-    int *vOrdem;
-    int *allocated=(int*)malloc(sizeof(int)*inst->nJobs );
+    
+    int *allocated = (int*)malloc(sizeof(int)*inst->nJobs );
     int i,j;
     unsigned short int agent;
-    int cont=0;
-    memset(allocated,0,sizeof(int)*inst->nJobs );
+    int amountAssigmentJobs=0;
+    for (i=0;i<inst->nJobs;i++){
+        allocated[i] = 0;
+    }
     sol->costFinal[block]=0;
     for(i=0; i<inst->nJobs ; i++)
     {   
-        vOrdem = inicializeVector2(inst,i,p1,p2);
+        int *vOrdem = createAssigmentPriorityVector(inst,i,p1,p2);
         for(j=0; j<inst->mAgents; j++)
         {
             agent = vOrdem[j];
@@ -116,14 +118,14 @@ int greedy(Instance *inst, Solution *sol, float p1, float p2, int block)
                 sol->s[i + block*inst->nJobs] = agent;
                 sol->costFinal[block]+=inst->cost[iReturn(i,agent,inst->nJobs ,inst->mAgents)];
                 sol->resUsage[agent + block*inst->mAgents]+=inst->resourcesAgent[iReturn(i,agent,inst->nJobs ,inst->mAgents)];
-                cont++;
+                amountAssigmentJobs++;
                 break;
             }
         }
         free(vOrdem);
     }
     free(allocated);
-    if(cont!=inst->nJobs ){
+    if(amountAssigmentJobs!=inst->nJobs ){ //if all jobs assigment
         sol->costFinal[block]=0;
         return 0;
     }

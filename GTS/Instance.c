@@ -4,19 +4,19 @@ int iReturn(int i, int j, int n, int m ){
 	return i*m+j;
 }
 
-Instance* allocationPointersInstance(int n, int m){
+Instance* allocationPointersInstance(int nJobs, int mAgents){
 	size_t size_instance = sizeof(Instance)
-							+ sizeof(Tcost)*(n*m)  //cost
-							+ sizeof(TresourcesAgent)*(m*n)
-							+ sizeof(Tcapacity)*m;
+							+ sizeof(Tcost)*(nJobs*mAgents)  //cost - d_ji
+							+ sizeof(TresourcesAgent)*(nJobs*mAgents) // resource consumed of agent - r_ji
+							+ sizeof(Tcapacity)*mAgents; // capacity agents b_i
 	Instance *inst =(Instance*)malloc(size_instance);
 	assert(inst!=NULL);
 	memset(inst,0,size_instance);
 	inst->cost = (Tcost*)(inst+1);
-	inst->resourcesAgent =(TresourcesAgent*) (inst->cost +(n*m));
-	inst->capacity =(Tcapacity*) (inst->resourcesAgent + (n*m));
-	inst->nJobs = n;
-	inst->mAgents = m;
+	inst->resourcesAgent =(TresourcesAgent*) (inst->cost +(nJobs*mAgents));
+	inst->capacity =(Tcapacity*) (inst->resourcesAgent + (nJobs*mAgents));
+	inst->nJobs = nJobs;
+	inst->mAgents = mAgents;
 	return inst;
 }
 
@@ -31,19 +31,20 @@ void freePointersInstance(Instance *inst){
 Instance* loadInstance(const char *fileName){
 	    FILE *arq;
 	    int aux_2;
-	    char ch;
-	    int m,n, cont=0, i,j,a;
+	    int m,n, i,j;
 	    short int aux;
 	    Instance *inst;
 	    arq=fopen(fileName, "r");
 	    if(arq==NULL)
 	    {
 	        printf("Erro, couldn't open the file.\n");
+			return NULL;
 	    }
 	    else
 	    {
-	        a = fscanf(arq, "%d" , &m);
-	        a = fscanf(arq, "%d" , &n);
+			printf("Instance %s opened successfully!\n",fileName);
+	        fscanf(arq, "%d" , &m);
+	        fscanf(arq, "%d" , &n);
 	        printf("Parameters load\n");
 	        inst = allocationPointersInstance(n,m);
 	        printf("Pointers Allocated!\n");
@@ -51,7 +52,7 @@ Instance* loadInstance(const char *fileName){
 	        {
 	            for(j=0; j<n; j++)
 	            {
-	                a = fscanf(arq,"%d", &aux_2);
+	                fscanf(arq,"%d", &aux_2);
 	                inst->cost[iReturn(j,i,n,m)]=aux_2;
 	            }
 	        }
@@ -62,13 +63,13 @@ Instance* loadInstance(const char *fileName){
 	        {
 	            for(j=0; j<n; j++)
 	            {
-	                a = fscanf(arq,"%hi", &aux);
+	                fscanf(arq,"%hi", &aux);
 	                inst->resourcesAgent[iReturn(j,i,n,m)]=aux;
 	            }
 	        }
 	        for(j=0; j<m; j++)
 	        {
-	            a = fscanf(arq,"%hi", &aux);
+	            fscanf(arq,"%hi", &aux);
 	            inst->capacity[j]=aux;
 	        }
 

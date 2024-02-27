@@ -10,6 +10,7 @@ Solution* allocationPointersSolution(Instance *inst){
 							+ sizeof(Ts)*(inst->nJobs*nBlocks)
 							+ sizeof(TresUsage)*(inst->mAgents*nBlocks);
 	Solution *sol;
+	printf("size_solution: %ld nBlocks: %d nJobs: %d \n",size_solution, nBlocks, inst->nJobs);
 	sol = (Solution*)malloc(size_solution);
 	assert(sol!=NULL);
 	memset(sol,0,size_solution);
@@ -50,63 +51,66 @@ void freePointerEjectionChain(EjectionChain *ejection){
 	free(ejection);
 }
 
-void create_solution(Solution *sol, Instance *inst,int pos_best, const char *fileName){
-		FILE *f;
-		char nf[30]="";
+void createOutputFileSolution(Solution *sol, Instance *inst,int pos_best, const char *fileName){
+		char nf[50]="";
 		strcat(nf,"../MIP/MIP_");
+		strcat(nf,fileName);
+		strcat(nf,".txt");
+		int i;
+		FILE *f = fopen (nf,"w");
+		if(f==NULL){
+			printf("erro: verify permission in folder: ../MIP/ \n \n ");
+		}else{
+			for(i=0;i<inst->nJobs;i++){
+				fprintf(f,"x(%d,%d)\n",i+1,sol->s[i + inst->nJobs*pos_best]+1);
+			}
+			printf("create solution output file sucessed : %s!\n",nf);
+			fclose(f);
+		}
+		
+}
+
+void createOutputFileFrequencyVersion1(Solution *sol, Instance *inst,int *cont_similarity,int pos_best, const char *fileName){
+		FILE *f;
+		char nf[50]="";
+		strcat(nf,"../Residence/Freq_");
 		strcat(nf,fileName);
 		strcat(nf,".txt");
 		int i;
 		f = fopen (nf,"w");
 		if(f==NULL){
-			printf("erro \n ");
+			printf("erro: verify permission in folder: ../Residence/ \n");
 		}else{
 			for(i=0;i<inst->nJobs;i++){
-				fprintf(f,"x(%d,%d)\n",i+1,sol->s[i + inst->nJobs*pos_best]+1);
+				fprintf(f,"x(%d,%d) = %d \n",i+1, sol->s[i + pos_best*inst->nJobs]+1 , cont_similarity[i + pos_best*inst->nJobs]);
 			}
-		}
-		fclose(f);
-}
-
-void create_frequency(Solution *sol, Instance *inst,int *cont_similarity,int pos_best, const char *fileName){
-			FILE *f;
-			char nf[30]="";
-			strcat(nf,"../Residence/Freq_");
-			strcat(nf,fileName);
-			strcat(nf,".txt");
-			int i;
-			f = fopen (nf,"w");
-			if(f==NULL){
-				printf("erro \n ");
-			}else{
-				for(i=0;i<inst->nJobs;i++){
-						fprintf(f,"x(%d,%d) = %d \n",i+1, sol->s[i + pos_best*inst->nJobs]+1 , cont_similarity[i + pos_best*inst->nJobs]);
-				}
-			}
+			printf("create frequency (v.1) output file sucessed : %s!\n",nf);		
 			fclose(f);
-			printf("Create frenquecy ok!\n");
+		}
+		
+		
 }
 
-void create_frequency_2(Solution *sol, Instance *inst,int *cont_similarity,int pos_best, const char *fileName){
-                        FILE *f;
-                        char nf[30]="";
-                        strcat(nf,"../Residence/Freq2_");
-                        strcat(nf,fileName);
-                        strcat(nf,".txt");
-                        int i,j;
-                        f = fopen (nf,"w");
-                        if(f==NULL){
-                                printf("erro \n ");
-                        }else{
-				
-                                for(i=0;i<inst->nJobs;i++){
-					for(j=0;j<inst->mAgents;j++){
-                                                fprintf(f,"x(%d,%d) = %d \n",i+1,j+1 , cont_similarity[i + j*inst->nJobs]);
-                               		}
-				 }
-                        }
-                        fclose(f);
-                        printf("Create frenquecy ok!\n");
+void createOutputFileFrequencyVersion2(Solution *sol, Instance *inst,int *cont_similarity,int pos_best, const char *fileName){
+    FILE *f;
+    char nf[50]="";
+    strcat(nf,"../Residence/Freq2_");
+    strcat(nf,fileName);
+    strcat(nf,".txt");
+    int i,j;
+    f = fopen (nf,"w");
+    if(f==NULL){
+        printf("erro: verify permission in folder: ../Residence/ \n");
+    }else{
+		for(i=0;i<inst->nJobs;i++){
+			for(j=0;j<inst->mAgents;j++){
+            	fprintf(f,"x(%d,%d) = %d \n",i+1,j+1 , cont_similarity[i + j*inst->nJobs]);
+            }
+		}
+		printf("create frequency (v.2) output file sucessed : %s!\n",nf);		
+		fclose(f);
+    }
+    
 }
 
 
@@ -115,11 +119,9 @@ int returnIndice(Solution *h_solution,EjectionChain *h_ejection, int block, /*in
 	int *v_pos_menor= (int*)malloc(sizeof(int)*nThreads);
 	int *mod_cont = (int*)malloc(sizeof(int)*nThreads);
 	int aux1 , aux2;
-	memset(mod_cont,0,sizeof(int)*nThreads);
-
 	int pos,i,j;
 	for(i=0;i<nThreads;i++){
-
+		mod_cont[i] = 0;
 		if(menor == h_ejection->delta[i + block*nThreads]){
 			qnt_menor++;
 			v_pos_menor[qnt_menor-1] = i;
