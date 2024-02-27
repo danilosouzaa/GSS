@@ -14,6 +14,7 @@
 #define BOLDYELLOW  "\033[1m\033[33m"      /* Bold Yellow */
 #define BOLDBLUE    "\033[1m\033[34m"      /* Bold Blue */
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <curand.h>
@@ -71,9 +72,8 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			printf("Found %d GPUs!\n", deviceCount);
+			printf("Found %d GPUs! GPU 0 initialized!\n", deviceCount);
 			gpuSetDevice(0);
-			printf("GPU 0 initialized!\n");
 		}
 	}
 	//free(error_id);
@@ -203,7 +203,9 @@ int main(int argc, char *argv[])
 	}
 
 	for(i=0;i<nBlocks;i++){ 
-		printf("Initial cost obtained by the greedy method: %d\n", h_solution->costFinal[i]);
+		#ifdef PRINTALL
+			printf("Initial cost obtained by the greedy method: %d\n", h_solution->costFinal[i]);
+		#endif
 		if(h_solution->costFinal[i]< bestCost){
 			bestCost = h_solution->costFinal[i]; //update costOut with value of greedy solution found
 		}
@@ -358,11 +360,13 @@ int main(int argc, char *argv[])
 				bestCost = h_solution->costFinal[i];
 				timeWOutImp = 0;
 				gettimeofday(&t_inicio,NULL);
-				printf(BOLDGREEN "IMPROMENT SOLUTION: " RESET);
-				printf("\tcost %d K.B.S. %d\n", bestCost, knowBestSolution);
-				if(bestCost<knowBestSolution){
-					printf(BOLDBLUE "IMPROMENT KNOW BEST SOLUTION!\n" RESET);
-				}
+				#ifdef PRINTALL
+					printf(BOLDGREEN "IMPROMENT SOLUTION: " RESET);
+					printf("\tcost %d K.B.S. %d\n", bestCost, knowBestSolution);
+					if(bestCost<knowBestSolution){
+						printf(BOLDBLUE "IMPROMENT KNOW BEST SOLUTION!\n" RESET);
+					}
+				#endif
 			}else{
 				//update time without improviment
 				gettimeofday(&t_fim, NULL);
@@ -401,13 +405,13 @@ int main(int argc, char *argv[])
 		gettimeofday(&t_fim, NULL); 
 		currentTime = (float) (1000 * (fim.tv_sec - inicio.tv_sec) + (fim.tv_usec - inicio.tv_usec) / 1000);
 		timeWOutImp = (float) (1000 * (t_fim.tv_sec - t_inicio.tv_sec) + (t_fim.tv_usec - t_inicio.tv_usec) / 1000);
-
-		printf("//----------------------------------------------------------------//\n");
-		printf("current iteration: %d iteration limit: %d\n", ite, iterationLimit);
-		printf("current time: %.0fms time limit: %.0fms\n", currentTime,runtimeLimit);
-		printf("current time without improvement: %.0fms time limit for found improvement: %.0f(ms)\n", timeWOutImp,timeLimitImprov);
-		printf("//----------------------------------------------------------------//\n");
-		
+		#ifdef PRINTALL
+			printf("//----------------------------------------------------------------//\n");
+			printf("current iteration: %d iteration limit: %d\n", ite, iterationLimit);
+			printf("current time: %.0fms time limit: %.0fms\n", currentTime,runtimeLimit);
+			printf("current time without improvement: %.0fms time limit for found improvement: %.0f(ms)\n", timeWOutImp,timeLimitImprov);
+			printf("//----------------------------------------------------------------//\n");
+		#endif	
 		if((ite!=iterationLimit)&&(currentTime<runtimeLimit)&&(timeWOutImp<timeLimitImprov)){
 			//reallocation pointers of Instance
 			h_instance->cost = (Tcost*)(d_instance+1);
@@ -446,8 +450,9 @@ int main(int argc, char *argv[])
 		//		currentTime = (float) (1000 * (fim.tv_sec - inicio.tv_sec) + (fim.tv_usec - inicio.tv_usec) / 1000);
 	}
 	free(h_long_list);
-	printf("cost: %d\n ite: %d\n time: %.2f ms\n", bestCost, ite, currentTime);
-
+	#ifdef PRINTALL
+		printf("cost: %d\n ite: %d\n time: %.2f ms\n", bestCost, ite, currentTime);
+	#endif
 	int k;	
 	int *cont_similarity = (int*)malloc(sizeof(int)*(h_instance->nJobs*nBlocks));
 	int *total_similarity = (int*)malloc(sizeof(int)*nBlocks);
@@ -481,11 +486,12 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-
-	for(i=0;i<nBlocks;i++){
-		printf("cost solution of the block %d: %d - BFS(%d)\n",i, h_solution->costFinal[i],best_solution->costFinal[i]);//best found solution
-		printf("total similarity :%d\n",total_similarity[i]);
-	}
+	#ifdef PRINTALL
+		for(i=0;i<nBlocks;i++){
+			printf("cost solution of the block %d: %d - BFS(%d)\n",i, h_solution->costFinal[i],best_solution->costFinal[i]);//best found solution
+			printf("total similarity :%d\n",total_similarity[i]);
+		}
+	#endif
 
 	aux = 0;
 	k = best_solution->costFinal[0];

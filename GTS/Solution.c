@@ -10,7 +10,6 @@ Solution* allocationPointersSolution(Instance *inst){
 							+ sizeof(Ts)*(inst->nJobs*nBlocks)
 							+ sizeof(TresUsage)*(inst->mAgents*nBlocks);
 	Solution *sol;
-	printf("size_solution: %ld nBlocks: %d nJobs: %d \n",size_solution, nBlocks, inst->nJobs);
 	sol = (Solution*)malloc(size_solution);
 	assert(sol!=NULL);
 	memset(sol,0,size_solution);
@@ -64,7 +63,9 @@ void createOutputFileSolution(Solution *sol, Instance *inst,int pos_best, const 
 			for(i=0;i<inst->nJobs;i++){
 				fprintf(f,"x(%d,%d)\n",i+1,sol->s[i + inst->nJobs*pos_best]+1);
 			}
-			printf("create solution output file sucessed : %s!\n",nf);
+			#ifdef PRINTALL
+				printf("create solution output file sucessed : %s!\n",nf);
+			#endif
 			fclose(f);
 		}
 		
@@ -84,7 +85,9 @@ void createOutputFileFrequencyVersion1(Solution *sol, Instance *inst,int *cont_s
 			for(i=0;i<inst->nJobs;i++){
 				fprintf(f,"x(%d,%d) = %d \n",i+1, sol->s[i + pos_best*inst->nJobs]+1 , cont_similarity[i + pos_best*inst->nJobs]);
 			}
-			printf("create frequency (v.1) output file sucessed : %s!\n",nf);		
+			#ifdef PRINTALL
+				printf("create frequency (v.1) output file sucessed : %s!\n",nf);		
+			#endif
 			fclose(f);
 		}
 		
@@ -107,7 +110,9 @@ void createOutputFileFrequencyVersion2(Solution *sol, Instance *inst,int *cont_s
             	fprintf(f,"x(%d,%d) = %d \n",i+1,j+1 , cont_similarity[i + j*inst->nJobs]);
             }
 		}
-		printf("create frequency (v.2) output file sucessed : %s!\n",nf);		
+		#ifdef PRINTALL
+			printf("create frequency (v.2) output file sucessed : %s!\n",nf);		
+		#endif
 		fclose(f);
     }
     

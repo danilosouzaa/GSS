@@ -42,12 +42,18 @@ Instance* loadInstance(const char *fileName){
 	    }
 	    else
 	    {
-			printf("Instance %s opened successfully!\n",fileName);
+			#ifdef PRINTALL
+				printf("Instance %s opened successfully!\n",fileName);
+			#endif
 	        fscanf(arq, "%d" , &m);
 	        fscanf(arq, "%d" , &n);
-	        printf("Parameters load\n");
+			#ifdef PRINTALL
+		        printf("Parameters load\n");
+			#endif
 	        inst = allocationPointersInstance(n,m);
-	        printf("Pointers Allocated!\n");
+			#ifdef PRINTALL
+		        printf("Pointers Allocated!\n");
+			#endif
 	        for(i=0; i<m; i++)
 	        {
 	            for(j=0; j<n; j++)
