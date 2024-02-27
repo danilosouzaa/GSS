@@ -488,10 +488,10 @@ int main(int argc, char *argv[])
 	//	free(sol_best);
 	free(h_short_list);
 	free(h_seed);
-	free(h_instance);
-	free(h_solution);
-	free(h_ejection);
-	free(best_solution);
+	freePointersInstance(h_instance);
+	freePointerSolution(h_solution);
+	freePointerEjectionChain(h_ejection);
+	freePointerSolution(best_solution);
 	free(cont_similarity);
 	free(total_similarity);
 	return 0;

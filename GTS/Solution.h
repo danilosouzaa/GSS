@@ -34,7 +34,11 @@ typedef struct{
 
 Solution* allocationPointersSolution(Instance *inst);
 
+void freePointersSolution(Solution *sol);
+
 EjectionChain* allocationPointerEjectionChain(Instance *inst);
+
+void freePointerEjectionChain(EjectionChain *ejection);
 
 void create_solution(Solution *sol, Instance *inst,int pos_best, const char *fileName);
 

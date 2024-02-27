@@ -7,12 +7,10 @@
 //Create vector with priority of allocation jobs in Agents 
 int* inicializeVector(Instance *inst, float p1, float p2)
 {
-    int *vOrdem;
-    float *vParametro;
+    int *vOrdem = (int*)malloc(sizeof(int)*(inst->nJobs *inst->mAgents));
+    float *vParametro = (float*)malloc(sizeof(float)*(inst->nJobs *inst->mAgents));
     int i, j;
     int aux1,aux2,iAux1,iAux2;
-    vOrdem = (int*)malloc(sizeof(int)*(inst->nJobs *inst->mAgents));
-    vParametro = (float*)malloc(sizeof(float)*(inst->nJobs *inst->mAgents));
     for(i=0; i<inst->nJobs ; i++)
     {
         for(j=0; j<inst->mAgents; j++)
@@ -130,7 +128,5 @@ int greedy(Instance *inst, Solution *sol, float p1, float p2, int block)
         return 0;
     }
     return 1;
-    
-
 }
 

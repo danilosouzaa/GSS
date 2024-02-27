@@ -20,6 +20,13 @@ Instance* allocationPointersInstance(int n, int m){
 	return inst;
 }
 
+void freePointersInstance(Instance *inst){
+	free(inst->cost);
+	free(inst->resourcesAgent);
+	free(inst->capacity);
+	free(inst);
+}
+
 
 Instance* loadInstance(const char *fileName){
 	    FILE *arq;

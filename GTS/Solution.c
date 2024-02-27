@@ -18,6 +18,13 @@ Solution* allocationPointersSolution(Instance *inst){
 	sol->resUsage = (TresUsage*)(sol->s + (inst->nJobs*nBlocks));
 	return sol;
 }
+void freePointersSolution(Solution *sol){
+	free(sol->costFinal);
+	free(sol->s);
+	free(sol->resUsage);
+	free(sol);
+}
+
 
 EjectionChain* allocationPointerEjectionChain(Instance *inst){
 	size_t size_ejection = sizeof(EjectionChain)
@@ -33,6 +40,14 @@ EjectionChain* allocationPointerEjectionChain(Instance *inst){
 	ejection->sizeChain = (TSizeChain*)(ejection->op + (nBlocks*nThreads));
 	ejection->delta = (Tdelta*)(ejection->sizeChain + (nBlocks*nThreads));
 	return ejection;
+}
+
+void freePointerEjectionChain(EjectionChain *ejection){
+	free(ejection->pos);
+	free(ejection->op);
+	free(ejection->sizeChain);
+	free(ejection->delta);
+	free(ejection);
 }
 
 void create_solution(Solution *sol, Instance *inst,int pos_best, const char *fileName){

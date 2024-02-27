@@ -30,6 +30,9 @@ int iReturn(int i, int j, int n, int m );
 
 Instance* allocationPointersInstance(int n, int m);
 
+void freePointersInstance(Instance *inst);
+
+
 Instance* loadInstance(const char *fileName);
 
 void showInstance(Instance *inst);
