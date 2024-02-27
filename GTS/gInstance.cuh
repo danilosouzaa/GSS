@@ -12,7 +12,6 @@ extern "C" {
 }
 
 // INCLUDE PROTOTYPE OF CUDA functions __device__ and __global__
-Instance* createGPUInstance(Instance* h_instance, TnJobs nJobs, TmAgents mAgents);
 
 
 
