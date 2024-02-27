@@ -483,7 +483,7 @@ int main(int argc, char *argv[])
 	}
 
 	for(i=0;i<nBlocks;i++){
-		printf("cost solution of the block %d: %d - BKS(%d)\n",i, h_solution->costFinal[i],best_solution->costFinal[i]);
+		printf("cost solution of the block %d: %d - BFS(%d)\n",i, h_solution->costFinal[i],best_solution->costFinal[i]);//best found solution
 		printf("total similarity :%d\n",total_similarity[i]);
 	}
 
