@@ -116,6 +116,7 @@ public:
     /*!
      * Destroy GAProblem instance.
      */
+
     virtual ~GAProblem() {
         free();
     }
@@ -158,6 +159,9 @@ public:
     //  * Friend classes
     //  */
     // friend class MLSolution;
+    void getCostJobsAgents(uint idJob, uint idAgent);
+    void getConsumeJobsAgent(uint idJob, uint idAgent);
+
 };
 
 

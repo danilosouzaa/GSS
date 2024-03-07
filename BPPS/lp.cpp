@@ -789,6 +789,9 @@ void lp_add_row(LinearProgram *lp, const int nz,  int *indexes, double *coefs, c
 
     int grbError = GRBaddconstr( lp->lp, nz, indexes, coefs, sense, rhs, name );
     lp_check_for_grb_error( LPgrbDefaultEnv, grbError, __FILE__, __LINE__ );
+    if (grbError!=0){
+        getchar();
+    }
 #endif
 #ifdef GLPK
     int currRow = lp_rows(lp) + 1;
@@ -1240,6 +1243,7 @@ int lp_optimize(LinearProgram *lp)
         lp->tmpCols = 0;
         lp->nModelChanges = 0;
     }
+    
 #endif
 
     int isMIP = 0;
@@ -3302,8 +3306,10 @@ void lp_config_glpk_params(LinearProgram *lp, glp_iocp *iocp)
 void lp_config_grb_params(LinearProgram *lp)
 {
     assert( lp && lp->lp );
-
+    
     GRBenv *env = GRBgetenv( lp->lp );
+    GRBsetintparam(env,GRB_INT_PAR_LOGTOCONSOLE,0);
+
     if ( lp->maxSeconds != INT_NOT_SET )
         GRBsetdblparam( env, GRB_DBL_PAR_TIMELIMIT, lp->maxSeconds);
 
@@ -3350,7 +3356,7 @@ void lp_config_grb_params(LinearProgram *lp)
 
     if ( (lp->msIdx->size()) )
     {
-        printf("setting grb mips start\n");
+        //printf("setting grb mips start\n");
 
         int *idx = &((*(lp->msIdx))[0]);
         double *coef = &((*(lp->msVal))[0]);
@@ -4251,13 +4257,22 @@ void lp_set_store_names(bool store)
 /* Define my callback function */
 int getcallback(LinearProgramPtr lp, int time){
     int erro = GRBsetcallbackfunc(lp->lp, mycallback, (void*) &time);
-
+    return erro;
 }
 
 int setNodeInfinity(LinearProgramPtr lp){
 #ifdef GRB
         GRBenv *env = GRBgetenv( lp->lp );
         GRBsetdblparam(env, GRB_DBL_PAR_NODELIMIT, GRB_INFINITY );
+        return 1; 
+#endif // GRB
+}
+
+int setNodeLimit(LinearProgramPtr lp, int number){
+#ifdef GRB
+        GRBenv *env = GRBgetenv( lp->lp );
+        GRBsetdblparam(env, GRB_DBL_PAR_NODELIMIT, number );
+        return 1; 
 #endif // GRB
 }
 
@@ -4276,7 +4291,6 @@ int mycallback(GRBmodel *model, void *cbdata, int where, void *usrdata)
         GRBcbget(cbdata, where, GRB_CB_MIPSOL_SOLCNT, &cont);
         GRBcbget(cbdata, where, GRB_CB_RUNTIME, &runTime);
         time = time - (int)runTime;
-        printf("%d\n", time);
         if(cont>1){
             GRBsetdblparam(modelenv, GRB_DBL_PAR_NODELIMIT, node+500 );
             GRBsetdblparam( modelenv, GRB_DBL_PAR_TIMELIMIT, time);

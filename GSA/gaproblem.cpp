@@ -70,6 +70,13 @@ GAProblem::free()
     mAgents = 0;
 }
 
+void GAProblem::getConsumeJobsAgent(uint idJob, uint idAgent){
+    return jobs[idJob].resourceConsumed[idAgent];
+}
+
+void GAProblem::getCostJobsAgents(uint idJob, uint idAgent){
+    return jobs[idJob].costAgentsAllocation[idAgent];
+}
 
 void GAProblem::allocData(uint nJ, uint mA)
 {

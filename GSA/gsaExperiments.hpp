@@ -1,8 +1,8 @@
 // Copyright Danilo Igor Machado Coelho & Eyder Rios, 2016
 // MIT License
 
-#ifndef SOURCE_WAMCAEXPERIMENT_HPP_
-#define SOURCE_WAMCAEXPERIMENT_HPP_
+#ifndef SOURCE_GSAEXPERIMENT_HPP_
+#define SOURCE_GASEXPERIMENT_HPP_
 
 #include <sys/time.h>  // gettimeofday
 //
@@ -14,6 +14,10 @@
 #include "./except.h"
 #include "gpulib/gpu.h"
 #include "./log.h"
+#include "./gaproblem.h"
+#include "gapkernel.h"
+#include "mtrand.h"
+//#include ""
 //#include "./mlk2opt.h"
 //#include "./mlkernel.h"
 //#include "./mlkoropt.h"
@@ -22,6 +26,86 @@
 //#include "./mlsolution.h"
 #include "./utils.h"
 
+
+class GSAExperiments{
+    public: 
+    GSAExperiments(GAProblem& _problem, int seed): problem(_problem){
+       generalInit(0, seed);
+       kernelInit();
+       initDevice();
+
+    }
+    //public atributes
+    GAProblem& problem;
+    MTRandom rng;//generate random -   mtrand .cpp .h
+    uint gpuId;               ///< GPU id
+    uint gpuMemFree;          ///< Amount of free memory on GPU
+    cudaDeviceProp gpuProps;  ///< Device properties
+
+
+    //VER CLASSE GAPkernels
+    GAPKernel* kernels[GAP_MAX_NEIGHBOR];  ///< Kernel searches
+    uint kernelCount;                     ///< Number of kernels
+    uint kernelBits;                      ///< Bit mask for active kernels
+
+    GAPKernel* tkernels[GAP_MAX_NEIGHBOR];  ///< Kernel searches
+    uint tkernelCount;                     ///< Number of kernels
+    uint tkernelBits;                      ///< Bit mask for active kernels
+
+    ullong lsCall;  ///< Local search call no.
+
+    GAPSolution* solInitialDevice;  ///< Base solution
+    GAPSolution* solResult;  ///< Resulting solution
+    GAPSolution* solAux;     ///< Aux solution
+
+    GAPMove64* mergeBuffer;   ///< Independent movements buffer
+    GAPMove64* tmergeBuffer;  ///< Independent movements buffer
+
+    ullong timeExec;  ///<< Exec time
+    ullong timeSync;  ///<< Time spent in synchronizing w/ GPU
+    ullong timeIdle;  ///<< Time CPU was idle
+    
+    
+    //public methods
+    void generalInit(int id = 0, int rngSeed = 0) {
+        lprintf("GPU%u\n", id);
+
+        if (rngSeed != 0) {
+            rng.seed(rngSeed);
+            lprintf("set seed %d\n", rngSeed);
+        } else {
+            rng.seed(uint(sysTimer()) + id + 1);
+            lprintf("set random seed!\n");
+        }
+
+        gpuId = id;
+        gpuMemFree = 0;
+
+        memset(&gpuProps, 0, sizeof(gpuProps));// ver o que é o gpuProps e onde é definido
+
+        solDevice = new GAPSolution(problem, cudaHostAllocDefault);
+        solResult = new GAPSolution(problem, cudaHostAllocDefault);
+        solAux = new GAPSolution(problem, cudaHostAllocDefault);
+
+        lsCall = 0;
+
+        kernelCount = 0;
+        memset(kernels, 0, sizeof(kernels));
+
+        tkernelCount = 0;
+        memset(tkernels, 0, sizeof(tkernels));
+
+        timeExec = 0;
+        timeIdle = 0;
+        timeSync = 0;
+
+        // Move merge buffer
+        int size = problem.nJobs*problem.mAgents; //size matriz nxm
+        mergeBuffer = new GAPMove64[size];
+
+        tmergeBuffer = new GAPMove64[problem.size * problem.size];
+    }
+}
 // class WAMCAExperiment {
 //  public:
 //   WAMCAExperiment(MLProblem& _problem, int seed) : problem(_problem) {
@@ -584,4 +668,4 @@
 //   }
 // };
 
-#endif  // SOURCE_WAMCAEXPERIMENT_HPP_
+#endif  // SOURCE_GSAEXPERIMENT_HPP_

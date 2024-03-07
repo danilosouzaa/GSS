@@ -199,5 +199,6 @@ void lp_set_store_names( bool store );
 int mycallback(GRBmodel *model, void *cbdata, int where, void *usrdata);
 int getcallback(LinearProgramPtr lp, int time);
 int setNodeInfinity(LinearProgramPtr lp);
+int setNodeLimit(LinearProgramPtr lp, int number);
 
 #endif

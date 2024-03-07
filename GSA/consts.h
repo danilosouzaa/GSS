@@ -22,6 +22,14 @@
 #define MLP_MAX_CPU                 ( 8U*uint(sizeof(uint)) )
 #define MLP_MAX_GPU                 2U
 
+#define GAP_MAX_NEIGHBOR            30
+#define GAP_MAX_HISTORY             5
+#define GAP_MAX_ALPHA               26
+#define GAP_MAX_CPU                 ( 8U*uint(sizeof(uint)) )
+#define GAP_MAX_GPU                 2U
+
+
+
 
 // TODO: got from mlparams.h
 #define OFM_LEN_APP             15    ///< Max length for app name
