@@ -1,0 +1,3 @@
+Found 1 GPUs! GPU 0 initialized!
+Time Greedy Random: 486.0ms
+time: 82069.00 ms (3722) - solution with most similarity is 5 with 23221, cost: 56500

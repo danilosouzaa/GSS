@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 	    printf("\t\t ./GTS " BOLDGREEN "[1] [2] [3] [4] [5]\n" RESET);
 	    printf(BOLDGREEN "\t[1]" RESET ": Instance name;\n");
 	    printf(BOLDGREEN "\t[2]" RESET ": Method iteration limit;\n");
-	    printf(BOLDGREEN "\t[3]" RESET ": Tabu search call limit;\n");
+	    printf(BOLDGREEN "\t[3]" RESET ": Ejection Chain - Thread limit;\n");
 	    printf(BOLDGREEN "\t[4]" RESET ": Best know object function;\n");
 	    printf(BOLDGREEN "\t[5]" RESET ": Method runtime limit (minutes).\n");
 	    exit(1);
@@ -268,7 +268,7 @@ int main(int argc, char *argv[])
 	gettimeofday(&inicio, NULL);
 	//size_t freeMem, totalMem;
 	gettimeofday(&t_inicio,NULL);
-	float timeLimitImprov = 60000; //ms
+	float timeLimitImprov = 15000; //ms
 	while((ite<=iterationLimit)&&(currentTime<=runtimeLimit)&&(timeWOutImp<timeLimitImprov)){
 		szTabuList = rand()%propSZMaxTabuList + 1; //random tabu list RANDOM(1,propSZMaxTabuList)
 		//verify in globals TS_GAP szTabuList???
@@ -506,7 +506,9 @@ int main(int argc, char *argv[])
 		    cont_freq[j+best_solution->s[j+i*h_instance->nJobs]*h_instance->nJobs]++;
 		}
 	}
-	printf("solution with most similarity is %d with %d, cost: %d\n",aux,total_similarity[aux],best_solution->costFinal[aux]);
+	gettimeofday(&fim, NULL);
+	currentTime = (float) (1000 * (fim.tv_sec - inicio.tv_sec) + (fim.tv_usec - inicio.tv_usec) / 1000);
+	printf("time: %.2f ms (%d) - solution with most similarity is %d with %d, cost: %d\n",currentTime,ite, aux,total_similarity[aux],best_solution->costFinal[aux]);
 	createOutputFileSolution(best_solution,h_instance,aux,temp_teste); //change function name 
 	createOutputFileFrequencyVersion1(best_solution,h_instance,cont_similarity,aux,temp_teste);//change function name 
 	createOutputFileFrequencyVersion2(best_solution,h_instance,cont_freq,aux,temp_teste);//change function name 

@@ -1,0 +1,3 @@
+Found 1 GPUs! GPU 0 initialized!
+Time Greedy Random: 15.0ms
+time: 16787.00 ms (2770) - solution with most similarity is 9 with 9860, cost: 102489

@@ -1,0 +1,3 @@
+Found 1 GPUs! GPU 0 initialized!
+Time Greedy Random: 33.0ms
+time: 123246.00 ms (6041) - solution with most similarity is 0 with 9580, cost: 17428
