@@ -13,7 +13,7 @@ extern "C" {
 #include <string>
 using namespace std;
 
-#define TIMERERUN 10
+//#define TIMERERUN 10
 #define SZMAXPATH 40
 
 #define PRINTALL 0
@@ -61,8 +61,8 @@ Instance* loadInstance(const char *fileName)
 {
     FILE *arq;
     int aux_2;
-    char ch;
-    int m,n, cont=0, i,j,a;
+    //char ch;
+    int m,n, i,j;
     int aux;
     Instance *inst;
 	std::string nf = "../Instances/" + std::string(fileName);
@@ -77,7 +77,7 @@ Instance* loadInstance(const char *fileName)
     }
     else
     {
-        a = fscanf(arq, "%d" , &m);
+        int a = fscanf(arq, "%d" , &m);
         a = fscanf(arq, "%d" , &n);
         inst = allocationPointer(n,m);
         inst->nJobs = n;
@@ -198,7 +198,7 @@ LinearProgramPtr geraLP(const char *fileName, Instance *inst)
     int i,j;
     //int *v_allocation;
 
-    int position;
+    //int position;
 
     c_variables = (double*)malloc(sizeof(double)*number_variables);
     lb = (double*)malloc(sizeof(double)*number_variables);
@@ -342,11 +342,11 @@ LinearProgramPtr fixed_variables(LinearProgramPtr lp, int *residence,int sizeFix
 {
     int *v_ordem =(int*)malloc(sizeof(int)*inst->nJobs);
     int *residence_aux = (int*)malloc(sizeof(int)*inst->nJobs);
-    memcpy(residence_aux,residence,sizeof(int)*inst->nJobs);
     int i, j, aux;
 
     for(i=0; i<inst->nJobs; i++)
     {
+        residence_aux[i] = residence[i];
         v_ordem[i] = i;
     }
     for( i = 0; i<inst->nJobs; i++ )
@@ -510,7 +510,13 @@ void update_res_ref(LinearProgramPtr lp, int *residence, int *m_reference, int *
             sscanf(col[1],"x(%d,%d)",&a1,&a2);
 //            printf("x(%d,%d)\n", a1,a2);
             sol[a1-1] = a2-1;
-            m_reference[iReturn(a1-1,a2-2,inst->nJobs,inst->mAgents)]++;
+            // int idAux = iReturn(a1-1,a2-1,inst->nJobs,inst->mAgents);
+            // if((idAux<0)||(idAux>=inst->nJobs*inst->mAgents)){
+            //     std::cout<<"a1:"<<a1<<" a2:"<<a2<< " idAx: "<<idAux<<std::endl;
+            //     getchar();
+            // }
+
+            m_reference[iReturn(a1-1,a2-1,inst->nJobs,inst->mAgents)]++;
             residence[a1-1] = m_reference[iReturn(a1-1,a2-1,inst->nJobs,inst->mAgents)];
             ++nRCols;
         }    //freq[(a_ux-1)+(j-1)*inst->nJobs]++;
@@ -546,7 +552,7 @@ LinearProgramPtr free_variables(LinearProgramPtr lp, Instance *inst)
 void runSolver(const char *fileName, /*int sizeFixHard, */int sizeFixSoft, float time)
 {
     bool FixedAllFlag = false;
-    int i,j, v_d = sizeFixSoft;
+    int v_d = sizeFixSoft;
     int fo_ini, fo_antes, fo_depois;
     //int quantidade = sizeFixHard;
     char n[SZMAXPATH];
@@ -569,14 +575,28 @@ void runSolver(const char *fileName, /*int sizeFixHard, */int sizeFixSoft, float
     strcat(n2,fileName);
     strcat(n2,".txt");
     int res_retirada = inst->nJobs+inst->mAgents;
-
-    int erro = 0;
 	struct timeval inicio, inicioImp;
 	struct timeval fim, fimImp;
     float tmili = 0, tImprovement = 0;
     gettimeofday(&inicio,NULL);
     gettimeofday(&inicioImp,NULL);
     long int countIte = 0;
+    int TIMERERUN = 0;
+    if(inst->nJobs*inst->mAgents<=2000){
+        TIMERERUN = 10;
+    }else if(inst->nJobs*inst->mAgents<=4000){
+        TIMERERUN = 20;
+    }else if(inst->nJobs*inst->mAgents<=8000){
+        TIMERERUN = 30;
+    }else if(inst->nJobs*inst->mAgents<=16000){
+        TIMERERUN = 40;
+    }else if(inst->nJobs*inst->mAgents<=36000){
+        TIMERERUN = 50;
+    }else if(inst->nJobs*inst->mAgents<=64000){
+        TIMERERUN = 60;
+    }else{
+        TIMERERUN = 120;
+    }
     //while((/*(quantidade<=inst->nJobs)&&*/tmili<time*60000)&&(tImprovement<20000))
     while((tmili<time*60000)&&(tImprovement<20000))
     {
@@ -596,7 +616,7 @@ void runSolver(const char *fileName, /*int sizeFixHard, */int sizeFixSoft, float
         lp_set_max_seconds(lp,TIMERERUN);
         ///printf("time: %f\n",time*60-(int)(tmili/1000));
         getcallback(lp,time*60-(int)(tmili/1000));
-        i=lp_optimize(lp);
+        int i=lp_optimize(lp);
         //lp_mipstart_debug(lp);
         fo_depois = lp_obj_value(lp);
         gettimeofday(&fim, NULL);
