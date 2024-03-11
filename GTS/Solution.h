@@ -32,11 +32,11 @@ typedef struct{
 	Tdelta *delta;
 }EjectionChain;
 
-Solution* allocationPointersSolution(Instance *inst);
+Solution* allocationPointersSolution(Instance *inst, int nBlocks);
 
 void freePointersSolution(Solution *sol);
 
-EjectionChain* allocationPointerEjectionChain(Instance *inst);
+EjectionChain* allocationPointerEjectionChain(Instance *inst, int nBlocks, int nThreads);
 
 void freePointerEjectionChain(EjectionChain *ejection);
 
@@ -46,11 +46,11 @@ void createOutputFileFrequencyVersion1(Solution *sol, Instance *inst,int *cont_s
 
 void createOutputFileFrequencyVersion2(Solution *sol, Instance *inst,int *cont_similarity,int pos_best, const char *fileName);
 
-int returnIndice(Solution *h_solution, EjectionChain *h_ejection, int block, /*int nBlocks, int nThreads,*/ int menor,int *h_long_list, int nJobs,int mAgents);
+int returnIndice(Solution *h_solution, EjectionChain *h_ejection, int block, int menor,int *h_long_list, int nJobs,int mAgents, int nThreads);
 
-Solution* createGPUsolution(Solution* h_solution,TnJobs nJobs, TmAgents mAgents);
+Solution* createGPUsolution(Solution* h_solution,TnJobs nJobs, TmAgents mAgents, int nBlocks);
 
-EjectionChain* createGPUejection(EjectionChain* h_ejection,TnJobs nJobs, TmAgents mAgents);
+EjectionChain* createGPUejection(EjectionChain* h_ejection,TnJobs nJobs, TmAgents mAgents, int nBlocks, int nThreads);
 
 EXTERN_C_END
 

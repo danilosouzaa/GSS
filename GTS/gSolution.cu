@@ -9,9 +9,12 @@ __global__ void TS_GAP(Instance *inst, Solution *sol, EjectionChain *ejection, i
         // n_busca eh o numero de CADEIAS que uma thread vai explorar
 
 	//variables of auxiliars
+	// if((threadIdx.x==1)&&(blockIdx.x==1))
+	// 	printf("%d %d:\n",blockDim.x, gridDim.x);
 	register int i, j,k,flag, aux, aux_2;
         register short int nJobs = inst->nJobs;
         register short int mAgents = inst->mAgents;
+
 
 	//use for counting amount resources
 	register unsigned short int res_aux[800];
@@ -21,8 +24,8 @@ __global__ void TS_GAP(Instance *inst, Solution *sol, EjectionChain *ejection, i
 	//s_shared = (short int *)malloc(sizeof(short int)*inst->nJobs);
 	//Iterator of size search
 	int s_search;
-	#define term  threadIdx.x + blockIdx.x*nThreads
-	#define tPos  threadIdx.x*maxChain + blockIdx.x*maxChain*nThreads
+	#define term  threadIdx.x + blockIdx.x*blockDim.x
+	#define tPos  threadIdx.x*maxChain + blockIdx.x*maxChain*blockDim.x
 
 	//save best Delta of ejection chain
 	int d_best_aux;
@@ -38,13 +41,13 @@ __global__ void TS_GAP(Instance *inst, Solution *sol, EjectionChain *ejection, i
 	int size_aux;
 
 
-	curand_init(seed[blockIdx.x*nThreads + threadIdx.x],blockIdx.x*nThreads + threadIdx.x,0,&states[blockIdx.x*nThreads + threadIdx.x]);
+	curand_init(seed[blockIdx.x*blockDim.x + threadIdx.x],blockIdx.x*blockDim.x + threadIdx.x,0,&states[blockIdx.x*blockDim.x + threadIdx.x]);
 	aux = 0;
 	//aux_2 = nJobs/nThreads;
-	for(i = 0; i<= nJobs/nThreads; ++i){ // <= aux_2
+	for(i = 0; i<= nJobs/blockDim.x; ++i){ // <= aux_2
 		//aux = nJobs - i*nThreads; 
-		if(threadIdx.x <  nJobs - i*nThreads){ // < aux
-			s_shared[threadIdx.x + i*nThreads] = sol->s[threadIdx.x + i*nThreads + blockIdx.x*inst->nJobs];
+		if(threadIdx.x <  nJobs - i*blockDim.x){ // < aux
+			s_shared[threadIdx.x + i*blockDim.x] = sol->s[threadIdx.x + i*blockDim.x + blockIdx.x*inst->nJobs];
 			//__syncthreads();
 		}
 		//__syncthreads();
@@ -254,7 +257,7 @@ __global__ void TS_GAP(Instance *inst, Solution *sol, EjectionChain *ejection, i
 
 
 
-Solution* createGPUsolution(Solution* h_solution,TnJobs nJobs, TmAgents mAgents)
+Solution* createGPUsolution(Solution* h_solution,TnJobs nJobs, TmAgents mAgents, int nBlocks)
 {
 	size_t size_solution = sizeof(Solution)
                         		   + sizeof(TcostFinal)*nBlocks
@@ -270,7 +273,7 @@ Solution* createGPUsolution(Solution* h_solution,TnJobs nJobs, TmAgents mAgents)
 	return d_sol;
 }
 
-EjectionChain* createGPUejection(EjectionChain* h_ejection,TnJobs nJobs, TmAgents mAgents)
+EjectionChain* createGPUejection(EjectionChain* h_ejection,TnJobs nJobs, TmAgents mAgents, int nBlocks, int nThreads)
 {
 	size_t size_ejection = sizeof(EjectionChain)
                         		   + sizeof(Tpos)*(nBlocks*nThreads*maxChain)

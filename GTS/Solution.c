@@ -4,7 +4,7 @@
 //const int nThreads = 896;
 //const int maxChain = 10;
 
-Solution* allocationPointersSolution(Instance *inst){
+Solution* allocationPointersSolution(Instance *inst, int nBlocks){
 	size_t size_solution =  sizeof(Solution)
 							+ sizeof(TcostFinal)*nBlocks
 							+ sizeof(Ts)*(inst->nJobs*nBlocks)
@@ -26,7 +26,7 @@ void freePointersSolution(Solution *sol){
 }
 
 
-EjectionChain* allocationPointerEjectionChain(Instance *inst){
+EjectionChain* allocationPointerEjectionChain(Instance *inst, int nBlocks, int nThreads){
 	size_t size_ejection = sizeof(EjectionChain)
 							+ sizeof(Tpos)*(nBlocks*nThreads*maxChain)
 							+ sizeof(Top)*(nBlocks*nThreads)
@@ -119,12 +119,15 @@ void createOutputFileFrequencyVersion2(Solution *sol, Instance *inst,int *cont_s
 }
 
 
-int returnIndice(Solution *h_solution,EjectionChain *h_ejection, int block, /*int nBlocks, int nThreads,*/ int menor, int *h_long_list, int nJobs,int mAgents){
+int returnIndice(Solution *h_solution,EjectionChain *h_ejection, int block, int menor, int *h_long_list, int nJobs,int mAgents, int nThreads){
 	int qnt_menor=0;
 	int *v_pos_menor= (int*)malloc(sizeof(int)*nThreads);
 	int *mod_cont = (int*)malloc(sizeof(int)*nThreads);
 	int aux1 , aux2;
 	int pos,i,j;
+	for(i=0;i<nThreads;i++){
+		v_pos_menor[i] = 0;	
+	}
 	for(i=0;i<nThreads;i++){
 		mod_cont[i] = 0;
 		if(menor == h_ejection->delta[i + block*nThreads]){

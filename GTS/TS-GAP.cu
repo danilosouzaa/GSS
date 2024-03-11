@@ -34,6 +34,20 @@
 //const int nBlocks = 5;
 //const int maxChain = 10;
 
+void returnDimension(int *nB, int *nT, int nRuns)
+{
+
+    int blockSize = 10;      // The launch configurator returned block size
+    int minGridSize = 10;    // The minimum grid size needed to achieve the maximum occupancy for a full device launch
+    //int gridSize;
+    int N = nRuns;
+
+    cudaOccupancyMaxPotentialBlockSize(&minGridSize, &blockSize,TS_GAP, 0, N);
+    *nB = minGridSize;
+    *nT = blockSize;
+}
+
+
 int main(int argc, char *argv[])
 {
 
@@ -79,6 +93,14 @@ int main(int argc, char *argv[])
 	//free(error_id);
 	//iterator of use in for
 	int i, j;
+
+	//occupance optimize GPU
+	fflush(stdout);	
+	int nBlocks, nThreads;
+	returnDimension(&nBlocks,&nThreads, atoi(argv[2]));
+	#if PRINTSIZEOCCUPANCE
+		printf("nB:%d nT: %d \n", nBlocks, nThreads);
+	#endif
 	//Pointer of states for use in curand (GPU)
 	curandState_t *states;
 	cudaMalloc((void**)&states, (nThreads*nBlocks)*sizeof(curandState_t));
@@ -108,9 +130,9 @@ int main(int argc, char *argv[])
 	
 	//showInstance(h_instance);
 	//Create and memory allocation from Solution and Ejection structs
-	Solution *best_solution = allocationPointersSolution(h_instance); //valgrindError: free
-	Solution *h_solution = allocationPointersSolution(h_instance);//valgrindError: free
-	EjectionChain *h_ejection = allocationPointerEjectionChain(h_instance); //valgrindError: free
+	Solution *best_solution = allocationPointersSolution(h_instance,nBlocks); //valgrindError: free
+	Solution *h_solution = allocationPointersSolution(h_instance,nBlocks);//valgrindError: free
+	EjectionChain *h_ejection = allocationPointerEjectionChain(h_instance,nBlocks,nThreads); //valgrindError: free
 	
 	//weight greedy
 	float w1,w2;
@@ -120,7 +142,7 @@ int main(int argc, char *argv[])
         struct timeval fim;
         struct timeval t_fim;
 
-
+	
 	//Generate Initial Solution from greedy method
 	gettimeofday(&t_inicio,NULL);
 	for(i=0;i<nBlocks;i++){
@@ -235,8 +257,8 @@ int main(int argc, char *argv[])
 	TnJobs tmpNJobs = h_instance->nJobs;
 	TmAgents tmpMAgents = h_instance->mAgents;
 	Instance *d_instance = createGPUInstance(h_instance, h_instance->nJobs, h_instance->mAgents);
-	Solution *d_solution = createGPUsolution(h_solution,tmpNJobs, tmpMAgents);
-	EjectionChain *d_ejection = createGPUejection(h_ejection,tmpNJobs, tmpMAgents);
+	Solution *d_solution = createGPUsolution(h_solution,tmpNJobs, tmpMAgents, nBlocks);
+	EjectionChain *d_ejection = createGPUejection(h_ejection,tmpNJobs, tmpMAgents, nBlocks, nThreads);
 
 	//Pointers seed in device (GPU)
 	unsigned int *d_seed;
@@ -313,7 +335,7 @@ int main(int argc, char *argv[])
 				}
 				//printf("value of delta for thread %d in block %d: :%d \n", j, i, h_ejection->delta[j + i*nThreads]);
 			}
-			lowestDelta = returnIndice(h_solution,h_ejection,i,/*nBlocks,nThreads,*/lowestDelta,h_long_list,h_instance->nJobs,h_instance->mAgents);
+			lowestDelta = returnIndice(h_solution,h_ejection,i,/*nBlocks,nThreads,*/lowestDelta,h_long_list,h_instance->nJobs,h_instance->mAgents,nThreads);
 			//	printf("lowestDelta delta do bloco %d: %d\n",i,lowestDelta);
 			if(h_ejection->op[lowestDelta + i*nThreads]==1){
 				int aux1 = h_ejection->pos[0 + lowestDelta*maxChain + i*maxChain*nThreads];
